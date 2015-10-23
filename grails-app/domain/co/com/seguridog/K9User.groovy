@@ -26,7 +26,7 @@ class K9User {
         lastName maxSize: 40
         firstName maxSize: 40
         birthDate min: LocalDate.of(1900, Month.JANUARY, 1)
-        cellphone size: 10
+        cellphone size: 10..11
         eMail email: true
         loginUser unique: true
         loginPass()
