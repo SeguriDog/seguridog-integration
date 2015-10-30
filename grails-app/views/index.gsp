@@ -1,122 +1,86 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
-		<style type="text/css" media="screen">
-			#status {
-				background-color: #eee;
-				border: .2em solid #fff;
-				margin: 2em 2em 1em;
-				padding: 1em;
-				width: 12em;
-				float: left;
-				-moz-box-shadow: 0px 0px 1.25em #ccc;
-				-webkit-box-shadow: 0px 0px 1.25em #ccc;
-				box-shadow: 0px 0px 1.25em #ccc;
-				-moz-border-radius: 0.6em;
-				-webkit-border-radius: 0.6em;
-				border-radius: 0.6em;
-			}
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>mPurpose - Multipurpose Feature Rich Bootstrap Template</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
 
-			.ie6 #status {
-				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
-			}
+		<link rel="stylesheet" href="${request.contextPath}/purpose/css/bootstrap.min.css">
+		<link rel="stylesheet" href="${request.contextPath}/purpose/css/icomoon-social.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
 
-			#status ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
+		<link rel="stylesheet" href="${request.contextPath}/purpose/css/leaflet.css" />
+		<!--[if lte IE 8]>
+			<link rel="stylesheet" href="${request.contextPath}/purpose/css/leaflet.ie.css" />
+		<![endif]-->
+		<link rel="stylesheet" href="${request.contextPath}/purpose/css/main.css">
 
-			#status li {
-				line-height: 1.3;
-			}
-
-			#status h1 {
-				text-transform: uppercase;
-				font-size: 1.1em;
-				margin: 0 0 0.3em;
-			}
-
-			#page-body {
-				margin: 2em 1em 1.25em 18em;
-			}
-
-			h2 {
-				margin-top: 1em;
-				margin-bottom: 0.3em;
-				font-size: 1em;
-			}
-
-			p {
-				line-height: 1.5;
-				margin: 0.25em 0;
-			}
-
-			#controller-list ul {
-				list-style-position: inside;
-			}
-
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
-				margin: 0.25em 0;
-			}
-
-			@media screen and (max-width: 480px) {
-				#status {
-					display: none;
-				}
-
-				#page-body {
-					margin: 0 1em 1em;
-				}
-
-				#page-body h1 {
-					margin-top: 0;
-				}
-			}
-		</style>
+		<script src="${request.contextPath}/purpose/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
-	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="status" role="complementary">
-			<h1>Application Status</h1>
-			<ul>
-				<li>App version: <g:meta name="app.version"/></li>
-				<li>Grails version: <g:meta name="app.grails.version"/></li>
-				<li>Groovy version: ${GroovySystem.getVersion()}</li>
-				<li>JVM version: ${System.getProperty('java.version')}</li>
-				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
-				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
-				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
-				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
-			</ul>
-			<h1>Installed Plugins</h1>
-			<ul>
-				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-					<li>${plugin.name} - ${plugin.version}</li>
-				</g:each>
-			</ul>
-		</div>
-		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
 
-			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
+	<body>
+		<!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+		<!-- Navigation & Logo-->
+		<div class="mainmenu-wrapper">
+			<div class="container">
+				<div class="menuextras">
+					<div class="extras">
+						<ul>
+                        <li><g:link controller="k9User" action="login">Login</g:link> </li>
+						</ul>
+					</div>
+				</div>
+				<nav id="mainmenu" class="mainmenu">
+					<ul>
+						<li class="logo-wrapper"><img src="${request.contextPath}/purpose/img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></li>
+						<li class="active">
+							<a href="index.html">Inicio</a>
+						</li>
+						<li>
+							<a href="features.html">Información</a>
+						</li>
+						<li>
+							<a href="credits.html">Créditos</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</div>
+
+		<!-- main content -->
+		<div id="page-content">
+
+		</div>
+		<!-- end main content -->
+
+		<!-- Footer -->
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="footer-copyright">&copy; 2013 mPurpose. All rights reserved.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Javascripts -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="${request.contextPath}/purpose/js/jquery-1.9.1.min.js"><\/script>')</script>
+		<script src="${request.contextPath}/purpose/js/bootstrap.min.js"></script>
+		<script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+		<script src="${request.contextPath}/purpose/js/jquery.fitvids.js"></script>
+		<script src="${request.contextPath}/purpose/js/jquery.sequence-min.js"></script>
+		<script src="${request.contextPath}/purpose/js/jquery.bxslider.js"></script>
+		<script src="${request.contextPath}/purpose/js/main-menu.js"></script>
+		<script src="${request.contextPath}/purpose/js/template.js"></script>
 	</body>
 </html>

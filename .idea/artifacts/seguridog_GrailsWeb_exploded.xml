@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="seguridog:GrailsWeb exploded">
+    <root id="root">
+      <element id="javaee-facet-resources" facet="seguridog/web/GrailsWeb" />
+    </root>
+  </artifact>
+</component>
+
