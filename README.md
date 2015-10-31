@@ -7,6 +7,6 @@ Mauricio Mejía  | Developer/Scrum Master  | jemmejiaca@unal.edu.co
 Edwin Bohorquez | Developer/Tester	  | eabohorquezg@unal.edu.co
 Richard Herrera | Developer		  | roherrerap@unal.edu.co
 Felipe Acevedo  | Developer		  | afacevedom@unal.edu.co
-Jefersson Cano  | Developer		  |
+Jefersson Cano  | Developer		  | jfcanob@unal.edu.co
 
 
