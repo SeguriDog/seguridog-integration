@@ -16,7 +16,7 @@ class CanineSpec extends Specification {
     def cleanup() {
     }
 
-    def "Testing Domain Class Canine - Name"() {
+    def "Testing Domain Class Canine - Name Canine"() {
         when:
         def obj = new Canine(nameCanine: nameCanine)
 
@@ -30,4 +30,33 @@ class CanineSpec extends Specification {
         null    | false     | 'null'
         ''      | false     | 'blank'
     }
+    
+    def "Testing Domain Class Canine - Name of Father"() {
+        when:
+        def obj = new Canine(nameFather : nameFather)
+
+        then:
+        obj.errors.hasFieldErrors("nameFather") == false
+
+        where:
+        name    | valid     | field
+        "aaaaaaaaaaaaaabbba"  | false  | 'maxSize'
+        "centinela" | true | 'maxSize'
+        ''      | false     | 'blank'
+    }
+    
+    def "Testing Domain Class Canine - Name of Mother"() {
+        when:
+        def obj = new Canine(nameMother : nameMother)
+
+        then:
+        obj.errors.hasFieldErrors("nameMother") == false
+
+        where:
+        name    | valid     | field
+        "aaaaaaaaaaaaaabbba"  | false  | 'maxSize'
+        "Luna" | true | 'maxSize'
+        ''      | false     | 'blank'
+    }
+    
 }
