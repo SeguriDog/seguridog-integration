@@ -10,11 +10,24 @@ import spock.lang.Specification
 class CanineSpec extends Specification {
 
     def setup() {
+        mockForConstraintsTests(Canine)
     }
 
     def cleanup() {
     }
 
-    void "test something"() {
+    def "Testing Domain Class Canine - Name"() {
+        when:
+        def obj = new Canine(nameCanine: nameCanine)
+
+        then:
+        obj.errors.hasFieldErrors("nameCanine") == false
+
+        where:
+        name    | valid     | field
+        "aaaaaaaaaaaaaabbba"  | false  | 'maxSize'
+        "guardian" | true | 'maxSize'
+        null    | false     | 'null'
+        ''      | false     | 'blank'
     }
 }
