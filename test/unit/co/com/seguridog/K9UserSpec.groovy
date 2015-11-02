@@ -28,6 +28,8 @@ class K9UserSpec extends Specification {
         lastName    | valid     | field
         "aabbccddeeffgghhiijjkkllmmnnooppqqrrsstt"  | true  | 'maxSize'
         "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttr" | false | 'maxSize'
+        null    | false     | 'null'
+        ''      | false     | 'blank'
     }
 
     def "Testing Domain Class K9User - firstName"() {
@@ -41,6 +43,8 @@ class K9UserSpec extends Specification {
         firstName    | valid     | field
         "aabbccddeeffgghhiijjkkllmmnnooppqqrrsstt"  | true  | 'maxSize'
         "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttr" | false | 'maxSize'
+        null    | false     | 'null'
+        ''      | false     | 'blank'
     }
 
     def "Testing Domain Class K9User - birthDate"() {
@@ -54,6 +58,7 @@ class K9UserSpec extends Specification {
         birthDate   | valid     | field
         LocalDate.parse("31-12-1899")   | false | 'minValue'
         LocalDate.parse("01-01-1900")   | true  | 'minValue'
+        null    | false     | 'null'
     }
 
     def "Testing Domain Class K9User - cellphone"(){
@@ -69,6 +74,8 @@ class K9UserSpec extends Specification {
         "3114408510"| true      | 'minSize'
         "31144085101"|  true    | 'maxSize'
         "311440851011"| false   | 'maxSize'
+        null    | false     | 'null'
+        ''      | false     | 'blank'
     }
 
     def "Testing Domain Class K9User - eMail"(){
@@ -82,5 +89,7 @@ class K9UserSpec extends Specification {
         eMail       | valid     | field
         "dexter@miamipd.gov"| true  |'email'
         "dexterm@m"     | false | 'email'
+        null    | false     | 'null'
+        ''      | false     | 'blank'
     }
 }
