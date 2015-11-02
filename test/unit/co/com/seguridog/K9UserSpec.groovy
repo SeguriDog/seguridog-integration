@@ -28,4 +28,17 @@ class K9UserSpec extends Specification {
         "aabbccddeeffgghhiijjkkllmmnnooppqqrrsstt"  | true  | 'maxSize'
         "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttr" | false | 'maxSize'
     }
+
+    def "Testing Domain Class K9User - firstName"() {
+        when:
+        def obj = new K9User(firstName: firstName)
+
+        then:
+        obj.errors.hasFieldErrors("firstName") == false
+
+        where:
+        firstName    | valid     | field
+        "aabbccddeeffgghhiijjkkllmmnnooppqqrrsstt"  | true  | 'maxSize'
+        "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttr" | false | 'maxSize'
+    }
 }
