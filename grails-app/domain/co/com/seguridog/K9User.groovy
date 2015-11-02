@@ -25,16 +25,6 @@ class K9User {
     }
 
     static constraints = {
-<<<<<<< HEAD
-        cedula unique: true
-        lastName maxSize: 40
-        firstName maxSize: 40
-        birthDate min: LocalDate.of(1900, Month.JANUARY, 1)
-        cellphone size: 10..11
-        eMail email: true
-        loginUser unique: true
-        loginPass()
-=======
         cedula nullable: false, blank: false, unique: true
         lastName nullable: false, blank: false, maxSize: 40
         firstName nullable: false, blank: false, maxSize: 40
@@ -50,6 +40,5 @@ class K9User {
         typeContract blank: false
         dateContract blank: false
         typeUsers range: 1..4
->>>>>>> 4d150330aa6a7f4318c4235718c971c35c5bebdb
     }
 }
