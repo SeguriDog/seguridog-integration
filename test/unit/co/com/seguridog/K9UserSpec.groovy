@@ -55,4 +55,19 @@ class K9UserSpec extends Specification {
         LocalDate.parse("31-12-1899")   | false | 'minValue'
         LocalDate.parse("01-01-1900")   | true  | 'minValue'
     }
+
+    def "Testing Domain Class K9User - cellphone"(){
+        when:
+        def obj = new K9User(cellphone: cellphone)
+
+        then:
+        obj.errors.hasFieldErrors("cellphone") == false
+
+        where:
+        cellphone   | valid     | field
+        "311440851" | false     | 'minSize'
+        "3114408510"| true      | 'minSize'
+        "31144085101"|  true    | 'maxSize'
+        "311440851011"| false   | 'maxSize'
+    }
 }
