@@ -1,5 +1,7 @@
 package co.com.seguridog
 
+import java.time.LocalDate
+
 class K9User {
 
     Integer cedula

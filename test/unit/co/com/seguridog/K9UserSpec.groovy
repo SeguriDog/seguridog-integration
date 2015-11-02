@@ -2,6 +2,7 @@ package co.com.seguridog
 
 import grails.test.mixin.TestFor
 import spock.lang.Specification
+import java.time.LocalDate
 
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
@@ -40,5 +41,18 @@ class K9UserSpec extends Specification {
         firstName    | valid     | field
         "aabbccddeeffgghhiijjkkllmmnnooppqqrrsstt"  | true  | 'maxSize'
         "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttr" | false | 'maxSize'
+    }
+
+    def "Testing Domain Class K9User - birthDate"() {
+        when:
+        def obj = new K9User(birthDate: birthDate)
+
+        then:
+        obj.errors.hasFieldErrors("birthDate") == false
+
+        where:
+        birthDate   | valid     | field
+        LocalDate.parse("31-12-1899")   | false | 'minValue'
+        LocalDate.parse("01-01-1900")   | true  | 'minValue'
     }
 }
