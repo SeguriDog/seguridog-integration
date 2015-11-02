@@ -20,10 +20,10 @@ class Canine {
     static hasMany = [canineabilities : CanineAbility, clinichistoriesCan: ClinicHistory, exerciseabilities: ExerciseAbility, workcanines: WorkCanine]
 
     static constraints = {
-        microChip (blank: false)
-        nameCanine (blank: false)
-        nameFather (blank: false)
-        nameMother (blank: false)
+        microChip (blank: false,nullable: false,unique: true)
+        nameCanine (blank: false,maxSize: 15)
+        nameFather (blank: false,maxSize: 15)
+        nameMother (blank: false,maxSize: 15)
         dateBirthday (blank: false)
         sexCanine (blank: false)
         typeRace (blank: false)
