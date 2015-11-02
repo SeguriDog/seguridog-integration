@@ -70,4 +70,17 @@ class K9UserSpec extends Specification {
         "31144085101"|  true    | 'maxSize'
         "311440851011"| false   | 'maxSize'
     }
+
+    def "Testing Domain Class K9User - eMail"(){
+        when:
+        def obj = new K9User(eMail: eMail)
+
+        then:
+        obj.errors.hasFieldErrors("eMail") == false
+
+        where:
+        eMail       | valid     | field
+        "dexter@miamipd.gov"| true  |'email'
+        "dexterm@m"     | false | 'email'
+    }
 }
