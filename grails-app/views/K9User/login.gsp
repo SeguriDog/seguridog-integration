@@ -6,10 +6,10 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>mPurpose - Multipurpose Feature Rich Bootstrap Template</title>
+		<title>SeguriDog</title>
 		<meta name="login" content="">
 		<meta name="viewport" content="width=device-width">
-
+		<link rel="shortcut icon" href="${assetPath(src: 'dog.png')}" type="image/x-icon">
 		<link rel="stylesheet" href="${request.contextPath}/purpose/css/bootstrap.min.css">
 		<link rel="stylesheet" href="${request.contextPath}/purpose/css/icomoon-social.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
@@ -40,7 +40,7 @@
 				</div>
 				<nav id="mainmenu" class="mainmenu">
 					<ul>
-						<li class="logo-wrapper"><img src="${request.contextPath}/purpose/img/mPurpose-logo.png" alt="Multipurpose Twitter Bootstrap Template"></li>
+						<li class="logo-wrapper"><img src="${request.contextPath}/purpose/img/SeguriDog-logo.png" alt="Multipurpose Twitter Bootstrap Template"></li>
 						<li class="active">
 							<a href="index.html">Inicio</a>
 						</li>

@@ -6,7 +6,9 @@ class K9UserController {
 
     def index() {}
 
-    def login = {}
+    def login = {
+        //render(view:"/K9User/login.gsp")
+    }
 
     def authenticate = {
         def user = K9User.findByLoginUserAndLoginPass(params.loginUser, params.loginPass)
@@ -31,7 +33,7 @@ class K9UserController {
     }
 
     def logout = {
-        flash.message = "Adios ${session.user.loginUser}"
+        //flash.message = "Adios ${session.user.loginUser}"
         session.user = null
         redirect(controller: "K9User", action: "login")
     }
