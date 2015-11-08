@@ -35,6 +35,7 @@
 					<div class="extras">
 						<ul>
                         <li><g:link controller="k9User" action="logout">Logout</g:link> </li>
+
 						</ul>
 					</div>
 				</div>
@@ -57,7 +58,9 @@
 
 		<!-- main content -->
 		<div id="page-content">
-			<li>Administrador</li>
+              <h2>Administrador</h2>
+               <li><g:link controller="k9Admin" action="user_register">Registrar Usuario</g:link> </li>
+               <li><g:link controller="k9Admin" action="users_list">Listar Usuarios</g:link> </li>
 		</div>
 		<!-- end main content -->
 
