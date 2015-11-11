@@ -1,7 +1,5 @@
 package co.com.seguridog
 
-import java.time.LocalDate
-
 class K9User {
 
     Integer cedula
@@ -15,6 +13,7 @@ class K9User {
     String typeContract
     Date dateContract
     Integer typeUsers
+    Boolean enableUser
 
     int getAge() {
         birthDate.compareTo(new Date())
@@ -40,5 +39,6 @@ class K9User {
         typeContract blank: false
         dateContract blank: false
         typeUsers range: 1..4
+        enableUser blank: false
     }
 }

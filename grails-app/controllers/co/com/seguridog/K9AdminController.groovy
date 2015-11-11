@@ -55,6 +55,5 @@ class K9AdminController {
         //se puede usar sql.executeInsert("insert into....")
         redirect(controller: "K9Admin", action: "index")
     }
-
 }
 

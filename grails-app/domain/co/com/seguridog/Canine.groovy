@@ -16,6 +16,7 @@ class Canine {
     String attendCall
     String positionStay
     String watchCanine
+    String stateCanine
 
     static hasMany = [canineabilities : CanineAbility, clinichistoriesCan: ClinicHistory, exerciseabilities: ExerciseAbility, workcanines: WorkCanine]
 
@@ -35,6 +36,7 @@ class Canine {
         attendCall (blank: false)
         positionStay (blank: false)
         watchCanine (blank: false)
+        stateCanine (blank: false)
     }
 
 }

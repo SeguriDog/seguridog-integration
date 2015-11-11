@@ -30,17 +30,19 @@ CREATE TABLE `canine` (
   `date_birthday` datetime NOT NULL,
   `felt_down` varchar(255) NOT NULL,
   `micro_chip` varchar(255) NOT NULL,
-  `name_canine` varchar(255) NOT NULL,
-  `name_father` varchar(255) NOT NULL,
-  `name_mother` varchar(255) NOT NULL,
+  `name_canine` varchar(15) NOT NULL,
+  `name_father` varchar(15) NOT NULL,
+  `name_mother` varchar(15) NOT NULL,
   `position_stay` varchar(255) NOT NULL,
   `sex_canine` varchar(255) NOT NULL,
   `sign_canine` varchar(255) NOT NULL,
   `sit_down` varchar(255) NOT NULL,
+  `state_canine` varchar(255) NOT NULL,
   `type_race` varchar(255) NOT NULL,
   `walk_side` varchar(255) NOT NULL,
   `watch_canine` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_ik0iuxaq1mmofoyfnyutlvqgk` (`micro_chip`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -178,6 +180,7 @@ CREATE TABLE `k9user` (
   `cellphone` varchar(10) NOT NULL,
   `date_contract` datetime NOT NULL,
   `e_mail` varchar(255) NOT NULL,
+  `enable_user` bit(1) NOT NULL,
   `first_name` varchar(40) NOT NULL,
   `last_name` varchar(40) NOT NULL,
   `login_pass` varchar(255) NOT NULL,
@@ -205,7 +208,7 @@ CREATE TABLE `k9user` (
 
 LOCK TABLES `k9user` WRITE;
 /*!40000 ALTER TABLE `k9user` DISABLE KEYS */;
-INSERT INTO `k9user` VALUES (1,1,'2015-10-29 00:00:00',10001001,'30430774','2015-10-29 00:00:00','jemmejiaca@unal.edu.co','Jesid','Mejia','admin','jemmejiaca','Fijo',1,'co.com.seguridog.K9Admin',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,2,'2015-10-29 00:00:00',10001002,'30430774','2015-10-29 00:00:00','eabohorquezg@unal.edu.co','Edwin','Bohorquez','instructor','eabohorquezg','Fijo',2,'co.com.seguridog.K9Instructor',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,3,'2015-10-29 00:00:00',10001003,'30430774','2015-10-29 00:00:00','roherrerap@unal.edu.co','Richard','Herrera','veterinario','roherrerap','Fijo',3,'co.com.seguridog.K9Veterinarian',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,4,'2015-10-29 00:00:00',10001004,'30430774','2015-10-29 00:00:00','jfcanob@unal.edu.co','Jefersson','Cano','manejador1','jfcanob','Fijo',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,5,'2015-10-29 00:00:00',10001005,'30430774','2015-10-29 00:00:00','afacevedom@unal.edu.co','Felipe','Acevedo','manejador2','afacevedom','Fijo',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `k9user` VALUES (1,1,'0000-00-00 00:00:00',80900,'3163163163','0000-00-00 00:00:00','jemmejiaca@unal.edu.co','','Mauricio','Mejia','admin','jemmejiaca','indefinido',1,'co.com.seguridog.K9Admin',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,2,'2015-01-01 00:00:00',2,'3163163163','2015-01-01 00:00:00','eabohorquezg@unal.edu.co','','Edwin','Bohorquez','instructor','eabohorquezg','indefinido',2,'co.com.seguridog.K9Instructor',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,3,'2015-01-01 00:00:00',3,'3163163163','2015-01-01 00:00:00','roherrerap@unal.edu.co','','Richard','Herrera','veterinario','roherrerap','indefinido',3,'co.com.seguridog.K9Veterinarian',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,4,'2015-01-01 00:00:00',4,'31631633','2015-01-01 00:00:00','afacevedom@unal.edu.co','','Felipe','Acevedo','manejador1','afacevedom','indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,5,'2015-01-01 00:00:00',5,'31631635','2015-01-01 00:00:00','jfcanob@unal.edu.co','','Jefersson','Cano','manejador2','jfcanob','indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `k9user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -277,4 +280,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-29 23:09:54
+-- Dump completed on 2015-11-11  9:19:09

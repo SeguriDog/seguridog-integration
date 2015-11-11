@@ -7,7 +7,7 @@ class K9UserController {
     def index() {}
 
     def login = {
-        //render(view:"/K9User/login.gsp")
+
     }
 
     def authenticate = {
