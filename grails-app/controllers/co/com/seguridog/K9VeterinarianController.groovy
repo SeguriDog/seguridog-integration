@@ -19,7 +19,7 @@ class K9VeterinarianController {
     def save_data_clinic() {
         Sql sql = Sql.newInstance(dataSource)
         sql.execute('insert into clinic_history(version,canines_id,date_treatment,evaluation,medics_id,name_treatment,type_treatment) values (?, ?, ?, ?, ?, ?, ?)',
-                [8,params.canine_id,params.dateTreatment,params.evaluation,params.medics_id,params.nameTreatment,params.typeTreatment])
+                [8,params.canine_id,params.dateTreatment,params.evaluation,session.user.id,params.nameTreatment,params.typeTreatment])
         redirect(controller: "K9Veterinarian", action: "index")
     }
 }

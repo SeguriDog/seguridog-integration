@@ -57,7 +57,7 @@
 </div>
 
 <!-- main content -->
-<h2>Bienvenido al registro de la historia clinica, Veterinario ${veterinarian_id.fullName}</h2>
+<h2>Bienvenido al registro de la historia clinica, Veterinario ${session.user.fullName}</h2>
 
 <div class="section">
     <div class="container">
@@ -79,7 +79,7 @@
 
                         <div class="form-group">
                             <label for="dateTreatment"><i class="icon-user"></i> <b>Fecha de Tratamiento:</b></label>
-                            <input class="form-control" id="dateTreatment" name="dateTratment" type="datetime" placeholder="">
+                            <input class="form-control" id="dateTreatment" name="dateTreatment" type="text" placeholder="">
                         </div>
 
                         <div class="form-group">

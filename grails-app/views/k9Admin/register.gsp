@@ -45,10 +45,10 @@
 							<a href="index.html">Inicio</a>
 						</li>
 						<li>
-							<a href="features.html">Información</a>
+							<a href="features.html">Informaciï¿½n</a>
 						</li>
 						<li>
-							<a href="credits.html">Créditos</a>
+							<a href="credits.html">Crï¿½ditos</a>
 						</li>
 					</ul>
 				</nav>
@@ -64,7 +64,7 @@
 							<g:form controller = "K9Admin" action="save_data">
 
                                 <div class="form-group">
-		        				 	<label for="cedula"><i class="icon-user"></i> <b>Cedula</b></label>
+		        				 	<label for="cedula"><i class="icon-user"></i> <b>CÃ©dula</b></label>
 									<input class="form-control" id="cedula" name="cedula" type="number" placeholder="">
 								</div>
 								<div class="form-group">
@@ -80,7 +80,7 @@
                                     <input class="form-control" id="loginUser" name="loginUser" type="text" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                	<label for="loginPass"><i class="icon-lock"></i> <b>Contraseña</b></label>
+                                	<label for="loginPass"><i class="icon-lock"></i> <b>ContraseÃ±a</b></label>
               						<input class="form-control" id="loginPass" name="loginPass" type="password" placeholder="">
                                 </div>
                                 <div class="form-group">
@@ -88,11 +88,11 @@
                                     <input class="form-control" id="birthDate" name="birthDate" type="text" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="cellphone"><i class="icon-user"></i> <b>Telefono</b></label>
+                                    <label for="cellphone"><i class="icon-user"></i> <b>TelÃ©fono</b></label>
                                     <input class="form-control" id="cellphone" name="cellphone" type="tel" placeholder="">
                                 </div>
                                 <div class="form-group">
-                                    <label for="eMail"><i class="icon-user"></i> <b>Correo Electronico</b></label>
+                                    <label for="eMail"><i class="icon-user"></i> <b>Correo ElectrÃ³nico</b></label>
                                     <input class="form-control" id="eMail" name="eMail" type="email" placeholder="">
                                 </div>
                                 <div class="form-group">
@@ -131,7 +131,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="footer-copyright">&copy; 2013 mPurpose. All rights reserved.</div>
+						<div class="footer-copyright">&copy; 2015 Seguridog Team UN. Todos los derechso reservados.</div>
 					</div>
 				</div>
 			</div>

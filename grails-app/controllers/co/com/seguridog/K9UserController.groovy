@@ -33,7 +33,6 @@ class K9UserController {
     }
 
     def logout = {
-        //flash.message = "Adios ${session.user.loginUser}"
         session.invalidate()
         redirect(controller: "K9User", action: "login")
     }
