@@ -18,25 +18,30 @@ class Canine {
     String watchCanine
     String stateCanine
 
+    String getNameFullCanine (){
+        microChip + " " + nameCanine
+    }
+
+    static transients = ['nameFullCanine']
+
     static hasMany = [canineabilities : CanineAbility, clinichistoriesCan: ClinicHistory, exerciseabilities: ExerciseAbility, workcanines: WorkCanine]
 
     static constraints = {
         microChip (blank: false,nullable: false,unique: true)
         nameCanine (blank: false,maxSize: 15)
-        nameFather (blank: false,maxSize: 15)
-        nameMother (blank: false,maxSize: 15)
+        nameFather (blank: true,maxSize: 15)
+        nameMother (blank: true,maxSize: 15)
         dateBirthday (blank: false)
         sexCanine (blank: false)
         typeRace (blank: false)
         colorCanine (blank: false)
-        signCanine(blank: false)
-        walkSide (blank: false)
-        sitDown (blank: false)
-        feltDown (blank: false)
-        attendCall (blank: false)
-        positionStay (blank: false)
-        watchCanine (blank: false)
+        signCanine(blank: true)
+        walkSide (blank: true)
+        sitDown (blank: true)
+        feltDown (blank: true)
+        attendCall (blank: true)
+        positionStay (blank: true)
+        watchCanine (blank: true)
         stateCanine (blank: false)
     }
-
 }

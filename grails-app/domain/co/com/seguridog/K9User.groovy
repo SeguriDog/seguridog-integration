@@ -23,6 +23,12 @@ class K9User {
         firstName + " " + lastName
     }
 
+    String getFullName(){
+        firstName + " " + lastName
+    }
+
+    static transients = ['fullName']
+
     static constraints = {
         cedula nullable: false, blank: false, unique: true
         lastName nullable: false, blank: false, maxSize: 40

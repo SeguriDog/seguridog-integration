@@ -25,25 +25,25 @@ DROP TABLE IF EXISTS `canine`;
 CREATE TABLE `canine` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `version` bigint(20) NOT NULL,
-  `attend_call` varchar(255) NOT NULL,
+  `attend_call` varchar(255) DEFAULT NULL,
   `color_canine` varchar(255) NOT NULL,
   `date_birthday` datetime NOT NULL,
-  `felt_down` varchar(255) NOT NULL,
+  `felt_down` varchar(255) DEFAULT NULL,
   `micro_chip` varchar(255) NOT NULL,
   `name_canine` varchar(15) NOT NULL,
-  `name_father` varchar(15) NOT NULL,
-  `name_mother` varchar(15) NOT NULL,
-  `position_stay` varchar(255) NOT NULL,
+  `name_father` varchar(15) DEFAULT NULL,
+  `name_mother` varchar(15) DEFAULT NULL,
+  `position_stay` varchar(255) DEFAULT NULL,
   `sex_canine` varchar(255) NOT NULL,
-  `sign_canine` varchar(255) NOT NULL,
-  `sit_down` varchar(255) NOT NULL,
-  `state_canine` varchar(255) NOT NULL,
+  `sign_canine` varchar(255) DEFAULT NULL,
+  `sit_down` varchar(255) DEFAULT NULL,
+  `state_canine` varchar(255) NOT NULL DEFAULT 'Activo',
   `type_race` varchar(255) NOT NULL,
-  `walk_side` varchar(255) NOT NULL,
-  `watch_canine` varchar(255) NOT NULL,
+  `walk_side` varchar(255) DEFAULT NULL,
+  `watch_canine` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_ik0iuxaq1mmofoyfnyutlvqgk` (`micro_chip`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -52,6 +52,7 @@ CREATE TABLE `canine` (
 
 LOCK TABLES `canine` WRITE;
 /*!40000 ALTER TABLE `canine` DISABLE KEYS */;
+INSERT INTO `canine` VALUES (1,2,NULL,'Cafe Claro','2015-01-01 00:00:00',NULL,'x21-0521-2015','alcon',NULL,NULL,NULL,'macho',NULL,NULL,'Activo','Pastor Alemán',NULL,NULL),(2,3,NULL,'Negro','2015-01-01 00:00:00',NULL,'x21-0351-2025','Danger',NULL,NULL,NULL,'hembra',NULL,NULL,'Activo','Pastor Coli',NULL,NULL),(3,3,NULL,'Blanco','2015-02-01 00:00:00',NULL,'m30-02010-2001','Burbuja',NULL,NULL,NULL,'hembra',NULL,NULL,'Inactivo','Fresh Pudul',NULL,NULL);
 /*!40000 ALTER TABLE `canine` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -208,7 +209,7 @@ CREATE TABLE `k9user` (
 
 LOCK TABLES `k9user` WRITE;
 /*!40000 ALTER TABLE `k9user` DISABLE KEYS */;
-INSERT INTO `k9user` VALUES (1,1,'0000-00-00 00:00:00',80900,'3163163163','0000-00-00 00:00:00','jemmejiaca@unal.edu.co','','Mauricio','Mejia','admin','jemmejiaca','indefinido',1,'co.com.seguridog.K9Admin',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,2,'2015-01-01 00:00:00',2,'3163163163','2015-01-01 00:00:00','eabohorquezg@unal.edu.co','','Edwin','Bohorquez','instructor','eabohorquezg','indefinido',2,'co.com.seguridog.K9Instructor',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,3,'2015-01-01 00:00:00',3,'3163163163','2015-01-01 00:00:00','roherrerap@unal.edu.co','','Richard','Herrera','veterinario','roherrerap','indefinido',3,'co.com.seguridog.K9Veterinarian',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,4,'2015-01-01 00:00:00',4,'31631633','2015-01-01 00:00:00','afacevedom@unal.edu.co','','Felipe','Acevedo','manejador1','afacevedom','indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,5,'2015-01-01 00:00:00',5,'31631635','2015-01-01 00:00:00','jfcanob@unal.edu.co','','Jefersson','Cano','manejador2','jfcanob','indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `k9user` VALUES (1,1,'2015-01-01 00:00:00',80900,'3163163163','2015-01-01 00:00:00','jemmejiaca@unal.edu.co','','Mauricio','Mejia','admin','jemmejiaca','indefinido',1,'co.com.seguridog.K9Admin',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,2,'2015-01-01 00:00:00',2,'3163163163','2015-01-01 00:00:00','eabohorquezg@unal.edu.co','','Edwin','Bohorquez','instructor','eabohorquezg','indefinido',2,'co.com.seguridog.K9Instructor',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,3,'2015-01-01 00:00:00',3,'3163163163','2015-01-01 00:00:00','roherrerap@unal.edu.co','','Richard','Herrera','veterinario','roherrerap','indefinido',3,'co.com.seguridog.K9Veterinarian',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,4,'2015-01-01 00:00:00',4,'31631633','2015-01-01 00:00:00','afacevedom@unal.edu.co','','Felipe','Acevedo','manejador1','afacevedom','indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,5,'2015-01-01 00:00:00',5,'31631635','2015-01-01 00:00:00','jfcanob@unal.edu.co','','Jefersson','Cano','manejador2','jfcanob','indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `k9user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -259,7 +260,7 @@ CREATE TABLE `work_canine` (
   KEY `FK_ngc4xwr7gaonf0nne0nlp65lp` (`handlers_id`),
   CONSTRAINT `FK_294gwcg2y482ifra6ird2t2go` FOREIGN KEY (`canines_id`) REFERENCES `canine` (`id`),
   CONSTRAINT `FK_ngc4xwr7gaonf0nne0nlp65lp` FOREIGN KEY (`handlers_id`) REFERENCES `k9user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -268,6 +269,7 @@ CREATE TABLE `work_canine` (
 
 LOCK TABLES `work_canine` WRITE;
 /*!40000 ALTER TABLE `work_canine` DISABLE KEYS */;
+INSERT INTO `work_canine` VALUES (1,7,'Carrera 70 No. 35 - 90',1,'2015-11-11 00:00:00',5,5);
 /*!40000 ALTER TABLE `work_canine` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -280,4 +282,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-11  9:19:09
+-- Dump completed on 2015-11-12 23:11:08

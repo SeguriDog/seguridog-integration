@@ -1,8 +1,6 @@
 package co.com.seguridog
 
-import javax.sql.DataSource
 import groovy.sql.Sql
-import groovy.xml.Entity
 
 class K9AdminController {
 
@@ -11,7 +9,7 @@ class K9AdminController {
     def index() {}
 
     def register() {
-        //render(view:"/K9Admin/register.gsp")
+
     }
 
     def user_register = {
@@ -55,5 +53,18 @@ class K9AdminController {
         //se puede usar sql.executeInsert("insert into....")
         redirect(controller: "K9Admin", action: "index")
     }
-}
 
+
+    def register_service (){
+        def handler_list = K9Handler.findAllByEnableUser(true)
+        def canine_list = Canine.findAllByStateCanine('Activo')
+        [handler_list : handler_list, canine_list : canine_list]
+    }
+
+    def save_data_service (){
+        Sql sql = Sql.newInstance(dataSource)
+        sql.execute('insert into work_canine(version,address_work_area,date_work_area,hours_per_day,canines_id,handlers_id) values (?, ?, ?, ?, ?, ?)',
+                [7,params.addressWorkArea,params.dateWorkArea,params.hoursPerDay,params.canine_id,params.handler_id])
+        redirect(controller: "K9Admin", action: "index")
+    }
+}

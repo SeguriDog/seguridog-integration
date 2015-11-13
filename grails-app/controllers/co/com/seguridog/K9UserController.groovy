@@ -1,5 +1,7 @@
 package co.com.seguridog
 
+import javax.servlet.http.HttpSession
+
 class K9UserController {
 
     def scaffold = K9User
@@ -14,8 +16,8 @@ class K9UserController {
         def user = K9User.findByLoginUserAndLoginPass(params.loginUser, params.loginPass)
         if (user) {
             session.user = user
-            flash.message = "Bienvenido ${user.toString()}!"
             if (user.typeUsers == 1) {
+                flash.message = "${session.user.loginUser}"
                 redirect(controller: "K9Admin", action: "index")
             } else if (user.typeUsers == 2) {
                 redirect(controller: "K9Instructor", action: "index")
@@ -34,7 +36,7 @@ class K9UserController {
 
     def logout = {
         //flash.message = "Adios ${session.user.loginUser}"
-        session.user = null
+        session.invalidate()
         redirect(controller: "K9User", action: "login")
     }
 }

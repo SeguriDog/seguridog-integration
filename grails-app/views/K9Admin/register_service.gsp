@@ -1,3 +1,4 @@
+<%@ page import="co.com.seguridog.K9User" %>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -7,7 +8,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>SeguriDog</title>
-		<meta name="description" content="">
+		<meta name="login" content="">
 		<meta name="viewport" content="width=device-width">
 		<link rel="shortcut icon" href="${assetPath(src: 'dog.png')}" type="image/x-icon">
 		<link rel="stylesheet" href="${request.contextPath}/purpose/css/bootstrap.min.css">
@@ -34,8 +35,7 @@
 				<div class="menuextras">
 					<div class="extras">
 						<ul>
-                        <li><g:link controller="k9User" action="logout">Logout</g:link> </li>
-
+							<li><g:link controller="k9User" action="logout">Logout</g:link></li>
 						</ul>
 					</div>
 				</div>
@@ -57,12 +57,59 @@
 		</div>
 
 		<!-- main content -->
-		<div id="page-content">
-			<h2>Bienvenido Administrador, ${flash.message}</h2>
-            <li><g:link controller="k9Admin" action="user_register">Registrar Usuario</g:link> </li>
-            <li><g:link controller="k9Admin" action="users_list">Listar Usuarios</g:link> </li>
-		    <li><g:link controller="k9Admin" action="register_service">Registrar un servicio</g:link> </li>
+       <div class="section">
+	    	<div class="container">
+				<div class="row">
+					<div class="col-sm-5">
+						<div class="basic-login">
+							<g:form controller = "K9Admin" action="save_data_service">
+								<div class="form-group">
+									<label for="handler_id"><i class="icon-user"></i> <b>Manejadores de Perros</b></label>
+                                    <g:select name="handler_id"
+                                              id="handler_id"
+                                              from="${handler_list}"
+                                              value=""
+                                              optionKey="id"
+                                              optionValue="fullName"
+                                              noSelection="['':'Seleccione uno...']"/>
+								</div>
+                                <div class="form-group">
+                                    <label for="canine_id"><i class="icon-user"></i> <b>Perro</b></label>
+                                    <g:select name="canine_id"
+                                              id="canine_id"
+                                              from="${canine_list}"
+                                              value=""
+                                              optionKey="id"
+                                              optionValue="nameFullCanine"
+                                              noSelection="['':'Seleccione uno...']"/>
+                                </div>
+
+                                <div class="form-group">
+		        				 	<label for="dateWorkArea"><i class="icon-user"></i> <b>Fecha de inicio de labor:</b></label>
+									<input class="form-control" id="dateWorkArea" name="dateWorkArea" type="text" placeholder="">
+								</div>
+								<div class="form-group">
+                                    <label for="addressWorkArea"><i class="icon-user"></i> <b>Dirección:</b></label>
+                           			<input class="form-control" id="addressWorkArea" name="addressWorkArea" type="text" placeholder="">
+                           		</div>
+                           		<div class="form-group">
+                                    <label for="hoursPerDay"><i class="icon-user"></i> <b>Horas por día</b></label>
+                                    <input class="form-control" id="hoursPerDay" name="hoursPerDay" type="text" placeholder="">
+                                </div>
+
+								<div class="form-group">
+									<button type="submit" class="btn pull-right">Guardar</button>
+									<div class="clearfix"></div>
+								</div>
+
+							</g:form>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+		${flash.message}
+
 		<!-- end main content -->
 
 		<!-- Footer -->

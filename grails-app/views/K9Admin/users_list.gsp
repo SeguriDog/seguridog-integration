@@ -45,10 +45,10 @@
 							<a href="index.html">Inicio</a>
 						</li>
 						<li>
-							<a href="features.html">Información</a>
+							<a href="features.html">Informaciï¿½n</a>
 						</li>
 						<li>
-							<a href="credits.html">Créditos</a>
+							<a href="credits.html">Crï¿½ditos</a>
 						</li>
 					</ul>
 				</nav>
@@ -61,33 +61,35 @@
           <table class="table table-bordered table-hover">
             <thead>
               <tr>
-                <th>Cedula</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Usuario</th>
-                <th>Contraseña</th>
-                <th>Fecha Nacimiento</th>
-                <th>Telefono</th>
-                <th>Correo electronico</th>
-                <th>Tipo de contrato</th>
-                <th>Fecha de contrato</th>
-                <th>Tipo de usuario</th>
-              </tr>
+                  <th>Cedula</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Usuario</th>
+                  <th>ContraseÃ±a</th>
+                  <th>Fecha Nacimiento</th>
+                  <th>Telefono</th>
+                  <th>Correo electronico</th>
+                  <th>Tipo de contrato</th>
+                  <th>Fecha de contrato</th>
+                  <th>Tipo de usuario</th>
+                  <th>Nombre completo</th>
+             </tr>
             </thead>
             <tbody>
             <g:each in="${users}" var="user">
               <tr>
-                <td>${user.cedula}</td>
-                <td>${user.firstName}</td>
-                <td>${user.lastName}</td>
-                <td>${user.loginUser}</td>
-                <td>${user.loginPass}</td>
-                <td>${user.birthDate}</td>
-                <td>${user.cellphone}</td>
-                <td>${user.eMail}</td>
-                <td>${user.typeContract}</td>
-                <td>${user.dateContract}</td>
-                <td>${user.typeUsers}</td>
+                  <td>${user.cedula}</td>
+                  <td>${user.firstName}</td>
+                  <td>${user.lastName}</td>
+                  <td>${user.loginUser}</td>
+                  <td>${user.loginPass}</td>
+                  <td>${user.birthDate}</td>
+                  <td>${user.cellphone}</td>
+                  <td>${user.eMail}</td>
+                  <td>${user.typeContract}</td>
+                  <td>${user.dateContract}</td>
+                  <td>${user.typeUsers}</td>
+                  <td>${user.fullName}</td>
               </tr>
             </g:each>
             </tbody>
