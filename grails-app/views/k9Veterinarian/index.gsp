@@ -57,7 +57,8 @@
 
 		<!-- main content -->
 		<div id="page-content">
-			<li>Veterinario</li>
+		<h2>Bienvenido Veterinario, ${flash.message}"</h2>
+		<li><g:link controller="K9Veterinarian" action="register_clinic_history">Registrar Historia Clínica</g:link> </li>
 		</div>
 		<!-- end main content -->
 
