@@ -34,7 +34,7 @@
 				<div class="menuextras">
 					<div class="extras">
 						<ul>
-							<li><a href="loginUser.gsp">Login</a></li>
+							<li><g:link controller="k9User" action="logout">Logout</g:link></li>
 						</ul>
 					</div>
 				</div>

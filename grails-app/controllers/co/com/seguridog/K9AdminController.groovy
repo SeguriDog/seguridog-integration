@@ -8,15 +8,28 @@ class K9AdminController {
 
     def index() {}
 
-    def register(){}
+    def register_user(){}
 
     def user_register = {
-        redirect(controller: "K9Admin", action: "register")
+        redirect(controller: "K9Admin", action: "register_user")
     }
 
     def users_list = {
         def list = K9User.findAll()
         [users:list]
+    }
+
+    def register_dog(){}
+
+    def dog_register = {
+        redirect(controller: "K9Admin", action: "register_dog")
+    }
+
+    def save_data_dog = {
+        Sql sql = Sql.newInstance(dataSource)
+        sql.execute('insert into canine(version,color_canine,date_birthday,micro_chip,name_canine,sex_canine,state_canine,type_race) values (?, ?, ?, ?, ?, ?, ?, ?)',
+                [4,params.color_canine,params.date_birthday,params.micro_chip,params.name_canine,params.sex_canine,'Activo',params.type_race])
+        redirect(controller: "K9Admin", action: "index")
     }
 
     def save_data_user = {
