@@ -61,47 +61,47 @@
 				<div class="row">
 					<div class="col-sm-5">
 						<div class="basic-login">
-							<g:form controller = "K9Admin" action="save_data">
+							<g:form controller = "K9Admin" action="save_data_user">
 
                                 <div class="form-group">
 		        				 	<label for="cedula"><i class="icon-user"></i> <b>Cédula</b></label>
-									<input class="form-control" id="cedula" name="cedula" type="number" placeholder="">
+									<input class="form-control" id="cedula" name="cedula" type="text" placeholder="Ingrese cedula">
 								</div>
 								<div class="form-group">
                                     <label for="firstName"><i class="icon-user"></i> <b>Nombre</b></label>
-                           			<input class="form-control" id="firstName" name="firstName" type="text" placeholder="">
+                           			<input class="form-control" id="firstName" name="firstName" type="text" placeholder="Ingrese nombre">
                            		</div>
                            		<div class="form-group">
                                     <label for="lastName"><i class="icon-user"></i> <b>Apellido</b></label>
-                                    <input class="form-control" id="lastName" name="lastName" type="text" placeholder="">
+                                    <input class="form-control" id="lastName" name="lastName" type="text" placeholder="Ingrese apellido">
                                 </div>
                                 <div class="form-group">
                                     <label for="loginUser"><i class="icon-user"></i> <b>Usuario</b></label>
-                                    <input class="form-control" id="loginUser" name="loginUser" type="text" placeholder="">
+                                    <input class="form-control" id="loginUser" name="loginUser" type="text" placeholder="Ingrese usuario">
                                 </div>
                                 <div class="form-group">
-                                	<label for="loginPass"><i class="icon-lock"></i> <b>Contraseña</b></label>
-              						<input class="form-control" id="loginPass" name="loginPass" type="password" placeholder="">
+                                	<label for="loginPass"><i class="icon-lock"></i> <b>Contrasenia</b></label>
+              						<input class="form-control" id="loginPass" name="loginPass" type="password" placeholder="ingrese contrasenia">
                                 </div>
                                 <div class="form-group">
                                     <label for="birthDate"><i class="icon-user"></i> <b>Fecha de Nacimiento</b></label>
-                                    <input class="form-control" id="birthDate" name="birthDate" type="text" placeholder="">
+                                    <input class="form-control" id="birthDate" name="birthDate" type="text" placeholder="Ingrese fecha">
                                 </div>
                                 <div class="form-group">
                                     <label for="cellphone"><i class="icon-user"></i> <b>Teléfono</b></label>
-                                    <input class="form-control" id="cellphone" name="cellphone" type="tel" placeholder="">
+                                    <input class="form-control" id="cellphone" name="cellphone" type="tel" placeholder="Ingrese telefono">
                                 </div>
                                 <div class="form-group">
                                     <label for="eMail"><i class="icon-user"></i> <b>Correo Electrónico</b></label>
-                                    <input class="form-control" id="eMail" name="eMail" type="email" placeholder="">
+                                    <input class="form-control" id="eMail" name="eMail" type="email" placeholder="Ingrese correo">
                                 </div>
                                 <div class="form-group">
                                     <label for="typeContract"><i class="icon-user"></i> <b>Tipo de contrato</b></label>
-                                    <input class="form-control" id="typeContract" name="typeContract" type="text" placeholder="">
+                                    <input class="form-control" id="typeContract" name="typeContract" type="text" placeholder="Ingrese contrato">
                                 </div>
                                 <div class="form-group">
                                     <label for="dateContract"><i class="icon-user"></i> <b>Fecha de Contrato</b></label>
-                                    <input class="form-control" id="dateContract" name="dateContract" type="text" placeholder="">
+                                    <input class="form-control" id="dateContract" name="dateContract" type="text" placeholder="Ingrese fecha">
                                 </div>
                                 <div class="form-group">
                                     <label for="typeUsers"><i class="icon-user"></i> <b>Tipo de usuario</b></label>
