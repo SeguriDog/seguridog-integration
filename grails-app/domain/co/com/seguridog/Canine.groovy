@@ -17,6 +17,7 @@ class Canine {
     String positionStay
     String watchCanine
     String stateCanine
+    String photoCanine
 
     String getNameFullCanine (){
         microChip + " " + nameCanine
@@ -43,5 +44,6 @@ class Canine {
         positionStay (blank: true)
         watchCanine (blank: true)
         stateCanine (blank: false)
+        photoCanine (blank: false)
     }
 }

@@ -31,6 +31,7 @@ CREATE TABLE `canine` (
   `felt_down` varchar(255) DEFAULT NULL,
   `micro_chip` varchar(255) NOT NULL,
   `name_canine` varchar(15) NOT NULL,
+  `photo_canine` varchar(255) NOT NULL,
   `name_father` varchar(15) DEFAULT NULL,
   `name_mother` varchar(15) DEFAULT NULL,
   `position_stay` varchar(255) DEFAULT NULL,
@@ -52,7 +53,7 @@ CREATE TABLE `canine` (
 
 LOCK TABLES `canine` WRITE;
 /*!40000 ALTER TABLE `canine` DISABLE KEYS */;
-INSERT INTO `canine` VALUES (1,2,NULL,'Cafe Claro','2015-01-01 00:00:00',NULL,'x21-0521-2015','alcon',NULL,NULL,NULL,'macho',NULL,NULL,'Activo','Pastor Alemán',NULL,NULL),(2,3,NULL,'Negro','2015-01-01 00:00:00',NULL,'x21-0351-2025','Danger',NULL,NULL,NULL,'hembra',NULL,NULL,'Activo','Pastor Coli',NULL,NULL),(3,3,NULL,'Blanco','2015-02-01 00:00:00',NULL,'m30-02010-2001','Burbuja',NULL,NULL,NULL,'hembra',NULL,NULL,'Inactivo','Fresh Pudul',NULL,NULL);
+INSERT INTO `canine` VALUES (1,2,NULL,'Cafe Claro','2015-01-01 00:00:00',NULL,'x21-0521-2015','alcon','img_alcon.png',NULL,NULL,NULL,'macho',NULL,NULL,'Activo','Pastor Aleman',NULL,NULL),(2,3,NULL,'Negro','2015-01-01 00:00:00',NULL,'x21-0351-2025','Danger','img_danger.png',NULL,NULL,NULL,'hembra',NULL,NULL,'Activo','Pastor Coli',NULL,NULL),(3,3,NULL,'Blanco','2015-02-01 00:00:00',NULL,'m30-02010-2001','Burbuja','img_burbuja.png',NULL,NULL,NULL,'hembra',NULL,NULL,'Inactivo','Fresh Pudul',NULL,NULL);
 /*!40000 ALTER TABLE `canine` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,6 +183,7 @@ CREATE TABLE `k9user` (
   `date_contract` datetime NOT NULL,
   `e_mail` varchar(255) NOT NULL,
   `enable_user` bit(1) NOT NULL,
+  `photo_user` varchar(255) NOT NULL,
   `first_name` varchar(40) NOT NULL,
   `last_name` varchar(40) NOT NULL,
   `login_pass` varchar(255) NOT NULL,
@@ -209,7 +211,7 @@ CREATE TABLE `k9user` (
 
 LOCK TABLES `k9user` WRITE;
 /*!40000 ALTER TABLE `k9user` DISABLE KEYS */;
-INSERT INTO `k9user` VALUES (1,1,'2015-01-01 00:00:00',80900,'3163163163','2015-01-01 00:00:00','jemmejiaca@unal.edu.co','','Mauricio','Mejia','admin','jemmejiaca','indefinido',1,'co.com.seguridog.K9Admin',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,2,'2015-01-01 00:00:00',2,'3163163163','2015-01-01 00:00:00','eabohorquezg@unal.edu.co','','Edwin','Bohorquez','instructor','eabohorquezg','indefinido',2,'co.com.seguridog.K9Instructor',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,3,'2015-01-01 00:00:00',3,'3163163163','2015-01-01 00:00:00','roherrerap@unal.edu.co','','Richard','Herrera','veterinario','roherrerap','indefinido',3,'co.com.seguridog.K9Veterinarian',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,4,'2015-01-01 00:00:00',4,'31631633','2015-01-01 00:00:00','afacevedom@unal.edu.co','','Felipe','Acevedo','manejador1','afacevedom','indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,5,'2015-01-01 00:00:00',5,'31631635','2015-01-01 00:00:00','jfcanob@unal.edu.co','','Jefersson','Cano','manejador2','jfcanob','indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `k9user` VALUES (1,1,'2015-01-01 00:00:00',80900,'3163163163','2015-01-01 00:00:00','jemmejiaca@unal.edu.co','','img_mauricio.png','Mauricio','Mejia','admin','jemmejiaca','indefinido',1,'co.com.seguridog.K9Admin',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,2,'2015-01-01 00:00:00',2,'3163163163','2015-01-01 00:00:00','eabohorquezg@unal.edu.co','','img_edwin.png','Edwin','Bohorquez','instructor','eabohorquezg','indefinido',2,'co.com.seguridog.K9Instructor',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,3,'2015-01-01 00:00:00',3,'3163163163','2015-01-01 00:00:00','roherrerap@unal.edu.co','','img_richard.png','Richard','Herrera','veterinario','roherrerap','indefinido',3,'co.com.seguridog.K9Veterinarian',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,4,'2015-01-01 00:00:00',4,'31631633','2015-01-01 00:00:00','afacevedom@unal.edu.co','','img_felipe.png','Felipe','Acevedo','manejador1','afacevedom','indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,5,'2015-01-01 00:00:00',5,'31631635','2015-01-01 00:00:00','jfcanob@unal.edu.co','','img_jefersson.png','Jefersson','Cano','manejador2','jfcanob','indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `k9user` ENABLE KEYS */;
 UNLOCK TABLES;
 

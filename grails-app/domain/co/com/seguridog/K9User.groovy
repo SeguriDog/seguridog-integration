@@ -14,6 +14,7 @@ class K9User {
     Date dateContract
     Integer typeUsers
     Boolean enableUser
+    String photoUser
 
     int getAge() {
         birthDate.compareTo(new Date())
@@ -46,5 +47,6 @@ class K9User {
         dateContract blank: false
         typeUsers range: 1..4
         enableUser blank: false
+        photoUser blank: false
     }
 }

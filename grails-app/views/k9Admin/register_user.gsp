@@ -21,6 +21,12 @@
 		<link rel="stylesheet" href="${request.contextPath}/purpose/css/main.css">
 
 		<script src="${request.contextPath}/purpose/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${request.contextPath}/purpose/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="${request.contextPath}/purpose/js/fileinput.min.js" type="text/javascript"></script>
+
 	</head>
 
 	<body>
@@ -45,10 +51,10 @@
 							<a href="index.html">Inicio</a>
 						</li>
 						<li>
-							<a href="features.html">Informaci�n</a>
+							<a href="features.html">Informacion</a>
 						</li>
 						<li>
-							<a href="credits.html">Cr�ditos</a>
+							<a href="credits.html">Creditos</a>
 						</li>
 					</ul>
 				</nav>
@@ -64,6 +70,10 @@
 						<div class="basic-login">
 							<g:form controller = "K9Admin" action="save_data_user">
 
+								<div class="form-group">
+                                    <label for="photoUser"><i class="icon-user"></i> <b>Foto de usuario</b></label>
+                                    <input class="form-control" name="photoUser" id="photoUser" type="file" accept="image/*">
+                                </div>
                                 <div class="form-group">
 		        				 	<label for="cedula"><i class="icon-user"></i> <b>Cédula</b></label>
 									<input class="form-control" id="cedula" name="cedula" type="text" placeholder="Ingrese cedula">
@@ -139,15 +149,21 @@
 			</div>
 		</div>
 
-		<!-- Javascripts -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="${request.contextPath}/purpose/js/jquery-1.9.1.min.js"><\/script>')</script>
-		<script src="${request.contextPath}/purpose/js/bootstrap.min.js"></script>
-		<script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
-		<script src="${request.contextPath}/purpose/js/jquery.fitvids.js"></script>
-		<script src="${request.contextPath}/purpose/js/jquery.sequence-min.js"></script>
-		<script src="${request.contextPath}/purpose/js/jquery.bxslider.js"></script>
-		<script src="${request.contextPath}/purpose/js/main-menu.js"></script>
-		<script src="${request.contextPath}/purpose/js/template.js"></script>
 	</body>
+
+	<script>
+           $("#photoUser").fileinput({
+              previewFileType: "image",
+              showCaption: false,
+              showUpload: false,
+              showRemove: true,
+              browseClass: "btn btn-success",
+              browseLabel: "Pick Image",
+              browseIcon: "<i class=\"glyphicon glyphicon-picture\"></i> ",
+              removeClass: "btn btn-danger",
+              removeLabel: "Delete",
+              removeIcon: "<i class=\"glyphicon glyphicon-trash\"></i> "
+           });
+    </script>
+
 </html>

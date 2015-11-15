@@ -21,6 +21,12 @@
 		<link rel="stylesheet" href="${request.contextPath}/purpose/css/main.css">
 
 		<script src="${request.contextPath}/purpose/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${request.contextPath}/purpose/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="${request.contextPath}/purpose/js/fileinput.min.js" type="text/javascript"></script>
+
 	</head>
 
 	<body>
@@ -64,6 +70,10 @@
 						<div class="basic-login">
 							<g:form controller = "K9Admin" action="save_data_dog">
 
+								<div class="form-group">
+                                    <label for="photoCanine"><i class="icon-user"></i> <b>Foto de perro</b></label>
+                                    <input class="form-control" name="photoCanine" id="photoCanine" type="file" accept="image/*">
+                                </div>
 								<div class="form-group">
                                     <label for="name_canine"><i class="icon-user"></i> <b>Nombre</b></label>
                            			<input class="form-control" id="name_canine" name="name_canine" type="text" placeholder="Ingrese nombre">
@@ -126,15 +136,21 @@
 			</div>
 		</div>
 
-		<!-- Javascripts -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="${request.contextPath}/purpose/js/jquery-1.9.1.min.js"><\/script>')</script>
-		<script src="${request.contextPath}/purpose/js/bootstrap.min.js"></script>
-		<script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
-		<script src="${request.contextPath}/purpose/js/jquery.fitvids.js"></script>
-		<script src="${request.contextPath}/purpose/js/jquery.sequence-min.js"></script>
-		<script src="${request.contextPath}/purpose/js/jquery.bxslider.js"></script>
-		<script src="${request.contextPath}/purpose/js/main-menu.js"></script>
-		<script src="${request.contextPath}/purpose/js/template.js"></script>
 	</body>
+
+		<script>
+               $("#photoCanine").fileinput({
+                  previewFileType: "image",
+                  showCaption: false,
+                  showUpload: false,
+                  showRemove: true,
+                  browseClass: "btn btn-success",
+                  browseLabel: "Pick Image",
+                  browseIcon: "<i class=\"glyphicon glyphicon-picture\"></i> ",
+                  removeClass: "btn btn-danger",
+                  removeLabel: "Delete",
+                  removeIcon: "<i class=\"glyphicon glyphicon-trash\"></i> "
+               });
+        </script>
+
 </html>

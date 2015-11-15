@@ -3,14 +3,78 @@
   <component name="ChangeListManager">
     <list default="true" id="b92634e5-1c40-442a-a065-1c3899fb4517" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\target\work\tomcat\work\Tomcat\localhost\seguridog\SESSIONS.ser" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\PC\seguridog-repo\grails-app\views\k9Admin\register.gsp" afterPath="$PROJECT_DIR$/grails-app/views/k9Admin/register_user.gsp" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\blog-large.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\blog1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\blog2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\blog3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\bx_loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\coming-soon-social.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\controls.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\documentation.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\flags.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\icomoon-social.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\in-press.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\launch-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\less-logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\news1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\news2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\news3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\portfolio1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\portfolio2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\portfolio3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\portfolio4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\portfolio5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\portfolio6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\portfolio7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\portfolio8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\product1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\product2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\product3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\product4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\product5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\product6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\product7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\product8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\services1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\services2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\services3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\social-login.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\stay-connected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\team1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\team2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\team3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\team4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\team5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\team6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\team7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\user1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\user2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\user3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\user4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\user5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\web-app\purpose\img\user6.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/Canine$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/Canine$__clinit__closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/Canine.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/Canine.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure2.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure3.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure4.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure5.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9User$__clinit__closure1$_closure2.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9User$__clinit__closure1$_closure2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9User$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9User$__clinit__closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9User.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/co/com/seguridog/Canine.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/co/com/seguridog/Canine.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/co/com/seguridog/K9User.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/co/com/seguridog/K9User.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/k9Admin/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/k9Admin/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/k9Admin/register_dog.gsp" afterPath="$PROJECT_DIR$/grails-app/views/k9Admin/register_dog.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/k9Admin/register_user.gsp" afterPath="$PROJECT_DIR$/grails-app/views/k9Admin/register_user.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seguridog.ipr" afterPath="$PROJECT_DIR$/seguridog.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seguridog.iws" afterPath="$PROJECT_DIR$/seguridog.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqlseguridog.sql" afterPath="$PROJECT_DIR$/sqlseguridog.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/k9Admin/users_list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/k9Admin/users_list.gsp" />
     </list>
@@ -33,18 +97,7 @@
     <favorites_list name="seguridog" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="K9AdminController.groovy" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.02905983">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,7 +111,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/domain/co/com/seguridog/K9User.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/K9User/login.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/K9Admin/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/K9Admin/register.gsp" />
@@ -68,14 +120,28 @@
         <option value="$PROJECT_DIR$/grails-app/views/K9Veterinarian/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9UserController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/k9Admin/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/k9Admin/register.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy" />
+        <option value="$PROJECT_DIR$/sqlseguridog.sql" />
+        <option value="$PROJECT_DIR$/grails-app/domain/co/com/seguridog/K9User.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/co/com/seguridog/Canine.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/k9Admin/register_dog.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/k9Admin/register_user.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/k9Admin/users_list.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/k9Admin/dogs_list.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/k9Admin/index.gsp" />
       </list>
     </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="NamedScopeManager">
     <order />
@@ -129,7 +195,6 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,8 +267,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seguridog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seguridog-repo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -388,18 +472,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.025718609" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1860817" sideWeight="0.6623068" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20953101" sideWeight="0.6623068" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -430,27 +514,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9UserController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -458,7 +525,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#26#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -473,7 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -488,7 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -503,7 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -532,7 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -561,7 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -590,7 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -605,7 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -620,7 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -635,7 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -702,42 +762,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/co/com/seguridog/K9User.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43589744">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9UserController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37777779">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.02905983">
           <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/k9Admin/users_list.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37777779">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/k9Admin/register_user.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5811966">
-          <caret line="36" column="96" selection-start-line="36" selection-start-column="96" selection-end-line="36" selection-end-column="96" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -745,14 +773,86 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41880342">
           <caret line="37" column="96" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="96" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/co/com/seguridog/CanineAbility.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05811966">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqlseguridog.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9HandlerController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05811966">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9InstructorController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05811966">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9UserController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9VeterinarianController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2905983">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/k9Admin/register_dog.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37777779">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.5521368">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/co/com/seguridog/K9User.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46495727">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/k9Admin/users_list.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31965813">
+          <caret line="68" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="122" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/co/com/seguridog/Canine.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52307695">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/k9Admin/dogs_list.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11623932">
+          <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -760,15 +860,25 @@
     <entry file="file://$PROJECT_DIR$/grails-app/views/k9Admin/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11623932">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02905983">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.26153848">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding>
+            <element signature="e#26#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/k9Admin/register_user.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18632479">
+          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
           <folding />
         </state>
       </provider>

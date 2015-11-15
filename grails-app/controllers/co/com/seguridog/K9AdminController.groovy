@@ -2,6 +2,8 @@ package co.com.seguridog
 
 import groovy.sql.Sql
 
+import javax.validation.constraints.Null
+
 class K9AdminController {
 
     def dataSource
@@ -19,6 +21,11 @@ class K9AdminController {
         [users:list]
     }
 
+    def dogs_list = {
+        def lista = Canine.findAll()
+        [dogs:lista]
+    }
+
     def register_dog(){}
 
     def dog_register = {
@@ -27,8 +34,8 @@ class K9AdminController {
 
     def save_data_dog = {
         Sql sql = Sql.newInstance(dataSource)
-        sql.execute('insert into canine(version,color_canine,date_birthday,micro_chip,name_canine,sex_canine,state_canine,type_race) values (?, ?, ?, ?, ?, ?, ?, ?)',
-                [4,params.color_canine,params.date_birthday,params.micro_chip,params.name_canine,params.sex_canine,'Activo',params.type_race])
+        sql.execute('insert into canine(version,photo_canine,color_canine,date_birthday,micro_chip,name_canine,sex_canine,state_canine,type_race) values (?, ?, ?, ?, ?, ?, ?, ?, ?)',
+                [4,params.photoCanine,params.color_canine,params.date_birthday,params.micro_chip,params.name_canine,params.sex_canine,'Activo',params.type_race])
         redirect(controller: "K9Admin", action: "index")
     }
 
@@ -42,8 +49,8 @@ class K9AdminController {
             nameClass = 'co.com.seguridog.K9Handler'
         }
         Sql sql = Sql.newInstance(dataSource)
-        sql.execute('insert into k9user(version,birth_date,cedula,cellphone,date_contract,e_mail,enable_user,first_name,last_name,login_pass,login_user,type_contract,type_users,class) values (?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?,?)',
-                [6,params.birthDate,params.cedula,params.cellphone,params.dateContract,params.eMail,true,params.firstName,params.lastName,params.loginPass,params.loginUser,params.typeContract,params.typeUsers,nameClass])
+        sql.execute('insert into k9user(version,photo_user,birth_date,cedula,cellphone,date_contract,e_mail,enable_user,first_name,last_name,login_pass,login_user,type_contract,type_users,class) values (?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?,?,?)',
+                [6,params.photoUser,params.birthDate,params.cedula,params.cellphone,params.dateContract,params.eMail,true,params.firstName,params.lastName,params.loginPass,params.loginUser,params.typeContract,params.typeUsers,nameClass])
         redirect(controller: "K9Admin", action: "index")
     }
 

@@ -45,10 +45,10 @@
 							<a href="index.html">Inicio</a>
 						</li>
 						<li>
-							<a href="features.html">Informaci�n</a>
+							<a href="features.html">Informacion</a>
 						</li>
 						<li>
-							<a href="credits.html">Cr�ditos</a>
+							<a href="credits.html">Creditos</a>
 						</li>
 					</ul>
 				</nav>
@@ -61,6 +61,7 @@
           <table class="table table-bordered table-hover">
             <thead>
               <tr>
+              	  <th>Foto</th>
                   <th>Cedula</th>
                   <th>Nombre</th>
                   <th>Apellido</th>
@@ -72,12 +73,12 @@
                   <th>Tipo de contrato</th>
                   <th>Fecha de contrato</th>
                   <th>Tipo de usuario</th>
-                  <th>Nombre completo</th>
              </tr>
             </thead>
             <tbody>
             <g:each in="${users}" var="user">
               <tr>
+              	  <td><img src="${request.contextPath}/purpose/img/users/${user.photoUser}"></td>
                   <td>${user.cedula}</td>
                   <td>${user.firstName}</td>
                   <td>${user.lastName}</td>
@@ -89,7 +90,6 @@
                   <td>${user.typeContract}</td>
                   <td>${user.dateContract}</td>
                   <td>${user.typeUsers}</td>
-                  <td>${user.fullName}</td>
               </tr>
             </g:each>
             </tbody>
