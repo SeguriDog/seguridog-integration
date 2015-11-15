@@ -1,14 +1,16 @@
 package co.com.seguridog
 
 class K9Handler extends K9User{
-    String approvedCourse
-    Date dateApproved
+    String basicInductionCourse
+    Date dateApprovedInduction
+    String typeTrainingHandler
 
     static hasMany = [workcanines : WorkCanine]
 
     static constraints = {
-        approvedCourse(blank: false)
-        dateApproved blank: false
+        basicInductionCourse (blank: false)
+        dateApprovedInduction (blank: false)
+        typeTrainingHandler (blank: false, inList: ["Búsqueda de Narcóticos","Búsqueda de Explosivos","Defensa Controlada","Búsqueda o Detección de Moneda","Búsqueda y Rescate de Personas"])
     }
 
 }

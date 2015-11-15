@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="seguridog dev" uuid="bc681883-14df-418e-b000-5e9e048f7b09">
+    <database-info product="MySQL" version="5.6.27" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.29 ( Revision: alexander.soklakov@oracle.com-20140120140810-s44574olh90i6i4l )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="dbseguridog"/>
+    <table name="canine" schema="" catalog="dbseguridog" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="attend_call" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="color_canine" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="date_birthday" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="felt_down" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="micro_chip" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name_canine" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name_father" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name_mother" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="position_stay" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="sex_canine" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="sign_canine" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="sit_down" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="state_canine" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="type_race" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="walk_side" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="watch_canine" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_1k34aoyc99eg7ops0ccsnf25d" table="canine_ability" schema="" catalog="dbseguridog" columns="canines_id"/>
+      <exported-key name="FK_jjf6b8usbknqry1waxt1djvum" table="clinic_history" schema="" catalog="dbseguridog" columns="canines_id"/>
+      <exported-key name="FK_9gmpsmjvuov2anntvf4pbkljv" table="exercise_ability" schema="" catalog="dbseguridog" columns="canines_id"/>
+      <exported-key name="FK_294gwcg2y482ifra6ird2t2go" table="work_canine" schema="" catalog="dbseguridog" columns="canines_id"/>
+      <index name="UK_ik0iuxaq1mmofoyfnyutlvqgk" unique="true" columns="micro_chip"/>
+    </table>
+    <table name="canine_ability" schema="" catalog="dbseguridog" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="act_certification" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="canines_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="date_certification" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="date_training_ability" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="name_entity" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_1k34aoyc99eg7ops0ccsnf25d" columns="canines_id" ref-table="canine" ref-schema="" ref-catalog="dbseguridog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_1k34aoyc99eg7ops0ccsnf25d" unique="false" columns="canines_id"/>
+    </table>
+    <table name="clinic_history" schema="" catalog="dbseguridog" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="canines_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="date_treatment" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="evaluation" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="medics_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="name_treatment" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="type_treatment" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_jjf6b8usbknqry1waxt1djvum" columns="canines_id" ref-table="canine" ref-schema="" ref-catalog="dbseguridog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_q1xgiriv89wdljc3esx6ywg8j" columns="medics_id" ref-table="k9user" ref-schema="" ref-catalog="dbseguridog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_jjf6b8usbknqry1waxt1djvum" unique="false" columns="canines_id"/>
+      <index name="FK_q1xgiriv89wdljc3esx6ywg8j" unique="false" columns="medics_id"/>
+    </table>
+    <table name="exercise_ability" schema="" catalog="dbseguridog" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="actitude_general" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="canines_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="comunicative_canine" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="date_ability" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="dominated" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="exercices_ability" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="instructors_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="inter_agressive" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="issues_training" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="level_contantactitude" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="level_exiting" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="name_ability" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nature_explore" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="nature_play" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="obedience" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="relationship_handler" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="stablity_emotional" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="type_ability" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="type_training" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="vel_learning" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_9gmpsmjvuov2anntvf4pbkljv" columns="canines_id" ref-table="canine" ref-schema="" ref-catalog="dbseguridog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_n5q0q0j8r5o644gdweainsumy" columns="instructors_id" ref-table="k9user" ref-schema="" ref-catalog="dbseguridog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_9gmpsmjvuov2anntvf4pbkljv" unique="false" columns="canines_id"/>
+      <index name="FK_n5q0q0j8r5o644gdweainsumy" unique="false" columns="instructors_id"/>
+    </table>
+    <table name="k9user" schema="" catalog="dbseguridog" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="birth_date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="cedula" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="cellphone" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="date_contract" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="e_mail" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="enable_user" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="first_name" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_name" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="login_pass" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="login_user" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="type_contract" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="type_users" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="class" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="date_initial_access" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="approved_course" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="date_approved" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="date_credentials" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="specialities" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="date_expedition" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="professional_card" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="basic_induction_course" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="date_approved_induction" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="type_training_handler" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK_q1xgiriv89wdljc3esx6ywg8j" table="clinic_history" schema="" catalog="dbseguridog" columns="medics_id"/>
+      <exported-key name="FK_n5q0q0j8r5o644gdweainsumy" table="exercise_ability" schema="" catalog="dbseguridog" columns="instructors_id"/>
+      <exported-key name="FK_ngc4xwr7gaonf0nne0nlp65lp" table="work_canine" schema="" catalog="dbseguridog" columns="handlers_id"/>
+      <index name="UK_7nmel6skfp3ex93dq0uvxcuxt" unique="true" columns="login_user"/>
+      <index name="UK_c0ocoenxgoxpo5yk1c41etnh9" unique="true" columns="login_pass"/>
+      <index name="UK_m7ix54rl16ry01qpagry1gsqc" unique="true" columns="cedula"/>
+    </table>
+    <table name="training_instructor" schema="" catalog="dbseguridog" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="date_course" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="name_course" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="student_course" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="teacher_course" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="work_canine" schema="" catalog="dbseguridog" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="version" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="address_rest_canine" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="address_ubication_work_area" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="canines_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="date_finish_return_unitk9" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="date_ubication_work_area" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="handlers_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="hours_per_day" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="type_service" sqlType="VARCHAR" precision="5" scale="0" nullable="false" jdbcType="12"/>
+      <column name="user_of_service" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK_294gwcg2y482ifra6ird2t2go" columns="canines_id" ref-table="canine" ref-schema="" ref-catalog="dbseguridog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_ngc4xwr7gaonf0nne0nlp65lp" columns="handlers_id" ref-table="k9user" ref-schema="" ref-catalog="dbseguridog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK_294gwcg2y482ifra6ird2t2go" unique="false" columns="canines_id"/>
+      <index name="FK_ngc4xwr7gaonf0nne0nlp65lp" unique="false" columns="handlers_id"/>
+    </table>
+  </data-source>
+</component>

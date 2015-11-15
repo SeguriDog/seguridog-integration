@@ -63,7 +63,7 @@
 					<div class="col-sm-5">
 						<div class="basic-login">
 							<g:form controller = "K9Admin" action="save_data_service">
-								<div class="form-group">
+								<div class="form-group" >
 									<label for="handler_id"><i class="icon-user"></i> <b>Manejadores de Perros</b></label>
                                     <g:select name="handler_id"
                                               id="handler_id"
@@ -85,17 +85,38 @@
                                 </div>
 
                                 <div class="form-group">
-		        				 	<label for="dateWorkArea"><i class="icon-user"></i> <b>Fecha de inicio de labor:</b></label>
-									<input class="form-control" id="dateWorkArea" name="dateWorkArea" type="text" placeholder="">
-								</div>
-								<div class="form-group">
-                                    <label for="addressWorkArea"><i class="icon-user"></i> <b>Dirección:</b></label>
-                           			<input class="form-control" id="addressWorkArea" name="addressWorkArea" type="text" placeholder="">
-                           		</div>
-                           		<div class="form-group">
-                                    <label for="hoursPerDay"><i class="icon-user"></i> <b>Horas por día</b></label>
-                                    <input class="form-control" id="hoursPerDay" name="hoursPerDay" type="text" placeholder="">
+                                    <label for="userService"><i class="icon-user"></i> <b>Nombre del contratante y/o usuario:</b></label>
+                                    <input class="form-control" id="userService" name="userService" type="text" placeholder="">
                                 </div>
+                                <div class="form-group">
+                                    <label for="addressWorkArea"><i class="icon-user"></i> <b>Dirección donde prestan el servicio:</b></label>
+                                    <input class="form-control" id="addressWorkArea" name="addressWorkArea" type="text" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dateWorkArea"><i class="icon-user"></i> <b>Fecha de inicio de labor:</b></label>
+                                    <input class="form-control" id="dateWorkArea" name="dateWorkArea" type="date" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="hoursPerDay"><i class="icon-user"></i> <b>Horas por día:</b></label>
+                                    <input class="form-control" id="hoursPerDay" name="hoursPerDay" type="number" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="typeService"><i class="icon-user"></i> <b>Modalidad del servicio</b></label>
+                                    <select name="typeService" id="typeService" type="text">
+                                        <option value="Fija">Fija</option>
+                                        <option value="Movil">Móvil</option>
+                                    </select>
+                                </div>
+
+
+								<div class="form-group">
+									<label for="dateFinishWork"><i class="icon-user"></i> <b>Fecha de inicio de labor:</b></label>
+									<input class="form-control" id="dateFinishWork" name="dateFinishWork" type="date" placeholder="">
+								</div>
+							    <div class="form-group">
+									<label for="addressRestCanine"><i class="icon-user"></i> <b>Dirección de descanso del Perro:</b></label>
+									<input class="form-control" id="addressRestCanine" name="addressRestCanine" type="text" placeholder="">
+								</div>
 
 								<div class="form-group">
 									<button type="submit" class="btn pull-right">Guardar</button>
@@ -108,8 +129,6 @@
 				</div>
 			</div>
 		</div>
-		${flash.message}
-
 		<!-- end main content -->
 
 		<!-- Footer -->
