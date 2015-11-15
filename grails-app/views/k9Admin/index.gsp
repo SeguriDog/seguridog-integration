@@ -61,6 +61,8 @@
 			<h2>Bienvenido Administrador, ${flash.message}</h2>
             <li><g:link controller="k9Admin" action="user_register">Registrar Usuario</g:link> </li>
             <li><g:link controller="k9Admin" action="users_list">Listar Usuarios</g:link> </li>
+            <li><g:link controller="k9Admin" action="dog_register">Registrar Perro</g:link> </li>
+            <li><g:link controller="k9Admin" action="dogs_list">Listar Perros</g:link> </li>
 		    <li><g:link controller="k9Admin" action="register_service">Registrar un servicio</g:link> </li>
 		</div>
 		<!-- end main content -->

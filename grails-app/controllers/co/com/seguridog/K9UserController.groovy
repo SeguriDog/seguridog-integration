@@ -12,7 +12,7 @@ class K9UserController {
 
     def authenticate = {
         def user = K9User.findByLoginUserAndLoginPass(params.loginUser, params.loginPass)
-        if (user) {
+        if ( user && user.enableUser ) {
             session.user = user
             flash.message = "${session.user.fullName}"
             if (user.typeUsers == 1) {
@@ -27,7 +27,9 @@ class K9UserController {
                 redirect(action: "login")
             }
         } else {
-            flash.message = "Lo sentimos, usuario y/o password incorrecto(s). Intenta nuevamente."
+            if( !user.enableUser ){
+                   flash.message = "Lo sentimos, el usuario no esta habilitado."
+            }else{ flash.message = "Lo sentimos, usuario y/o password incorrecto(s). Intenta nuevamente." }
             redirect(action: "login")
         }
     }

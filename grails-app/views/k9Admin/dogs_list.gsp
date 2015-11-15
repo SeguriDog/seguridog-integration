@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>SeguriDog</title>
-		<meta name="description" content="">
+		<meta name="login" content="">
 		<meta name="viewport" content="width=device-width">
 		<link rel="shortcut icon" href="${assetPath(src: 'dog.png')}" type="image/x-icon">
 		<link rel="stylesheet" href="${request.contextPath}/purpose/css/bootstrap.min.css">
@@ -34,7 +34,7 @@
 				<div class="menuextras">
 					<div class="extras">
 						<ul>
-                        <li><g:link controller="k9User" action="login">Login</g:link> </li>
+							<li><g:link controller="k9User" action="logout">Logout</g:link></li>
 						</ul>
 					</div>
 				</div>
@@ -45,10 +45,10 @@
 							<a href="index.html">Inicio</a>
 						</li>
 						<li>
-							<a href="features.html">Información</a>
+							<a href="features.html">Informacion</a>
 						</li>
 						<li>
-							<a href="credits.html">Créditos</a>
+							<a href="credits.html">Creditos</a>
 						</li>
 					</ul>
 				</nav>
@@ -56,66 +56,46 @@
 		</div>
 
 		<!-- main content -->
-		<br><br>
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <img src="${request.contextPath}/purpose/img/labrador.png" alt="Perro Labrador">
-              <div class="carousel-caption">
-                <p>Labrador prestando servicio de guardia.</p>
-              </div>
-            </div>
-
-            <div class="item">
-              <img src="${request.contextPath}/purpose/img/pastoraleman.png" alt="Pastor Aleman">
-              <div class="carousel-caption">
-                <p>Pastor aleman prestando servicio de guardia.</p>
-              </div>
-            </div>
-
-            <div class="item">
-              <img src="${request.contextPath}/purpose/img/entrenador.png" alt="Entrenamiento">
-              <div class="carousel-caption">
-                <p>Tacticas de ataque y defensa.</p>
-              </div>
-            </div>
-
-            <div class="item">
-              <img src="${request.contextPath}/purpose/img/saltarin.png" alt="Agilidad y rapidez">
-              <div class="carousel-caption">
-                <p>Practica de agilidad, rapidez, y salto.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+		<div class="container">
+          <h2>Perros Registrados</h2>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+              	  <th>Foto</th>
+                  <th>Nombre</th>
+                  <th>Fecha Nacimiento</th>
+                  <th>Sexo</th>
+                  <th>Raza</th>
+                  <th>Color</th>
+                  <th>Microchip</th>
+                  <th>Estado</th>
+             </tr>
+            </thead>
+            <tbody>
+            <g:each in="${dogs}" var="dog">
+              <tr>
+              	  <td><img src="${request.contextPath}/purpose/img/canines/${dog.photoCanine}"></td>
+                  <td>${dog.nameCanine}</td>
+                  <td>${dog.dateBirthday}</td>
+                  <td>${dog.sexCanine}</td>
+                  <td>${dog.typeRace}</td>
+                  <td>${dog.colorCanine}</td>
+                  <td>${dog.microChip}</td>
+                  <td>${dog.stateCanine}</td>
+              </tr>
+            </g:each>
+            </tbody>
+          </table>
         </div>
+
 		<!-- end main content -->
 
 		<!-- Footer -->
-		<br>
 		<div class="footer">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="footer-copyright">&copy; 2015 SeguriDog. All rights reserved.</div>
+						<div class="footer-copyright">&copy; 2013 mPurpose. All rights reserved.</div>
 					</div>
 				</div>
 			</div>
