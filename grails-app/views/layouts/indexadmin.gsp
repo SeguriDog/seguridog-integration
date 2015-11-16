@@ -18,7 +18,7 @@
 		<!--[if lte IE 8]>
 			<link rel="stylesheet" href="${request.contextPath}/purpose/css/leaflet.ie.css" />
 		<![endif]-->
-		<link rel="stylesheet" href="${request.contextPath}/purpose/css/main.css">
+		<link rel="stylesheet" href="${request.contextPath}/purpose/css/main-green.css">
 
 		<script src="${request.contextPath}/purpose/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
@@ -35,17 +35,39 @@
 					<ul>
 						<li class="logo-wrapper"><img src="${request.contextPath}/purpose/img/SeguriDog-logo.png" alt="Multipurpose Twitter Bootstrap Template"></li>
 						<li class="active">
-							<g:link uri="/">Inicio</g:link>
+							<g:link controller="k9Admin" action="index">Inicio</g:link>
 						</li>
-						<li>
-							<a href="features.html">Información</a>
-						</li>
-						<li>
-							<a href="credits.html">Créditos</a>
-						</li>
-                        <li>
-                            <g:link controller="k9User" action="login" class="btn btn-grey">Login</g:link>
+                        <li class="has-submenu">
+						    <a href="#">Información</a>
+                            <div class="mainmenu-submenu">
+                                <div class="mainmenu-submenu-inner">
+                                    <div>
+                                        <h4>Crear</h4>
+                                        <ul>
+                                            <li><g:link controller="k9Admin" action="register_user">Nuevo Usuario</g:link></li>
+                                            <li><g:link controller="k9Admin" action="register_dog">Nuevo Canino</g:link></li>
+                                            <li><g:link controller="k9Admin" action="register_service">Nuevo Servicio Canino</g:link></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4>Modificar</h4>
+                                        <ul>
+                                            <li>Pendiente</li>
+                                       </ul>
+                                    </div>
+                                    <div>
+                                        <h4>Listados</h4>
+                                        <ul>
+                                            <li><g:link controller="k9Admin" action="users_list">Todos los Usuarios</g:link></li>
+                                            <li><g:link controller="k9Admin" action="dogs_list">Todos los Caninos</g:link></li>
+                                       </ul>
+                                    </div>
+                                </div><!-- /mainmenu-submenu-inner -->
+                            </div><!-- /mainmenu-submenu -->
                         </li>
+						<li>
+							<g:link controller="k9User" action="logout" class="btn btn-green">Logout</g:link>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -58,12 +80,11 @@
 		<!-- end main content -->
 
 		<!-- Footer -->
-		<br>
 		<div class="footer">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="footer-copyright">&copy; 2015 SeguriDog. All rights reserved.</div>
+						<div class="footer-copyright">&copy; 2015 Seguridog UN. Todos los derechos reservados.</div>
 					</div>
 				</div>
 			</div>

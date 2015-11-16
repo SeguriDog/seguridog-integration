@@ -23,7 +23,22 @@ class Canine {
         microChip + " " + nameCanine
     }
 
-    static transients = ['nameFullCanine']
+    Integer getAgeCanine (){
+        def start = dateBirthday
+        def end = new Date()
+        return end[Calendar.YEAR] - start[Calendar.YEAR]
+    }
+
+    static transients = [
+            'nameFullCanine',
+            'ageCanine'
+    ]
+
+    static namedQueries = {
+        todayAgeCanine {
+            between(ageCanine, 1, 8)
+        }
+    }
 
     static hasMany = [canineabilities : CanineAbility, clinichistoriesCan: ClinicHistory, exerciseabilities: ExerciseAbility, workcanines: WorkCanine]
 

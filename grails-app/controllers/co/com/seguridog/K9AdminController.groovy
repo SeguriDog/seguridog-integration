@@ -2,8 +2,6 @@ package co.com.seguridog
 
 import groovy.sql.Sql
 
-import javax.validation.constraints.Null
-
 class K9AdminController {
 
     def dataSource
@@ -57,6 +55,7 @@ class K9AdminController {
     def register_service (){
         def handler_list = K9Handler.findAllByEnableUser(true)
         def canine_list = Canine.findAllByStateCanine('Activo')
+        //def canine_last = Canine.todayAgeCanine.findAllByStateCanine('Activo')
         [handler_list : handler_list, canine_list : canine_list]
     }
 

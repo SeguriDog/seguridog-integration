@@ -4,8 +4,6 @@
     <data-source name="seguridog dev" uuid="bc681883-14df-418e-b000-5e9e048f7b09">
       <user-name>root</user-name>
       <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
-      <schema-pattern>dbseguridog.*</schema-pattern>
-      <default-schemas>dbseguridog.*</default-schemas>
     </data-source>
   </component>
 </project>

@@ -25,26 +25,26 @@ DROP TABLE IF EXISTS `canine`;
 CREATE TABLE `canine` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `version` bigint(20) NOT NULL,
-  `attend_call` varchar(255) DEFAULT NULL,
+  `attend_call` varchar(255) NOT NULL,
   `color_canine` varchar(255) NOT NULL,
   `date_birthday` datetime NOT NULL,
-  `felt_down` varchar(255) DEFAULT NULL,
+  `felt_down` varchar(255) NOT NULL,
   `micro_chip` varchar(255) NOT NULL,
   `name_canine` varchar(15) NOT NULL,
+  `name_father` varchar(15) NOT NULL,
+  `name_mother` varchar(15) NOT NULL,
   `photo_canine` varchar(255) NOT NULL,
-  `name_father` varchar(15) DEFAULT NULL,
-  `name_mother` varchar(15) DEFAULT NULL,
-  `position_stay` varchar(255) DEFAULT NULL,
+  `position_stay` varchar(255) NOT NULL,
   `sex_canine` varchar(255) NOT NULL,
-  `sign_canine` varchar(255) DEFAULT NULL,
-  `sit_down` varchar(255) DEFAULT NULL,
-  `state_canine` varchar(255) NOT NULL DEFAULT 'Activo',
+  `sign_canine` varchar(255) NOT NULL,
+  `sit_down` varchar(255) NOT NULL,
+  `state_canine` varchar(255) NOT NULL,
   `type_race` varchar(255) NOT NULL,
-  `walk_side` varchar(255) DEFAULT NULL,
-  `watch_canine` varchar(255) DEFAULT NULL,
+  `walk_side` varchar(255) NOT NULL,
+  `watch_canine` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_ik0iuxaq1mmofoyfnyutlvqgk` (`micro_chip`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -53,7 +53,7 @@ CREATE TABLE `canine` (
 
 LOCK TABLES `canine` WRITE;
 /*!40000 ALTER TABLE `canine` DISABLE KEYS */;
-INSERT INTO `canine` VALUES (1,2,NULL,'Cafe Claro','2015-01-01 00:00:00',NULL,'x21-0521-2015','alcon','img_alcon.png',NULL,NULL,NULL,'macho',NULL,NULL,'Activo','Pastor Aleman',NULL,NULL),(2,3,NULL,'Negro','2015-01-01 00:00:00',NULL,'x21-0351-2025','Danger','img_danger.png',NULL,NULL,NULL,'hembra',NULL,NULL,'Activo','Pastor Coli',NULL,NULL),(3,3,NULL,'Blanco','2015-02-01 00:00:00',NULL,'m30-02010-2001','Burbuja','img_burbuja.png',NULL,NULL,NULL,'hembra',NULL,NULL,'Inactivo','Fresh Pudul',NULL,NULL);
+INSERT INTO `canine` VALUES (1,0,'','Negro','2006-01-01 00:00:00','','M15-001-0001','Rocky','','','img_alcon.png','','Macho','','','Activo','Pastor Aleman','',''),(2,0,'','Blanco','2007-01-01 00:00:00','','M15-002-0002','Toby','','','img_toby.png','','Macho','','','Activo','Schnauzer','',''),(3,0,'','Cafe Oscuro','2008-01-01 00:00:00','','M15-003-0003','Erik','','','img_erik.png','','Macho','','','Activo','Rottweiller','',''),(4,0,'','Cafe Claro','2009-01-01 00:00:00','','M15-004-0004','Buddy','','','img_buddy.png','','Macho','','','Activo','Boxer','',''),(5,0,'','Gris Oscuro','2010-01-01 00:00:00','','M15-005-0005','Duke','','','img_duke.png','','Macho','','','Activo','Doberman','',''),(6,0,'','Gris Claro','2011-01-01 00:00:00','','M15-001-0006','Dalia','','','img_dalia.png','','Hembra','','','Activo','Retriever','',''),(7,0,'','Gris Claro','2012-01-01 00:00:00','','M15-001-0007','Rose','','','img_rose.png','','Hembra','','','Activo','Spaniels','',''),(8,0,'','Blanco','2013-01-01 00:00:00','','M15-001-0008','Linda','','','img_linda.png','','Hembra','','','Activo','Beagle','',''),(9,0,'','Blanco','2014-01-01 00:00:00','','M15-001-0009','Laika','','','img_laika.png','','Hembra','','','Activo','Zetter','',''),(10,0,'','Blanco','2015-01-01 00:00:00','','M15-001-0010','Bella','','','img_bella.png','','Hembra','','','Activo','Pastor Belga','','');
 /*!40000 ALTER TABLE `canine` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -183,26 +183,29 @@ CREATE TABLE `k9user` (
   `date_contract` datetime NOT NULL,
   `e_mail` varchar(255) NOT NULL,
   `enable_user` bit(1) NOT NULL,
-  `photo_user` varchar(255) NOT NULL,
   `first_name` varchar(40) NOT NULL,
   `last_name` varchar(40) NOT NULL,
   `login_pass` varchar(255) NOT NULL,
   `login_user` varchar(255) NOT NULL,
+  `photo_user` varchar(255) NOT NULL,
   `type_contract` varchar(255) NOT NULL,
   `type_users` int(11) NOT NULL,
   `class` varchar(255) NOT NULL,
-  `approved_course` varchar(255) DEFAULT NULL,
-  `date_approved` datetime DEFAULT NULL,
-  `date_initial_access` datetime DEFAULT NULL,
-  `date_credentials` datetime DEFAULT NULL,
-  `specialities` varchar(255) DEFAULT NULL,
   `date_expedition` datetime DEFAULT NULL,
   `professional_card` varchar(255) DEFAULT NULL,
+  `date_initial_access` datetime DEFAULT NULL,
+  `approved_course` varchar(255) DEFAULT NULL,
+  `date_approved` datetime DEFAULT NULL,
+  `date_credentials` datetime DEFAULT NULL,
+  `specialities` varchar(255) DEFAULT NULL,
+  `basic_induction_course` varchar(255) DEFAULT NULL,
+  `date_approved_induction` datetime DEFAULT NULL,
+  `type_training_handler` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_m7ix54rl16ry01qpagry1gsqc` (`cedula`),
   UNIQUE KEY `UK_c0ocoenxgoxpo5yk1c41etnh9` (`login_pass`),
   UNIQUE KEY `UK_7nmel6skfp3ex93dq0uvxcuxt` (`login_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -211,7 +214,7 @@ CREATE TABLE `k9user` (
 
 LOCK TABLES `k9user` WRITE;
 /*!40000 ALTER TABLE `k9user` DISABLE KEYS */;
-INSERT INTO `k9user` VALUES (1,1,'2015-01-01 00:00:00',80900,'3163163163','2015-01-01 00:00:00','jemmejiaca@unal.edu.co','','img_mauricio.png','Mauricio','Mejia','admin','jemmejiaca','indefinido',1,'co.com.seguridog.K9Admin',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,2,'2015-01-01 00:00:00',2,'3163163163','2015-01-01 00:00:00','eabohorquezg@unal.edu.co','','img_edwin.png','Edwin','Bohorquez','instructor','eabohorquezg','indefinido',2,'co.com.seguridog.K9Instructor',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(3,3,'2015-01-01 00:00:00',3,'3163163163','2015-01-01 00:00:00','roherrerap@unal.edu.co','','img_richard.png','Richard','Herrera','veterinario','roherrerap','indefinido',3,'co.com.seguridog.K9Veterinarian',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(4,4,'2015-01-01 00:00:00',4,'31631633','2015-01-01 00:00:00','afacevedom@unal.edu.co','','img_felipe.png','Felipe','Acevedo','manejador1','afacevedom','indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(5,5,'2015-01-01 00:00:00',5,'31631635','2015-01-01 00:00:00','jfcanob@unal.edu.co','','img_jefersson.png','Jefersson','Cano','manejador2','jfcanob','indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `k9user` VALUES (1,0,'1990-01-01 00:00:00',101300001,'3005640001','2015-01-01 00:00:00','mmejia@unal.edu.co','','Mauricio','Mejia','admin','jemmejiaca','img_mauricio.png','Indefinido',1,'co.com.seguridog.K9Admin',NULL,NULL,'2014-12-01 00:00:00',NULL,NULL,NULL,NULL,NULL,NULL,NULL),(2,0,'1990-01-02 00:00:00',101300002,'3005640002','2015-01-02 00:00:00','ebohorquez@unal.edu.co','','Edwin','Bohorquez','instructor1','eabohorquezg','img_edwin.png','Indefinido',2,'co.com.seguridog.K9Instructor',NULL,NULL,NULL,'Busqueda de Narcoticos','2014-12-02 00:00:00','2014-12-12 00:00:00','Olfato',NULL,NULL,NULL),(3,0,'1990-01-03 00:00:00',101300003,'3005640003','2015-01-03 00:00:00','jcuatin@unal.edu.co','','James','Cuatin','instructor2','jcuatin','user1.jpg','Fijo',2,'co.com.seguridog.K9Instructor',NULL,NULL,NULL,'Busqueda de Explosivos','2014-12-03 00:00:00','2014-12-13 00:00:00','Olfato',NULL,NULL,NULL),(4,0,'1990-01-04 00:00:00',101300004,'3005640004','2015-01-04 00:00:00','camaya@gmail.edu.co','','Cristhian','Amaya','instructor3','camaya','user2.jpg','Indefinido',2,'co.com.seguridog.K9Instructor',NULL,NULL,NULL,'Defensa Controlada','2014-12-04 00:00:00','2014-12-14 00:00:00','Defensa',NULL,NULL,NULL),(5,0,'1990-01-05 00:00:00',101300005,'3005640005','2015-01-05 00:00:00','fvaldemar@gmail.edu.co','','Fabian','Valdemar','instructor4','fvaldemar','user3.jpg','Indefinido',2,'co.com.seguridog.K9Instructor',NULL,NULL,NULL,'Busqueda o deteccion de moneda','2014-12-05 00:00:00','2014-12-15 00:00:00','Olfato',NULL,NULL,NULL),(6,0,'1990-01-06 00:00:00',101300006,'3005640006','2015-01-06 00:00:00','jcasas@gmail.edu.co','','Jessica','Casas','instructor5','jcasas','user4.jpg','Fijo',2,'co.com.seguridog.K9Instructor',NULL,NULL,NULL,'Busqueda y rescate de personas','2014-12-06 00:00:00','2014-12-16 00:00:00','Apoyo',NULL,NULL,NULL),(7,0,'1990-01-07 00:00:00',101300007,'3005640007','2015-01-07 00:00:00','rherrera@gmail.edu.co','','Richard','Herrera','veterinario1','roherrerap','img_richard.png','Indefinido',3,'co.com.seguridog.K9Veterinarian','2014-12-08 00:00:00','vet-0001',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(8,0,'1990-01-08 00:00:00',101300008,'3005640008','2015-01-08 00:00:00','lhoyos@gmail.edu.co','','Laura','Hoyos','veterinario2','lhoyos','user5.jpg','Indefinido',3,'co.com.seguridog.K9Veterinarian','2014-12-09 00:00:00','vet-0002',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),(9,0,'1990-01-09 00:00:00',101300009,'3005640009','2015-01-09 00:00:00','jcano@hotmail.com','','Jefersson','Cano','manejador1','jfcanob','img_jefersson.png','Indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Academia cadetes','2014-12-09 00:00:00','Busqueda de Narcoticos'),(10,0,'1990-01-10 00:00:00',101300010,'3005640010','2015-01-10 00:00:00','facevedo@unal.edu.co','','Felipe','Acevedo','manejador2','afacevedom','img_felipe.png','Indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Academia cadetes','2014-12-10 00:00:00','Busqueda de Explosivos'),(11,0,'1990-01-11 00:00:00',101300011,'3005640011','2015-01-11 00:00:00','obustos@gmail.com','','Oscar','Bustos','manejador3','obustos','user6.jpg','Fijo',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Academia cadetes','2014-12-11 00:00:00','Defensa Controlada'),(12,0,'1990-01-12 00:00:00',101300012,'3005640012','2015-01-12 00:00:00','amoreno@gmail.com','','Andres','Moreno','manejador4','amoreno','user7.jpg','Fijo',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Academia cadetes','2014-12-12 00:00:00','Busqueda o deteccion de moneda'),(13,0,'1990-01-13 00:00:00',101300013,'3005640013','2015-01-13 00:00:00','amoreno@gmail.com','','Juan','Garcia','manejador5','jgarcia','user7.jpg','Indefinido',4,'co.com.seguridog.K9Handler',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Academia cadetes','2014-12-13 00:00:00','Busqueda y rescate de personas');
 /*!40000 ALTER TABLE `k9user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -252,17 +255,21 @@ DROP TABLE IF EXISTS `work_canine`;
 CREATE TABLE `work_canine` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `version` bigint(20) NOT NULL,
-  `address_work_area` varchar(255) NOT NULL,
+  `address_rest_canine` varchar(255) NOT NULL,
+  `address_ubication_work_area` varchar(255) NOT NULL,
   `canines_id` bigint(20) NOT NULL,
-  `date_work_area` datetime NOT NULL,
+  `date_finish_return_unitk9` datetime NOT NULL,
+  `date_ubication_work_area` datetime NOT NULL,
   `handlers_id` bigint(20) NOT NULL,
   `hours_per_day` int(11) NOT NULL,
+  `type_service` varchar(5) NOT NULL,
+  `user_of_service` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_294gwcg2y482ifra6ird2t2go` (`canines_id`),
   KEY `FK_ngc4xwr7gaonf0nne0nlp65lp` (`handlers_id`),
   CONSTRAINT `FK_294gwcg2y482ifra6ird2t2go` FOREIGN KEY (`canines_id`) REFERENCES `canine` (`id`),
   CONSTRAINT `FK_ngc4xwr7gaonf0nne0nlp65lp` FOREIGN KEY (`handlers_id`) REFERENCES `k9user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -271,7 +278,6 @@ CREATE TABLE `work_canine` (
 
 LOCK TABLES `work_canine` WRITE;
 /*!40000 ALTER TABLE `work_canine` DISABLE KEYS */;
-INSERT INTO `work_canine` VALUES (1,7,'Carrera 70 No. 35 - 90',1,'2015-11-11 00:00:00',5,5);
 /*!40000 ALTER TABLE `work_canine` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -284,4 +290,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-11-12 23:11:08
+-- Dump completed on 2015-11-16 10:46:38

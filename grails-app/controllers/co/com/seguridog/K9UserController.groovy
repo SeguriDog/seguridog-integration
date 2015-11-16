@@ -28,7 +28,7 @@ class K9UserController {
             }
         } else {
             if( !user.enableUser ){
-                   flash.message = "Lo sentimos, el usuario no esta habilitado."
+                   flash.message = "Lo sentimos, el usuario no está habilitado."
             }else{ flash.message = "Lo sentimos, usuario y/o password incorrecto(s). Intenta nuevamente." }
             redirect(action: "login")
         }
