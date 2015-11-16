@@ -57,7 +57,8 @@
 
 		<!-- main content -->
 		<div id="page-content">
-			<li>Instructor o Guía de Caninos</li>
+			<h2>Bienvenido Instructor, ${flash.message}</h2>
+			<li><g:link controller="k9Instructor" action="register_ExerciseAbility">Registrar Habilidades del Canino.</g:link> </li>
 		</div>
 		<!-- end main content -->
 
