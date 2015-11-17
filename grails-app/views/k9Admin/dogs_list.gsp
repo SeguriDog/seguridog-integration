@@ -6,6 +6,7 @@
 
 	<body>
 		<!-- main content -->
+		<br><br><br><br><br><br><br>
 		<div class="container">
           <h2>Perros Registrados</h2>
           <table class="table table-bordered table-hover">
@@ -18,11 +19,13 @@
                   <th>Raza</th>
                   <th>Color</th>
                   <th>Microchip</th>
+                  <th>Estado</th>
              </tr>
             </thead>
             <tbody>
             <g:each in="${dogs}" var="dog">
               <tr>
+                  <td><img src="${request.contextPath}/purpose/img/canines/${dog.photoCanine}"></td>
                   <td>${dog.nameCanine}</td>
                   <td>${dog.dateBirthday}</td>
                   <td>${dog.sexCanine}</td>

@@ -18,9 +18,30 @@
 		<!--[if lte IE 8]>
 			<link rel="stylesheet" href="${request.contextPath}/purpose/css/leaflet.ie.css" />
 		<![endif]-->
-		<link rel="stylesheet" href="${request.contextPath}/purpose/css/main-orange.css">
-
+		<link rel="stylesheet" href="${request.contextPath}/purpose/css/main.css">
 		<script src="${request.contextPath}/purpose/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+		<link rel="stylesheet" href="${request.contextPath}/purpose/css/style.css" type="text/css" media="screen"/>
+        <script type="text/javascript">
+
+        (function() {
+        			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+        </script>
+
+        <style>
+        			body{
+        				background: gray url("${request.contextPath}/purpose/img/bg.png") repeat top left;
+        				font-family:Arial;
+        			}
+        			ul.sdt_menu{
+                         margin: 0 auto;
+        			}
+        </style>
+
 	</head>
 
 	<body>
@@ -29,65 +50,79 @@
         <![endif]-->
 
 		<!-- Navigation & Logo-->
-		<div class="mainmenu-wrapper">
-			<div class="container">
-				<nav id="mainmenu" class="mainmenu">
-					<ul>
-						<li class="logo-wrapper"><img src="${request.contextPath}/purpose/img/SeguriDog-logo.png" alt="Multipurpose Twitter Bootstrap Template"></li>
-						<li class="active">
-							<g:link controller="k9Handler" action="index">Inicio</g:link>
-						</li>
-                        <li class="has-submenu">
-                            <a href="#">Información</a>
-                            <div class="mainmenu-submenu">
-                                <div class="mainmenu-submenu-inner">
-                                    <div>
-                                        <h4>Actividades</h4>
-                                        <ul>
-                                            <li><g:link controller="k9Handler" action="current_activities">Programadas: Actuales...</g:link></li>
-                                            <li><g:link controller="k9Handler" action="activities_history">Historial</g:link></li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4>Búsquedas</h4>
-                                        <ul>
-                                            <li><g:link controller="k9Handler" action="search_user">Usuarios del Sistema</g:link></li>
-                                            <li><g:link controller="k9Handler" action="search_canines">Caninos del Sistema</g:link></li>
-                                       </ul>
-                                    </div>
-                                    <div>
-                                        <h4>Usuario</h4>
-                                        <ul>
-                                            <li>Pendiente</li>
-                                       </ul>
-                                    </div>
-                                </div><!-- /mainmenu-submenu-inner -->
-                            </div><!-- /mainmenu-submenu -->
-                        </li>
-                        <li>
-                            <g:link controller="k9User" action="logout" class="btn btn-orange">Logout</g:link>
-                        </li>
-					</ul>
-				</nav>
-			</div>
-		</div>
+		<img src="${request.contextPath}/purpose/img/SeguriDog-logo.png" alt=""/>
 
-	    <!-- main content -->
-		<div id="page-content">
-            <g:layoutBody/>
-		</div>
-		<!-- end main content -->
+        		<div class="content">
+        			<ul id="sdt_menu" class="sdt_menu">
+        				<li>
+        					<g:link controller="k9Handler" action="index">
+        						<img src="${request.contextPath}/purpose/img/images_menu/1.png" alt=""/>
+        						<span class="sdt_active"></span>
+        						<span class="sdt_wrap">
+        							<span class="sdt_link">Inicio</span>
+        							<span class="sdt_descr">SeguriDog</span>
+        						</span>
+        					</g:link>
+        				</li>
+        				<li>
+        					<g:link controller="k9Handler" action="index">
+        						<img src="${request.contextPath}/purpose/img/images_menu/2.png" alt=""/>
+        						<span class="sdt_active"></span>
+        						<span class="sdt_wrap">
+        							<span class="sdt_link">Actividades</span>
+        							<span class="sdt_descr">SeguriDog</span>
+        						</span>
+        					</g:link>
+        					<div class="sdt_box">
+                                   <g:link controller="k9Handler" action="current_activities">Programadas Actuales</g:link>
+                                   <g:link controller="k9Handler" action="activities_history">Historial</g:link>
+                            </div>
+        				</li>
+        				<li>
+        					<g:link controller="k9Handler" action="index">
+        						<img src="${request.contextPath}/purpose/img/images_menu/3.png" alt=""/>
+        						<span class="sdt_active"></span>
+        						<span class="sdt_wrap">
+        							<span class="sdt_link">Busquedas</span>
+        							<span class="sdt_descr">SeguriDog</span>
+        						</span>
+        					</g:link>
+        					<div class="sdt_box">
+                                 <g:link controller="k9Handler" action="search_user">Usuarios del Sistema</g:link>
+                                 <g:link controller="k9Handler" action="search_canines">Caninos del Sistema</g:link>
+                            </div>
+        				</li>
+                       	<li>
+                            <g:link controller="k9User" action="logout">
+                                 <img src="${request.contextPath}/purpose/img/images_menu/4.png" alt=""/>
+                                 <span class="sdt_active"></span>
+                                 <span class="sdt_wrap">
+                                     <span class="sdt_link">Logout</span>
+                                     <span class="sdt_descr">SeguriDo</span>
+		                         </span>
+                            </g:link>
+                        </li>
+        			</ul>
+        		</div>
+
+		<!--end Navigation & Logo-->
+
+		<!-- main content -->
+		<g:layoutBody/>
+        <!-- end main content -->
 
 		<!-- Footer -->
+		<br><br><br><br>
 		<div class="footer">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<div class="footer-copyright">&copy; 2015 Seguridog UN. Todos los derechos reservados.</div>
+						<div class="footer-copyright">&copy; 2015 SeguriDog. All rights reserved.</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
 
 		<!-- Javascripts -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -99,5 +134,74 @@
 		<script src="${request.contextPath}/purpose/js/jquery.bxslider.js"></script>
 		<script src="${request.contextPath}/purpose/js/main-menu.js"></script>
 		<script src="${request.contextPath}/purpose/js/template.js"></script>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="${request.contextPath}/purpose/js/jquery.easing.1.3.js"></script>
+                <script type="text/javascript">
+                    $(function() {
+        				/**
+        				* for each menu element, on mouseenter,
+        				* we enlarge the image, and show both sdt_active span and
+        				* sdt_wrap span. If the element has a sub menu (sdt_box),
+        				* then we slide it - if the element is the last one in the menu
+        				* we slide it to the left, otherwise to the right
+        				*/
+                        $('#sdt_menu > li').bind('mouseenter',function(){
+        					var $elem = $(this);
+        					$elem.find('img')
+        						 .stop(true)
+        						 .animate({
+        							'width':'170px',
+        							'height':'170px',
+        							'left':'0px'
+        						 },400,'easeOutBack')
+        						 .andSelf()
+        						 .find('.sdt_wrap')
+        					     .stop(true)
+        						 .animate({'top':'140px'},500,'easeOutBack')
+        						 .andSelf()
+        						 .find('.sdt_active')
+        					     .stop(true)
+        						 .animate({'height':'170px'},300,function(){
+        						var $sub_menu = $elem.find('.sdt_box');
+        						if($sub_menu.length){
+        							var left = '170px';
+        							if($elem.parent().children().length == $elem.index()+1)
+        								left = '-170px';
+        							$sub_menu.show().animate({'left':left},200);
+        						}
+        					});
+        				}).bind('mouseleave',function(){
+        					var $elem = $(this);
+        					var $sub_menu = $elem.find('.sdt_box');
+        					if($sub_menu.length)
+        						$sub_menu.hide().css('left','0px');
+
+        					$elem.find('.sdt_active')
+        						 .stop(true)
+        						 .animate({'height':'0px'},300)
+        						 .andSelf().find('img')
+        						 .stop(true)
+        						 .animate({
+        							'width':'0px',
+        							'height':'0px',
+        							'left':'85px'},400)
+        						 .andSelf()
+        						 .find('.sdt_wrap')
+        						 .stop(true)
+        						 .animate({'top':'25px'},500);
+        				});
+        				$('#relatedPosts').toggle(
+        					function(){
+        						$('#rp_list').animate({'bottom':'10px'},500);
+        					},
+        					function(){
+        						$('#rp_list').animate({'bottom':'-50px'},500);
+        					}
+        				);
+        				$('#rp_list a').tipsy({gravity: 's'});
+                    });
+                </script>
+
 	</body>
 </html>

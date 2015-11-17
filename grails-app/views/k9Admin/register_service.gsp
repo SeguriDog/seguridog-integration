@@ -6,8 +6,10 @@
 
 	<body>
 		<!-- main content -->
+		<br><br><br><br><br><br><br><br><br><br>
         <div class="section">
 	    	<div class="container">
+	    	<h2>Formulario : Registro de servicio canino</h2>
 				<div class="row">
 					<div class="col-sm-5">
 						<div class="basic-login">

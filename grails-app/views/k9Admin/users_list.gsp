@@ -6,6 +6,7 @@
 
 	<body>
  		<!-- main content -->
+ 		<br><br><br><br><br><br><br>
 		<div class="container">
           	<h2>Usuarios Registrados</h2>
           	<table class="table table-bordered table-hover">

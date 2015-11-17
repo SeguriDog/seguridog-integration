@@ -2,10 +2,15 @@
 	<head>
 		<meta name="layout" content="indexadmin"/>
         <title>Seguridog - Administrador</title>
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${request.contextPath}/purpose/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="${request.contextPath}/purpose/js/fileinput.min.js" type="text/javascript"></script>
 	</head>
 
 	<body>
 		<!-- main content -->
+		<br><br><br><br><br><br><br><br><br><br>
        <div class="section">
 	    	<div class="container">
 	    	<h2>Formulario : Registro de Perro</h2>

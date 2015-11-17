@@ -159,12 +159,23 @@
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/register_service.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/register_user.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/users_list.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/k9Handler/activities_history.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/k9Handler/current_activities.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Handler/index.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/k9Handler/result_search_canines.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/k9Handler/result_search_user.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/k9Handler/search_canines.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/k9Handler/search_user.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Instructor/index.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/k9Instructor/register_ExerciseAbility.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9User/login.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Veterinarian/index.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/k9Veterinarian/register_clinic_history.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/layouts/indexadmin.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/layouts/indexhandler.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/layouts/indexinstructor.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/layouts/indexveterinarian.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp" />
-    <file url="file://$PROJECT_DIR$/grails-app/views/layouts/purpose.gsp" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
