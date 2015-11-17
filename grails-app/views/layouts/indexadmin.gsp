@@ -18,7 +18,7 @@
 		<!--[if lte IE 8]>
 			<link rel="stylesheet" href="${request.contextPath}/purpose/css/leaflet.ie.css" />
 		<![endif]-->
-		<link rel="stylesheet" href="${request.contextPath}/purpose/css/main.css">
+		<link rel="stylesheet" href="${request.contextPath}/purpose/css/main-green.css">
 		<script src="${request.contextPath}/purpose/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
 		<link rel="stylesheet" href="${request.contextPath}/purpose/css/style.css" type="text/css" media="screen"/>
@@ -34,12 +34,18 @@
 
         <style>
         			body{
-        				background: gray url("${request.contextPath}/purpose/img/bg.png") repeat top left;
+        				background: #DFDFDF url("${request.contextPath}/purpose/img/page-background-green.png") repeat top left;
         				font-family:Arial;
         			}
         			ul.sdt_menu{
                          margin: 0 auto;
         			}
+                    ul.sdt_menu li span.sdt_active{
+                        background: #0A463A;
+                    }
+                    ul.sdt_menu li div.sdt_box{
+                        background: #16A085;
+                    }
         </style>
 
 	</head>
