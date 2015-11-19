@@ -62,7 +62,7 @@
         			<ul id="sdt_menu" class="sdt_menu">
         				<li>
         					<g:link controller="k9Handler" action="index">
-        						<img src="${request.contextPath}/purpose/img/images_menu/1.png" alt=""/>
+        						<img src="${request.contextPath}/purpose/img/images_menu/inicio.png" alt=""/>
         						<span class="sdt_active"></span>
         						<span class="sdt_wrap">
         							<span class="sdt_link">Inicio</span>
@@ -72,7 +72,7 @@
         				</li>
         				<li>
         					<g:link controller="k9Handler" action="index">
-        						<img src="${request.contextPath}/purpose/img/images_menu/2.png" alt=""/>
+        						<img src="${request.contextPath}/purpose/img/images_menu/actividades.png" alt=""/>
         						<span class="sdt_active"></span>
         						<span class="sdt_wrap">
         							<span class="sdt_link">Actividades</span>
@@ -86,7 +86,7 @@
         				</li>
         				<li>
         					<g:link controller="k9Handler" action="index">
-        						<img src="${request.contextPath}/purpose/img/images_menu/3.png" alt=""/>
+        						<img src="${request.contextPath}/purpose/img/images_menu/buscar.png" alt=""/>
         						<span class="sdt_active"></span>
         						<span class="sdt_wrap">
         							<span class="sdt_link">Busquedas</span>
@@ -100,7 +100,7 @@
         				</li>
                        	<li>
                             <g:link controller="k9User" action="logout">
-                                 <img src="${request.contextPath}/purpose/img/images_menu/4.png" alt=""/>
+                                 <img src="${request.contextPath}/purpose/img/images_menu/logout.png" alt=""/>
                                  <span class="sdt_active"></span>
                                  <span class="sdt_wrap">
                                      <span class="sdt_link">Logout</span>

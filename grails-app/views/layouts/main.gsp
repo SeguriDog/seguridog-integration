@@ -56,7 +56,7 @@
         			<ul id="sdt_menu" class="sdt_menu">
         				<li>
         					<g:link uri="/">
-        						<img src="${request.contextPath}/purpose/img/images_menu/1.png" alt=""/>
+        						<img src="${request.contextPath}/purpose/img/images_menu/inicio.png" alt=""/>
         						<span class="sdt_active"></span>
         						<span class="sdt_wrap">
         							<span class="sdt_link">Inicio</span>
@@ -66,7 +66,7 @@
         				</li>
         				<li>
         					<a href="informacion.gsp">
-        						<img src="${request.contextPath}/purpose/img/images_menu/2.png" alt=""/>
+        						<img src="${request.contextPath}/purpose/img/images_menu/grupo.png" alt=""/>
         						<span class="sdt_active"></span>
         						<span class="sdt_wrap">
         							<span class="sdt_link">A cerca de</span>
@@ -80,7 +80,7 @@
         				</li>
         				<li>
         					<a href="contactos.gsp">
-        						<img src="${request.contextPath}/purpose/img/images_menu/4.png" alt=""/>
+        						<img src="${request.contextPath}/purpose/img/images_menu/contactos.png" alt=""/>
         						<span class="sdt_active"></span>
         						<span class="sdt_wrap">
         							<span class="sdt_link">Contactos</span>
@@ -90,7 +90,7 @@
         				</li>
         				<li>
         					<g:link controller="k9User" action="login">
-        						<img src="${request.contextPath}/purpose/img/images_menu/5.png" alt=""/>
+        						<img src="${request.contextPath}/purpose/img/images_menu/login.png" alt=""/>
         						<span class="sdt_active"></span>
         						<span class="sdt_wrap">
         							<span class="sdt_link">Login</span>
