@@ -1,6 +1,10 @@
 package co.com.seguridog
 
+import groovy.sql.Sql
+
 class K9HandlerController {
+
+    def dataSource
 
     def index() { }
 
@@ -42,5 +46,23 @@ class K9HandlerController {
             result_canine = Canine.findAll()
         }
         [result_canine : result_canine]
+    }
+
+    def look_profile_user(){
+        def activities_list = WorkCanine.findAllByHandlersAndDateFinishReturnUnitK9LessThanEquals(session.user, new Date())
+        def user_list = K9Handler.findById(session.user.id)
+        [activities_list : activities_list, user_list : user_list]
+    }
+
+    def edit_profile_user(){
+        def edit_user = K9Handler.findById(session.user.id)
+        [edit_user : edit_user]
+    }
+
+    def save_profile_user(){
+        Sql sql = Sql.newInstance(dataSource)
+        sql.executeUpdate('update k9user set first_name = ?, last_name = ?, login_user = ?, login_pass = ?, birth_date = ?, cellphone = ?, e_mail = ? where id = ?',
+                [params.firstName,params.lastName,params.loginUser,params.loginPass,params.birthDate,params.cellphone,params.eMail,session.user.id])
+        redirect(controller: "K9Handler", action: "look_profile_user")
     }
 }

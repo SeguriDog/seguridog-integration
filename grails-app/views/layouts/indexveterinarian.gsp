@@ -106,7 +106,6 @@
                         </li>
         			</ul>
         		</div>
-
 		<!--end Navigation & Logo-->
 
 		<!-- main content -->
