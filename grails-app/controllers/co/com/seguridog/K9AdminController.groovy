@@ -8,6 +8,23 @@ class K9AdminController {
 
     def index() {}
 
+    def view_profile_user(){
+        def user = K9Admin.findById(session.user.id)
+        [user : user]
+    }
+
+    def edit_profile_user(){
+        def edit_user = K9Admin.findById(session.user.id)
+        [edit_user : edit_user]
+    }
+
+    def save_profile_user(){
+        Sql sql = Sql.newInstance(dataSource)
+        sql.executeUpdate('update k9user set first_name = ?, last_name = ?, login_user = ?, login_pass = ?, birth_date = ?, cellphone = ?, e_mail = ? where id = ?',
+                [params.firstName,params.lastName,params.loginUser,params.loginPass,params.birthDate,params.cellphone,params.eMail,session.user.id])
+        redirect(controller: "K9Admin", action: "view_profile_user")
+    }
+
     def register_user(){}
 
     def user_register = {

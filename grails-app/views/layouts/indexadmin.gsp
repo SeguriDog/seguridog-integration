@@ -71,6 +71,20 @@
         					</g:link>
         				</li>
         				<li>
+                            <g:link controller="k9Admin" action="index">
+                                <img src="${request.contextPath}/purpose/img/images_menu/perfil.png" alt=""/>
+                                <span class="sdt_active"></span>
+                                <span class="sdt_wrap">
+                                	<span class="sdt_link">Perfil</span>
+                                    <span class="sdt_descr">SeguriDog</span>
+                                </span>
+                            </g:link>
+                            <div class="sdt_box">
+                                <g:link controller="k9Admin" action="view_profile_user">Información</g:link>
+                                <g:link controller="k9Admin" action="edit_profile_user">Editar Información</g:link>
+                            </div>
+                        </li>
+        				<li>
         					<g:link controller="k9Admin" action="index">
         						<img src="${request.contextPath}/purpose/img/images_menu/registro.png" alt=""/>
         						<span class="sdt_active"></span>
