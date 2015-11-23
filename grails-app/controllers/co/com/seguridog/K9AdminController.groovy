@@ -32,13 +32,24 @@ class K9AdminController {
     }
 
     def users_list = {
-        def list = K9User.findAll()
+        def list = K9User.findAllByEnableUser(true)
         [users:list]
     }
 
     def dogs_list = {
         def lista = Canine.findAll()
         [dogs:lista]
+    }
+
+    def list_services = {
+        def service = WorkCanine.findAll()
+        [service:service]
+    }
+
+    def disable_user = {
+        Sql sql = Sql.newInstance(dataSource)
+        sql.executeUpdate('update k9user set enable_user = ? where id = ?',[false,params.id_user])
+        redirect(controller: "K9Admin", action: "index")
     }
 
     def register_dog(){}
@@ -94,6 +105,12 @@ class K9AdminController {
         } else if (params.search_type_user.equals("2")){
             result_user = K9User.findAllByLastNameLikeAndEnableUser("%${params.search_text}%", true)
         } else if (params.search_type_user.equals("3")){
+            result_user = K9User.findAllByTypeUsersAndEnableUser(2,true)
+        } else if (params.search_type_user.equals("4")){
+            result_user = K9User.findAllByTypeUsersAndEnableUser(3,true)
+        } else if (params.search_type_user.equals("5")){
+            result_user = K9User.findAllByTypeUsersAndEnableUser(4,true)
+        } else if (params.search_type_user.equals("6")){
             result_user = K9User.findAllByEnableUser(true)
         }
         [result_user : result_user]

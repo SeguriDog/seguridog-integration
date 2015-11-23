@@ -30,9 +30,20 @@
                             <li><b>Celular: </b>${rUser.cellphone}</li>
                             <li><b>Email: </b>${rUser.eMail}</li>
                             <li><b>Fecha Nacimiento: </b><g:formatDate format="dd-MM-yyyy" date="${rUser.birthDate}"/></li>
+                            <li><b>Habilitado: </b>${rUser.enableUser}</li>
                         </div>
                     </div>
+                   <g:form controller="k9Admin" action="disable_user">
+                         <div class="form-group">
+                              <input class="form-control" id="id_user" name="id_user" type="hidden" value="${rUser.id}">
+                         </div>
+                         <div class="form-group">
+                              <button type="submit" class="btn pull-right">Deshabilitar</button>
+                           	  <div class="clearfix"></div>
+                         </div>
+                    </g:form>
 				</g:each>
+
 	        </div>
 	    </div>
 	</body>

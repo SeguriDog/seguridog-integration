@@ -27,7 +27,10 @@
                                     <select name="search_type_user" id="search_type_user" type="number">
                                         <option value="1">Nombre</option>
                                         <option value="2">Apellido</option>
-                                        <option value="3">Todos</option>
+                                        <option value="3">Instructores</option>
+                                        <option value="4">Veterinarios</option>
+                                        <option value="5">Manejadores</option>
+                                        <option value="6">Todos</option>
                                     </select>
                                 </div>
                                 <div class="form-group">

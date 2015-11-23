@@ -111,6 +111,7 @@
         					<div class="sdt_box">
                                  <g:link controller="k9Admin" action="users_list">Todos los Usuarios</g:link>
                                  <g:link controller="k9Admin" action="dogs_list">Todos los Caninos</g:link>
+                                 <g:link controller="k9Admin" action="list_services">Todos los Servicios</g:link>
                             </div>
         				</li>
 						<li>
