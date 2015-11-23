@@ -34,9 +34,10 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://localhost/dbseguridog"
-            username = "root"
-            password = "password"
+            uri = new URI(System.env.CLEARDB_DATABASE_URL_A?:"mysql://99784530f103:934c2a0@server.cleardb.com/heroku_0ac7f6f45fa34")
+             url = "jdbc:mysql://"+uri.host+uri.path
+            username = uri.userInfo.split(":")[0]
+            password = uri.userInfo.split(":")[1]
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true
