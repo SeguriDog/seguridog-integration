@@ -65,4 +65,11 @@ class K9HandlerController {
                 [params.firstName,params.lastName,params.loginUser,params.loginPass,params.birthDate,params.cellphone,params.eMail,session.user.id])
         redirect(controller: "K9Handler", action: "look_profile_user")
     }
+
+    def look_profile_canine(){
+        def canine_info = Canine.findById(params.id_canine)
+        def canine_clinic = ClinicHistory.findAllByCanines(canine_info)
+        def canine_training = ExerciseAbility.findAllByCanines(canine_info)
+        [canine_info : canine_info, canine_clinic : canine_clinic, canine_training : canine_training]
+    }
 }

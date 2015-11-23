@@ -99,16 +99,30 @@
                                  <g:link controller="k9Admin" action="dogs_list">Todos los Caninos</g:link>
                             </div>
         				</li>
-                       	<li>
-                            <g:link controller="k9User" action="logout">
-                                 <img src="${request.contextPath}/purpose/img/images_menu/logout.png" alt=""/>
-                                 <span class="sdt_active"></span>
-                                 <span class="sdt_wrap">
-                                     <span class="sdt_link">Logout</span>
-                                     <span class="sdt_descr">SeguriDo</span>
-		                         </span>
-                            </g:link>
-                        </li>
+						<li>
+							<g:link controller="k9Admin" action="index">
+								<img src="${request.contextPath}/purpose/img/images_menu/buscar.png" alt=""/>
+								<span class="sdt_active"></span>
+								<span class="sdt_wrap">
+									<span class="sdt_link">Busquedas</span>
+									<span class="sdt_descr">SeguriDog</span>
+								</span>
+							</g:link>
+							<div class="sdt_box">
+								<g:link controller="k9Admin" action="search_user">Usuarios del Sistema</g:link>
+								<g:link controller="k9Admin" action="search_canines">Caninos del Sistema</g:link>
+							</div>
+						</li>
+						<li>
+							<g:link controller="k9User" action="logout">
+								<img src="${request.contextPath}/purpose/img/images_menu/logout.png" alt=""/>
+								<span class="sdt_active"></span>
+								<span class="sdt_wrap">
+									<span class="sdt_link">Logout</span>
+									<span class="sdt_descr">SeguriDo</span>
+								</span>
+							</g:link>
+						</li>
         			</ul>
         		</div>
 

@@ -33,6 +33,15 @@
                             <li><b>Sexo: </b>${rCanine.sexCanine}</li>
                             <li><b>Raza: </b>${rCanine.typeRace}</li>
                             <li><b>Estado: </b>${rCanine.stateCanine}</li>
+                            <g:form controller="k9Handler" action="look_profile_canine">
+                                <div class="form-group">
+                                    <input class="form-control" id="id_canine" name="id_canine" type="hidden" value="${rCanine.id}">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn pull-right">Mas...</button>
+                                <div class="clearfix"></div>
+                                </div>
+                            </g:form>
                         </div>
                     </div>
 				</g:each>

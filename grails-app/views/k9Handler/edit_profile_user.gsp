@@ -11,7 +11,7 @@
 		    <div class="container">
 			    <div class="row">
 				    <div class="col-md-12">
-					    <h1>Historial Actividades</h1>
+					    <h1>Perfil del Usuario</h1>
     				</div>
 	    		</div>
 		    </div>
