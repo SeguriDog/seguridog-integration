@@ -43,7 +43,7 @@ class K9AdminController {
 
     def list_services = {
         def service = WorkCanine.findAll()
-        [service:service]
+        [servi:service]
     }
 
     def disable_user = {

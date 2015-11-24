@@ -22,7 +22,7 @@
              		</tr>
             	</thead>
             	<tbody>
-            		<g:each in="${service}" var="service">
+            		<g:each in="${servi}" var="service">
               			<tr>
                   			<td>${service.userOfService}</td>
                   			<td>${service.addressUbicationWorkArea}</td>

@@ -3,17 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b92634e5-1c40-442a-a065-1c3899fb4517" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\PC\seguridog-repo\target\work\tomcat\work\Tomcat\localhost\seguridog\SESSIONS.ser" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure2.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure4.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure5.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure6.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController$_closure6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController.class" afterPath="$PROJECT_DIR$/target/classes/co/com/seguridog/K9AdminController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/layouts/indexadmin.gsp" afterPath="$PROJECT_DIR$/grails-app/views/layouts/indexadmin.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/k9Admin/result_search_user.gsp" afterPath="$PROJECT_DIR$/grails-app/views/k9Admin/result_search_user.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/k9Admin/search_user.gsp" afterPath="$PROJECT_DIR$/grails-app/views/k9Admin/search_user.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seguridog.ipr" afterPath="$PROJECT_DIR$/seguridog.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/k9Admin/list_services.gsp" afterPath="$PROJECT_DIR$/grails-app/views/k9Admin/list_services.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seguridog.iws" afterPath="$PROJECT_DIR$/seguridog.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqlseguridog.sql" afterPath="$PROJECT_DIR$/sqlseguridog.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
     </list>
     <ignored path="seguridog.iws" />
@@ -35,7 +28,18 @@
     <favorites_list name="seguridog" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="K9AdminController.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.18511796">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,14 +87,14 @@
         <option value="$PROJECT_DIR$/grails-app/views/layouts/indexinstructor.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/indexhandler.gsp" />
         <option value="$PROJECT_DIR$/web-app/purpose/css/style.css" />
-        <option value="$PROJECT_DIR$/sqlseguridog.sql" />
         <option value="$PROJECT_DIR$/grails-app/views/k9Admin/edit_profile_user.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/k9Admin/view_profile_user.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/k9Admin/search_user.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/layouts/indexadmin.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/k9Admin/list_services.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/k9Admin/result_search_user.gsp" />
+        <option value="$PROJECT_DIR$/sqlseguridog.sql" />
         <option value="$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/k9Admin/list_services.gsp" />
       </list>
     </option>
   </component>
@@ -154,9 +158,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -231,6 +232,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,7 +419,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -426,7 +430,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20499243" sideWeight="0.6623068" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21028744" sideWeight="0.6623068" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -735,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18511796">
           <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -743,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.030852994">
           <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.69147">
           <caret line="32" column="72" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -759,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4936479">
           <caret line="16" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,15 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27767694">
           <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/k9Admin/list_services.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5862069">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.69147">
           <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,7 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.81488204">
           <caret line="126" column="111" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="111" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -799,15 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4355717">
           <caret line="15" column="22" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sqlseguridog.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4754991">
-          <caret line="184" column="14" selection-start-line="184" selection-start-column="3" selection-end-line="184" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,14 +795,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.62431943">
           <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqlseguridog.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5245009">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/k9Admin/list_services.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3520871">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22867514">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.18511796">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
