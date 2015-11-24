@@ -148,4 +148,9 @@ class K9AdminController {
                 [params.name_canine,params.name_father,params.name_mother,params.birthDate,params.type_race,params.color_canine,params.sign_canine,params.sex_canine,params.state_canine,params.id_canine])
         redirect(controller: "K9Admin", action: "index")
     }
+
+    def look_book_service() {
+        def book_service_list = WorkCanine.findAllById(params.service_id)
+        [book_service_list : book_service_list]
+    }
 }
