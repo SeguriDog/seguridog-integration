@@ -34,7 +34,7 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            uri = new URI(System.env.CLEARDB_DATABASE_URL_A?:"mysql://99784530f103:934c2a0@server.cleardb.com/heroku_f31292485c0c8f3")
+            uri = new URI(System.env.CLEARDB_DATABASE_URL_A?:"mysql://b240ae917cb9e6:546339e6@server.cleardb.com/heroku_f31292485c0c8f3")
              url = "jdbc:mysql://"+uri.host+uri.path
             username = uri.userInfo.split(":")[0]
             password = uri.userInfo.split(":")[1]
