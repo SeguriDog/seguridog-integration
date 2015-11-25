@@ -43,7 +43,7 @@ class K9AdminController {
 
     def list_services = {
         def service = WorkCanine.findAll()
-        [service:service]
+        [servi:service]
     }
 
     def disable_user = {
@@ -150,7 +150,57 @@ class K9AdminController {
     }
 
     def look_book_service() {
-        def book_service_list = WorkCanine.findAllById(params.service_id)
+        def book_service_list = WorkCanine.findById(params.service_id)
         [book_service_list : book_service_list]
+    }
+
+    def edit_user(){
+        def edit_user
+        if (params.edit_user_type.equals("1")) {
+            edit_user = K9Admin.findById(params.edit_user_id)
+        } else if (params.edit_user_type.equals("2")) {
+            edit_user = K9Instructor.findById(params.edit_user_id)
+        } else if (params.edit_user_type.equals("3")) {
+            edit_user = K9Veterinarian.findById(params.edit_user_id)
+        } else if (params.edit_user_type.equals("4")) {
+            edit_user = K9Handler.findById(params.edit_user_id)
+        }
+        [edit_user : edit_user]
+    }
+
+    def save_edit_user(){
+        Sql sql = Sql.newInstance(dataSource)
+        if (params.id_type.equals("1")) {
+            sql.executeUpdate('update k9user set cedula = ?, first_name = ?, last_name = ?, login_user = ?, login_pass = ?, birth_date = ?, cellphone = ?, e_mail = ?, type_contract = ?, date_contract = ? where id = ?',
+                    [params.cedula, params.firstName, params.lastName, params.loginUser, params.loginPass, params.birthDate, params.cellphone, params.eMail, params.typeContract, params.dateContract, params.id_type_user])
+        } else if (params.id_type.equals("2")) {
+            sql.executeUpdate('update k9user set cedula = ?, first_name = ?, last_name = ?, login_user = ?, login_pass = ?, birth_date = ?, cellphone = ?, e_mail = ?, type_contract = ?, date_contract = ?, approved_course = ?, date_approved = ?, date_credentials = ?, specialities = ? where id = ?',
+                    [params.cedula, params.firstName, params.lastName, params.loginUser, params.loginPass, params.birthDate, params.cellphone, params.eMail, params.typeContract, params.dateContract, params.approved_course, params.date_approved, params.date_credentials, params.ins_specialities, params.id_type_user])
+        } else if (params.id_type.equals("3")) {
+            sql.executeUpdate('update k9user set cedula = ?, first_name = ?, last_name = ?, login_user = ?, login_pass = ?, birth_date = ?, cellphone = ?, e_mail = ?, type_contract = ?, date_contract = ?, professional_card = ?, date_expedition = ? where id = ?',
+                    [params.cedula, params.firstName, params.lastName, params.loginUser, params.loginPass, params.birthDate, params.cellphone, params.eMail, params.typeContract, params.dateContract, params.professional_card, params.date_expedition, params.id_type_user])
+        } else if (params.id_type.equals("4")) {
+            sql.executeUpdate('update k9user set cedula = ?, first_name = ?, last_name = ?, login_user = ?, login_pass = ?, birth_date = ?, cellphone = ?, e_mail = ?, type_contract = ?, date_contract = ?, basic_induction_course = ?, date_approved_induction = ?, type_training_handler = ? where id = ?',
+                    [params.cedula, params.firstName, params.lastName, params.loginUser, params.loginPass, params.birthDate, params.cellphone, params.eMail, params.typeContract, params.dateContract, params.basic_instruction_course, params.date_approved_course, params.type_training, params.id_type_user])
+        }
+        redirect(controller: "K9Admin", action: "users_list")
+    }
+
+    def look_full_profile_user () {
+        def full_user
+        def full_info
+        if (params.full_user_type.equals("1")) {
+            full_user = K9Admin.findById(params.full_user_id)
+        } else if (params.full_user_type.equals("2")) {
+            full_user = K9Instructor.findById(params.full_user_id)
+            full_info = ExerciseAbility.findAllByInstructors(full_user)
+        } else if (params.full_user_type.equals("3")) {
+            full_user = K9Veterinarian.findById(params.full_user_id)
+            full_info = ClinicHistory.findAllByMedics(full_user)
+        } else if (params.full_user_type.equals("4")) {
+            full_user = K9Handler.findById(params.full_user_id)
+            full_info = WorkCanine.findAllByHandlers(full_user)
+        }
+        [full_user : full_user, full_info : full_info]
     }
 }

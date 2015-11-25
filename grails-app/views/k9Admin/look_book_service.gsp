@@ -30,9 +30,9 @@
 								<h3>${book_service_list.canines.nameCanine}</h3>
 							</div>
 							<div class="post-summary">
-								<p><b>Microchip:</b>${book_service_list.canines.microChip}</p>
-                                <p><b>Raza:</b>${book_service_list.canines.typeRace}</p>
-                                <p><b>Sexo:</b>${book_service_list.canines.sexCanine}</p>
+								<p><b>Microchip: </b>${book_service_list.canines.microChip}</p>
+                                <p><b>Raza: </b>${book_service_list.canines.typeRace}</p>
+                                <p><b>Sexo: </b>${book_service_list.canines.sexCanine}</p>
 							</div>
 							<!-- End Post Title & Summary -->
 						</div>
@@ -69,23 +69,23 @@
 							<!-- Tab Content (Full Description) -->
 							<div class="tab-content product-detail-info">
 								<div class="tab-pane active" id="tab1">
-									<h4>Fecha ubicación en el puesto</h4>
+									<h3>Fecha ubicación en el puesto</h3>
 									<p>
 										<g:formatDate format="dd-MM-yyyy" date="${book_service_list.dateUbicationWorkArea}"/>
 									</p>
-									<h4>Fecha de regreso a la unidad canina</h4>
+									<h3>Fecha de regreso a la unidad canina</h3>
 									<p>
 										<g:formatDate format="dd-MM-yyyy" date="${book_service_list.dateFinishReturnUnitK9}"/>
 									</p>
-									<h4>Dirección donde presta servicio</h4>
+									<h3>Dirección donde presta servicio</h3>
 									<p>
 										${book_service_list.addressUbicationWorkArea}
 									</p>
-									<h4>Dirección donde descansa canino</h4>
+									<h3>Dirección donde descansa canino</h3>
 									<p>
 										${book_service_list.addressRestCanine}
 									</p>
-									<h4>Modalidad del servicio</h4>
+									<h3>Modalidad del servicio</h3>
 									<p>
 										${book_service_list.typeService}
 									</p>

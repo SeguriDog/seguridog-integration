@@ -33,7 +33,7 @@
                             <li><b>Habilitado: </b>${rUser.enableUser}</li>
                         </div>
                     </div>
-                   <g:form controller="k9Admin" action="disable_user">
+                    <g:form controller="k9Admin" action="disable_user">
                          <div class="form-group">
                               <input class="form-control" id="id_user" name="id_user" type="hidden" value="${rUser.id}">
                          </div>
@@ -42,8 +42,27 @@
                            	  <div class="clearfix"></div>
                          </div>
                     </g:form>
+                    <g:form controller="k9Admin" action="edit_user">
+                         <div class="form-group">
+                              <input class="form-control" id="edit_user_id" name="edit_user_id" type="hidden" value="${rUser.id}">
+                              <input class="form-control" id="edit_user_type" name="edit_user_type" type="hidden" value="${rUser.typeUsers}">
+                         </div>
+                         <div class="form-group">
+                              <button type="submit" class="btn pull-right">Editar...</button>
+                           	  <div class="clearfix"></div>
+                         </div>
+                    </g:form>
+                    <g:form controller="k9Admin" action="look_full_profile_user">
+                         <div class="form-group">
+                              <input class="form-control" id="full_user_id" name="full_user_id" type="hidden" value="${rUser.id}">
+                              <input class="form-control" id="full_user_type" name="full_user_type" type="hidden" value="${rUser.typeUsers}">
+                         </div>
+                         <div class="form-group">
+                              <button type="submit" class="btn pull-right">Más...</button>
+                           	  <div class="clearfix"></div>
+                         </div>
+                    </g:form>
 				</g:each>
-
 	        </div>
 	    </div>
 	</body>

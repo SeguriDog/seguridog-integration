@@ -46,6 +46,7 @@
             	</tbody>
           	</table>
         </div>
+		<h3>${flash.message}</h3>
 		<!-- end main content -->
 	</body>
 </html>

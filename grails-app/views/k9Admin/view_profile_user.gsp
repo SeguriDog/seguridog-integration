@@ -29,12 +29,12 @@
 	    			<div class="col-sm-6 product-details">
 	    				<h4>${user.fullName}</h4>
 						<h5>Datos Personales:  </h5>
-                        <p><b>Cedula:  </b>${user.cedula}</p>
+                        <p><b>CÃ©dula:  </b>${user.cedula}</p>
                         <p><b>Fecha Nacimiento:  </b><g:formatDate format="dd-MM-yyyy" date="${user.birthDate}"/></p>
-                        <p><b>No. Telefónico:  </b>${user.cellphone}</p>
+                        <p><b>No. TelefÃ³nico:  </b>${user.cellphone}</p>
 						<p><b>Email:  </b>${user.eMail}</p>
                         <p><b>Nombre Usuario:  </b>${user.loginUser}</p>
-                        <p><b>Contraseña:  </b>${user.loginPass}</p>
+                        <p><b>ContraseÃ±a:  </b>${user.loginPass}</p>
                         <p><b>Tipo Contrato:  </b>${user.typeContract}</p>
 						<p><b>Fecha Inicio Contrato:  </b><g:formatDate format="dd-MM-yyyy" date="${user.dateContract}"/></p>
 	    			</div>
@@ -43,6 +43,5 @@
 			</div>
 		</div>
     	<!-- end main content -->
-
 	</body>
 </html>
