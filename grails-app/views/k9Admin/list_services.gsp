@@ -6,9 +6,19 @@
 
 	<body>
  		<!-- main content -->
- 		<br><br><br><br><br><br><br>
+ 		<br><br><br><br><br><br><br><br><br><br><br>
+                            	<!-- Page Title -->
+                        	    <div class="section section-breadcrumbs">
+                        		    <div class="container">
+                        			    <div class="row">
+                        				    <div class="col-md-12">
+                        					    <h1>Servicios registrados</h1>
+                            				</div>
+                        	    		</div>
+                        		    </div>
+                            	</div>
+
 		<div class="container">
-          	<h2>Servicios Registrados</h2>
           	<table class="table table-bordered table-hover">
             	<thead>
               		<tr>

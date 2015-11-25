@@ -73,10 +73,6 @@
         							<span class="sdt_descr">Conozca sobre nosotros</span>
         						</span>
         					</a>
-        					<div class="sdt_box">
-        							<a href="#">Mision</a>
-        							<a href="#">Vision</a>
-        					</div>
         				</li>
         				<li>
         					<a href="contactos.gsp">
@@ -109,7 +105,7 @@
 		<!-- end main content -->
 
 		<!-- Footer -->
-		<br>
+		<br><br><br><br>
 		<div class="footer">
 			<div class="container">
 				<div class="row">

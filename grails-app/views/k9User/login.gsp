@@ -10,7 +10,7 @@
        <div class="section">
 	    	<div class="container">
 				<div class="row">
-					<div class="col-sm-5">
+					<div class="col-sm-5 col-sm-offset-3">
 						<div class="basic-login">
 							<g:form controller = "K9User" action="authenticate">
 								<div class="form-group">

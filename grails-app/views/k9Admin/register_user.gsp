@@ -10,12 +10,22 @@
 
 	<body>
 		<!-- main content -->
-		<br><br><br><br><br><br><br><br><br><br>
+		 <br><br><br><br><br><br><br><br><br><br><br>
+            	<!-- Page Title -->
+        	    <div class="section section-breadcrumbs">
+        		    <div class="container">
+        			    <div class="row">
+        				    <div class="col-md-12">
+        					    <h1>Registrar Usuario</h1>
+            				</div>
+        	    		</div>
+        		    </div>
+            	</div>
+
         <div class="section">
 	    	<div class="container">
-	    	<h2>Formulario : Registro de Usuario</h2>
 				<div class="row">
-					<div class="col-sm-5">
+					<div class="col-sm-6 col-sm-offset-3">
 						<div class="basic-login">
 							<g:form controller = "K9Admin" action="save_data_user">
 
