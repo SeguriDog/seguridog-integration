@@ -6,7 +6,7 @@
 
     <body>
 		<!-- main content -->
-		<br><br><br><br>
+		<br><br><br><br><br><br>
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <ol class="carousel-indicators">

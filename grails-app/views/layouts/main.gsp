@@ -72,7 +72,11 @@
         							<span class="sdt_link">Acerca de</span>
         							<span class="sdt_descr">Conozca sobre nosotros</span>
         						</span>
+<<<<<<< HEAD
         					</g:link>
+=======
+        					</a>
+>>>>>>> 785ac72425fc47f2966c8727cb568ffce9602ca2
         				</li>
         				<li>
         					<g:link controller="k9User" action="collaborators">
@@ -105,7 +109,7 @@
 		<!-- end main content -->
 
 		<!-- Footer -->
-		<br>
+		<br><br><br><br>
 		<div class="footer">
 			<div class="container">
 				<div class="row">

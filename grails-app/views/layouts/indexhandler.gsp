@@ -70,6 +70,20 @@
         						</span>
         					</g:link>
         				</li>
+        										<li>
+                        							<g:link controller="k9Handler" action="index">
+                        								<img src="${request.contextPath}/purpose/img/images_menu/perfil.png" alt=""/>
+                        								<span class="sdt_active"></span>
+                        								<span class="sdt_wrap">
+                        									<span class="sdt_link">Perfil Usuario</span>
+                        									<span class="sdt_descr">SeguriDog</span>
+                        								</span>
+                        							</g:link>
+                        							<div class="sdt_box">
+                        								<g:link controller="k9Handler" action="look_profile_user">Información</g:link>
+                        								<g:link controller="k9Handler" action="edit_profile_user">Editar Información</g:link>
+                        							</div>
+                        						</li>
         				<li>
         					<g:link controller="k9Handler" action="index">
         						<img src="${request.contextPath}/purpose/img/images_menu/actividades.png" alt=""/>
@@ -98,20 +112,6 @@
                                  <g:link controller="k9Handler" action="search_canines">Caninos del Sistema</g:link>
                             </div>
         				</li>
-						<li>
-							<g:link controller="k9Handler" action="index">
-								<img src="${request.contextPath}/purpose/img/images_menu/perfil.png" alt=""/>
-								<span class="sdt_active"></span>
-								<span class="sdt_wrap">
-									<span class="sdt_link">Perfil Usuario</span>
-									<span class="sdt_descr">SeguriDog</span>
-								</span>
-							</g:link>
-							<div class="sdt_box">
-								<g:link controller="k9Handler" action="look_profile_user">Información</g:link>
-								<g:link controller="k9Handler" action="edit_profile_user">Editar Información</g:link>
-							</div>
-						</li>
                        	<li>
                             <g:link controller="k9User" action="logout">
                                  <img src="${request.contextPath}/purpose/img/images_menu/logout.png" alt=""/>
@@ -132,7 +132,7 @@
         <!-- end main content -->
 
 		<!-- Footer -->
-		<br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br>
 		<div class="footer">
 			<div class="container">
 				<div class="row">

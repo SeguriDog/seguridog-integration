@@ -19,34 +19,30 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="form-group">
-								<form class="form-horizontal" role="form">
-									<label for="date_ability" class="col-md-2 control-label"><i class="icon-user"></i>Fecha</label>
-									<div class="col-md-10">
-										<input class="form-control" id="date_ability" name="date_ability" type="date">
-									</div>
-								</form>
-							</div>
+							<g:form controller="k9Instructor" action="all_Canines">
+								<div class="form-group">
+									<label for="name_canine"><i class="icon-user"></i>Canino</label>
+									<select class="form-control" id="name_canine" name="name_canine">
+										<g:each in="${result_name_canine}" var="rCanine">
+											<option>${rCanine.nameCanine}</option>
+										</g:each>
+									</select>
+								</div>
+								<button type="submit" class="btn pull-right">Enviar</button>
+								<div class="clearfix"></div>
+							</g:form>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<form class="form-horizontal" role="form">
-									<label for="micro_chip" class="col-md-2 control-label"><i class="icon-user"></i>Microchip</label>
-									<div class="col-md-10">
-										<input class="form-control" id="micro_chip" name="micro_chip" type="text">
-									</div>
-								</form>
+								<label for="micro_chip" ><i class="icon-user"></i>Microchip</label>
+								<input class="form-control" id="micro_chip" name="micro_chip" type="text">
 							</div>
 						</div>
 						<BR><BR>
 						<div class="col-md-12">
 							<div class="form-group">
-								<form class="form-horizontal" role="form">
-									<label for="name_ability" class="col-md-2 control-label"><i class="icon-user"></i>Nombre del Manejdor</label>
-									<div class="col-md-10">
-										<input class="form-control" id="name_ability" name="date_ability" type="text">
-									</div>
-								</form>
+								<label for="name_ability"><i class="icon-user"></i>Nombre del Manejdor</label>
+								<input class="form-control" id="name_ability" name="date_ability" type="text">
 							</div>
 						</div>
 					</div>
@@ -66,7 +62,7 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td></td>
+								<td>${}</td>
 								<td></td>
 								<td></td>
 								<td></td>

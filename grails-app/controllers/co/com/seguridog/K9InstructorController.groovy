@@ -8,8 +8,13 @@ class K9InstructorController {
 
     def index() {}
 
-    def register_ExerciseAbility() {}
-
+    def register_ExerciseAbility() {
+        def result_name_canine
+        result_name_canine = Canine.findAll()
+        def n_canine
+        n_canine = Canine.findAllByNameCanineIlike("%${params.name_canine}%")
+        [result_name_canine: result_name_canine, n_canine: n_canine]
+    }
     def search_user(){}
 
     def search_canines(){}
