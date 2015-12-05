@@ -41,6 +41,17 @@
                   			<td>${service.typeService}</td>
                  			<td>${service.addressRestCanine}</td>
                   			<td>${service.dateFinishReturnUnitK9}</td>
+							<td>
+                               <g:form controller="k9Admin" action="look_book_service">
+                                    <div class="form-group">
+                                        <input class="form-control" id="service_id" name="service_id" type="hidden" value="${service.id}">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn pull-right">Mas...</button>
+                                    <div class="clearfix"></div>
+                                    </div>
+                                </g:form>
+							</td>
               			</tr>
             		</g:each>
             	</tbody>

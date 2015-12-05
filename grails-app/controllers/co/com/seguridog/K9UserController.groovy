@@ -38,4 +38,8 @@ class K9UserController {
         session.invalidate()
         redirect(controller: "K9User", action: "login")
     }
+
+    def collaborators () {}
+
+    def information () {}
 }
