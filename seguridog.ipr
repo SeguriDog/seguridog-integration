@@ -156,8 +156,11 @@
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/dogs_list.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/edit_profile_canine.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/edit_profile_user.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/edit_user.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/index.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/list_services.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/look_book_service.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/look_full_profile_user.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/look_profile_canine.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/register_dog.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Admin/register_service.gsp" />
@@ -179,6 +182,8 @@
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Handler/search_user.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Instructor/index.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Instructor/register_ExerciseAbility.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/k9User/collaborators.gsp" />
+    <file url="file://$PROJECT_DIR$/grails-app/views/k9User/information.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9User/login.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Veterinarian/index.gsp" />
     <file url="file://$PROJECT_DIR$/grails-app/views/k9Veterinarian/register_clinic_history.gsp" />

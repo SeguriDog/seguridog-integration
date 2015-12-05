@@ -72,11 +72,8 @@
         							<span class="sdt_link">Acerca de</span>
         							<span class="sdt_descr">Conozca sobre nosotros</span>
         						</span>
-<<<<<<< HEAD
         					</g:link>
-=======
         					</a>
->>>>>>> 785ac72425fc47f2966c8727cb568ffce9602ca2
         				</li>
         				<li>
         					<g:link controller="k9User" action="collaborators">
@@ -93,7 +90,7 @@
         						<img src="${request.contextPath}/purpose/img/images_menu/login.png" alt=""/>
         						<span class="sdt_active"></span>
         						<span class="sdt_wrap">
-        							<span class="sdt_link">Login</span>
+        							<span class="sdt_link">Entrar</span>
         							<span class="sdt_descr">Ingrese al sistema</span>
         						</span>
         					</g:link>

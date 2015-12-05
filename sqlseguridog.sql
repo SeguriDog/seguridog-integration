@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.6.24, for Win32 (x86)
+ï»¿-- MySQL dump 10.13  Distrib 5.6.24, for Win32 (x86)
 --
 -- Host: 127.0.0.1    Database: dbseguridog
 -- ------------------------------------------------------
@@ -53,11 +53,7 @@ CREATE TABLE `canine` (
 
 LOCK TABLES `canine` WRITE;
 /*!40000 ALTER TABLE `canine` DISABLE KEYS */;
-<<<<<<< HEAD
 INSERT INTO `canine` VALUES (1,0,'','Negro','2006-01-01 00:00:00','','M15-001-0001','Rocky','PRocky','MRocky','img_alcon.jpg','','Macho','','','Activo','Pastor Aleman','',''),(2,0,'','Blanco','2007-01-01 00:00:00','','M15-002-0002','Toby','PToby','Mtoby','img_toby.jpg','','hembra','','','RecuperaciÃ³n FÃ­sica','Schnauzer','',''),(3,0,'','Cafe Oscuro - Negro','2008-01-01 00:00:00','','M15-003-0003','Erik','PErik','MErik','img_erik.jpg','','macho','','','Activo','Rottweiller','',''),(4,0,'','Cafe Claro','2009-01-01 00:00:00','','M15-004-0004','Buddy','PBuddy','MBuddy','img_buddy.jpg','','Macho','','','Activo','Boxer','',''),(5,0,'','Gris Oscuro','2010-01-01 00:00:00','','M15-005-0005','Duke','PDuke','MDuke','img_duke.jpg','','Macho','','','Activo','Doberman','',''),(6,0,'','Cafe Claro','2011-01-01 00:00:00','','M15-001-0006','Dalia','PDalia','MDalia','img_dalia.jpg','','Hembra','','','Activo','Retriever','',''),(7,0,'','Cafe Claro','2012-01-01 00:00:00','','M15-001-0007','Rose','PRose','MRose','img_rose.jpg','','Hembra','','','Activo','Spaniels','',''),(8,0,'','Blanco','2013-01-01 00:00:00','','M15-001-0008','Linda','PLinda','MLinda','img_linda.jpg','','Hembra','','','Activo','Beagle','',''),(9,0,'','Blanco','2014-01-01 00:00:00','','M15-001-0009','Laika','PLaika','','img_laika.jpg','','Hembra','','','Activo','Zetter','',''),(10,0,'','Blanco','2015-01-01 00:00:00','','M15-001-0010','Bella','','MBella','img_bella.jpg','','Hembra','','','Activo','Pastor Belga','','');
-=======
-INSERT INTO `canine` VALUES (1,0,'','Negro','2006-01-01 00:00:00','','M15-001-0001','Rocky','PRocky','MRocky','img_alcon.jpg','','Macho','','','Activo','Pastor Aleman','',''),(2,0,'','Blanco','2007-01-01 00:00:00','','M15-002-0002','Toby','PToby','Mtoby','img_toby.jpg','','hembra','','','Recuperación Física','Schnauzer','',''),(3,0,'','Cafe Oscuro - Negro','2008-01-01 00:00:00','','M15-003-0003','Erik','PErik','MErik','img_erik.jpg','','macho','','','Activo','Rottweiller','',''),(4,0,'','Cafe Claro','2009-01-01 00:00:00','','M15-004-0004','Buddy','PBuddy','MBuddy','img_buddy.jpg','','Macho','','','Activo','Boxer','',''),(5,0,'','Gris Oscuro','2010-01-01 00:00:00','','M15-005-0005','Duke','PDuke','MDuke','img_duke.jpg','','Macho','','','Activo','Doberman','',''),(6,0,'','Cafe Claro','2011-01-01 00:00:00','','M15-001-0006','Dalia','PDalia','MDalia','img_dalia.jpg','','Hembra','','','Activo','Retriever','',''),(7,0,'','Cafe Claro','2012-01-01 00:00:00','','M15-001-0007','Rose','PRose','MRose','img_rose.jpg','','Hembra','','','Activo','Spaniels','',''),(8,0,'','Blanco','2013-01-01 00:00:00','','M15-001-0008','Linda','PLinda','MLinda','img_linda.jpg','','Hembra','','','Activo','Beagle','',''),(9,0,'','Blanco','2014-01-01 00:00:00','','M15-001-0009','Laika','PLaika','','img_laika.jpg','','Hembra','','','Activo','Zetter','',''),(10,0,'','Blanco','2015-01-01 00:00:00','','M15-001-0010','Bella','','MBella','img_bella.jpg','','Hembra','','','Activo','Pastor Belga','','');
->>>>>>> 6cfd95e079a5f1729f79b1709af26295746b6c11
 /*!40000 ALTER TABLE `canine` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,11 +117,7 @@ CREATE TABLE `clinic_history` (
 
 LOCK TABLES `clinic_history` WRITE;
 /*!40000 ALTER TABLE `clinic_history` DISABLE KEYS */;
-<<<<<<< HEAD
 INSERT INTO `clinic_history` VALUES (1,0,1,'2015-01-01 00:00:00','buena',7,'Vacuna1','Vacuna'),(2,0,1,'2015-03-01 00:00:00','buena',7,'Vacuna2','Vacuna'),(3,0,8,'2015-02-02 00:00:00','Estable',8,'DesparacitaciÃ³n garrapata','DesparacitaciÃ³n'),(4,0,1,'2015-04-04 00:00:00','Estable',8,'DesparacitaciÃ³n garrapata','DesparacitaciÃ³n');
-=======
-INSERT INTO `clinic_history` VALUES (1,0,1,'2015-01-01 00:00:00','buena',7,'Vacuna1','Vacuna'),(2,0,1,'2015-03-01 00:00:00','buena',7,'Vacuna2','Vacuna'),(3,0,8,'2015-02-02 00:00:00','Estable',8,'Desparacitación garrapata','Desparacitación'),(4,0,1,'2015-04-04 00:00:00','Estable',8,'Desparacitación garrapata','Desparacitación');
->>>>>>> 6cfd95e079a5f1729f79b1709af26295746b6c11
 /*!40000 ALTER TABLE `clinic_history` ENABLE KEYS */;
 UNLOCK TABLES;
 
