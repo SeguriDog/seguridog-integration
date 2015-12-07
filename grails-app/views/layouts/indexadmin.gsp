@@ -13,14 +13,13 @@
 		<link rel="stylesheet" href="${request.contextPath}/purpose/css/bootstrap.min.css">
 		<link rel="stylesheet" href="${request.contextPath}/purpose/css/icomoon-social.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
-
 		<link rel="stylesheet" href="${request.contextPath}/purpose/css/leaflet.css" />
 		<!--[if lte IE 8]>
 			<link rel="stylesheet" href="${request.contextPath}/purpose/css/leaflet.ie.css" />
 		<![endif]-->
 		<link rel="stylesheet" href="${request.contextPath}/purpose/css/main-green.css">
 		<script src="${request.contextPath}/purpose/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
+		<script src="${request.contextPath}/purpose/js/Chart.js" type="text/javascript"></script>
 		<link rel="stylesheet" href="${request.contextPath}/purpose/css/style.css" type="text/css" media="screen"/>
         <script type="text/javascript">
 

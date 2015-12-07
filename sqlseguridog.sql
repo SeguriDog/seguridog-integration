@@ -165,6 +165,16 @@ CREATE TABLE `exercise_ability` (
 
 LOCK TABLES `exercise_ability` WRITE;
 /*!40000 ALTER TABLE `exercise_ability` DISABLE KEYS */;
+INSERT INTO `exercise_ability` VALUES (1,0,9,1,7,'2015-01-01 00:00:00',8,'Olfato',2,6,'Antiexplosivos',7,5,'Deteccion de explosivos',6,5,8,4,6,'Olfato','Deteccion de explosivos',10),
+(2,0,9,2,7,'2015-02-02 00:00:00',8,'Defensa',2,8,'Defensa',7,7,'Defensa controlada',6,5,8,4,6,'Defensa','Defensa controlada',10),
+(3,0,8,3,3,'2015-02-21 00:00:00',7,'Olfato',3,7,'Busqueda',5,8,'Busqueda de moneda',5,4,8,4,6,'Olfato','Busqueda de moneda',10),
+(4,0,7,4,5,'2015-03-02 00:00:00',8,'Olfato',4,10,'Antiexplosivos',6,9,'Deteccion de explosivos',7,6,8,4,6,'Olfato','Deteccion de explosivos',10),
+(5,0,5,5,7,'2015-04-02 00:00:00',8,'Apoyo',5,5,'Busqueda',8,8,'Busqueda y rescate de personas',9,5,8,4,6,'Apoyo','Busqueda y rescate de personas',10),
+(6,0,3,6,8,'2015-05-02 00:00:00',8,'Olfato',6,2,'Antinarcoticos',10,3,'Deteccion de drogas',3,5,8,4,6,'Olfato','Deteccion de narcoticos',10),
+(7,0,5,7,9,'2015-02-06 00:00:00',6,'Olfato',2,9,'Antinarcoticos',5,4,'Deteccion de drogas',4,8,8,4,6,'Olfato','Deteccion de narcoticos',10),
+(8,0,6,8,9,'2015-04-06 00:00:00',10,'Apoyo',2,3,'Busqueda',3,5,'Busqueda y rescate de personas',5,9,8,4,6,'Apoyo','Busqueda y rescate de personas',10),
+(9,0,7,9,9,'2015-02-12 00:00:00',8,'Olfato',3,3,'Antiexplosivos',4,6,'Deteccion de explosivos',7,5,8,4,6,'Olfato','Deteccion de explosivos',10),
+(10,0,9,10,7,'2015-02-03 00:00:00',10,'Defensa',4,5,'Defensa',8,8,'Defensa controlada',8,10,8,4,6,'Defensa','Defensa controlada',10);
 /*!40000 ALTER TABLE `exercise_ability` ENABLE KEYS */;
 UNLOCK TABLES;
 
