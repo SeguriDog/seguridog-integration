@@ -9,6 +9,11 @@ class K9VeterinarianController {
     def index() {
     }
 
+    def calendar() {
+        def clinic_history_list = ClinicHistory.findAllByMedics(session.user)
+        [clinic_history_list : clinic_history_list]
+    }
+
     def register_clinic_history() {
         def canine_list = Canine.findAllByStateCanine('Activo')
         [canine_list : canine_list]

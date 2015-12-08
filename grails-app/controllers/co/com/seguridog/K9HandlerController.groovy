@@ -6,7 +6,12 @@ class K9HandlerController {
 
     def dataSource
 
-    def index() { }
+    def index() {}
+
+    def calendar() {
+        def activities_list = WorkCanine.findAllByHandlers(session.user)
+        [activities_list : activities_list]
+    }
 
     def activities_history(){
         def activities_list = WorkCanine.findAllByHandlers(session.user)
@@ -62,7 +67,7 @@ class K9HandlerController {
     def save_profile_user(){
         Sql sql = Sql.newInstance(dataSource)
         sql.executeUpdate('update k9user set first_name = ?, last_name = ?, login_user = ?, login_pass = ?, birth_date = ?, cellphone = ?, e_mail = ? where id = ?',
-                [params.firstName,params.lastName,params.loginUser,params.loginPass,params.birthDate,params.cellphone,params.eMail,session.user.id])
+                [params.firstName, params.lastName, params.loginUser, params.loginPass, params.birthDate, params.cellphone, params.eMail, session.user.id])
         redirect(controller: "K9Handler", action: "look_profile_user")
     }
 

@@ -4,13 +4,19 @@ import groovy.sql.Sql
 import javax.imageio.ImageIO
 import java.awt.image.BufferedImage;
 
-
 class K9AdminController {
 
     def dataSource
     BufferedImage image
 
     def index() {}
+
+    def calendar() {
+        def activities_list = WorkCanine.findAll()
+        def exercise_ability_list = ExerciseAbility.findAll()
+        def clinic_history_list = ClinicHistory.findAll()
+        [activities_list : activities_list, exercise_ability_list : exercise_ability_list, clinic_history_list : clinic_history_list]
+    }
 
     def view_profile_user(){
         def user = K9Admin.findById(session.user.id)
@@ -72,20 +78,35 @@ class K9AdminController {
     }
 
     def save_data_user = {
-        image = ImageIO.read( new File( params.path+"\\"+ params.photoUser ) )
-        ImageIO.write(image, params.photoUser.substring(params.photoUser.length()-3,params.photoUser.length()) , new File( "${new File("").getAbsolutePath()}\\web-app\\purpose\\img\\users\\"+params.photoUser ) )
-        Sql sql = Sql.newInstance(dataSource)
-        if( params.typeUsers.equals("2") ) {//instructor
-            sql.execute('insert into k9user(version,photo_user,birth_date,cedula,cellphone,date_contract,e_mail,enable_user,first_name,last_name,login_pass,login_user,type_contract,type_users,approved_course,date_approved,date_credentials,specialities,class) values (?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?,?,?,?,?,?,?)',
-                    [6,params.photoUser,params.birthDate,params.cedula,params.cellphone,params.dateContract,params.eMail,true,params.firstName,params.lastName,params.loginPass,params.loginUser,params.typeContract,params.typeUsers,params.approved_course,params.date_approved,params.date_credentials,params.specialities,'co.com.seguridog.K9Instructor'])
+        def newUser
+        if( params.typeUsers.equals("1") ) {//admin
+            newUser = new K9Admin(cedula: params.cedula, firstName: params.firstName, lastName: params.lastName, loginUser: params.loginUser, loginPass: params.loginPass, birthDate: params.birthDate, cellphone: params.cellphone, eMail: params.eMail, typeContract: params.typeContract, dateContract: params.dateContract, typeUsers: params.typeUsers, enableUser: true, photoUser: params.photoUser, dateInitialAccess: new Date())
+        }else if( params.typeUsers.equals("2") ){//instructor
+            newUser = new K9Instructor(cedula: params.cedula, firstName: params.firstName, lastName: params.lastName, loginUser: params.loginUser, loginPass: params.loginPass, birthDate: params.birthDate, cellphone: params.cellphone, eMail: params.eMail, typeContract: params.typeContract, dateContract: params.dateContract, typeUsers: params.typeUsers, enableUser: true, photoUser: params.photoUser, approvedCourse: params.approved_course, dateApproved: params.date_approved, dateCredentials: params.date_credentials, specialities: params.specialities)
         }else if( params.typeUsers.equals("3") ){//veterinario
-            sql.execute('insert into k9user(version,photo_user,birth_date,cedula,cellphone,date_contract,e_mail,enable_user,first_name,last_name,login_pass,login_user,type_contract,type_users,professional_card,date_expedition,class) values (?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?,?,?,?,?)',
-                    [6,params.photoUser,params.birthDate,params.cedula,params.cellphone,params.dateContract,params.eMail,true,params.firstName,params.lastName,params.loginPass,params.loginUser,params.typeContract,params.typeUsers,params.professional_card,params.date_expedition,'co.com.seguridog.K9Veterinarian'])
+            newUser = new K9Veterinarian(cedula: params.cedula, firstName: params.firstName, lastName: params.lastName, loginUser: params.loginUser, loginPass: params.loginPass, birthDate: params.birthDate, cellphone: params.cellphone, eMail: params.eMail, typeContract: params.typeContract, dateContract: params.dateContract, typeUsers: params.typeUsers, enableUser: true, photoUser: params.photoUser, professionalCard: params.professional_card, dateExpedition: params.date_expedition)
         }else{//manejador
-            sql.execute('insert into k9user(version,photo_user,birth_date,cedula,cellphone,date_contract,e_mail,enable_user,first_name,last_name,login_pass,login_user,type_contract,type_users,approved_course,date_approved,class) values (?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?,?,?,?,?)',
-                    [6,params.photoUser,params.birthDate,params.cedula,params.cellphone,params.dateContract,params.eMail,true,params.firstName,params.lastName,params.loginPass,params.loginUser,params.typeContract,params.typeUsers,params.approved_course,params.date_approved,'co.com.seguridog.K9Handler'])
+            newUser = new K9Handler(cedula: params.cedula, firstName: params.firstName, lastName: params.lastName, loginUser: params.loginUser, loginPass: params.loginPass, birthDate: params.birthDate, cellphone: params.cellphone, eMail: params.eMail, typeContract: params.typeContract, dateContract: params.dateContract, typeUsers: params.typeUsers, enableUser: true, photoUser: params.photoUser, basicInductionCourse: params.basic_induction_course, dateApprovedInduction: params.date_approved_induction, typeTrainingHandler: params.type_training_handler)
         }
-        redirect(controller: "K9Admin", action: "index")
+        if(!newUser.validate()){
+            render(view:"/k9Admin/register_user", model:[newUser:newUser])
+            return
+        } else {
+            image = ImageIO.read( new File( params.path+"\\"+ params.photoUser ) )
+            ImageIO.write(image, params.photoUser.substring(params.photoUser.length()-3,params.photoUser.length()) , new File( "${new File("").getAbsolutePath()}\\web-app\\purpose\\img\\users\\"+params.photoUser ) )
+            Sql sql = Sql.newInstance(dataSource)
+            if( params.typeUsers.equals("2") ) {//instructor
+                sql.execute('insert into k9user(version,photo_user,birth_date,cedula,cellphone,date_contract,e_mail,enable_user,first_name,last_name,login_pass,login_user,type_contract,type_users,approved_course,date_approved,date_credentials,specialities,class) values (?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?,?,?,?,?,?,?)',
+                        [6,params.photoUser,params.birthDate,params.cedula,params.cellphone,params.dateContract,params.eMail,true,params.firstName,params.lastName,params.loginPass,params.loginUser,params.typeContract,params.typeUsers,params.approved_course,params.date_approved,params.date_credentials,params.specialities,'co.com.seguridog.K9Instructor'])
+            }else if( params.typeUsers.equals("3") ){//veterinario
+                sql.execute('insert into k9user(version,photo_user,birth_date,cedula,cellphone,date_contract,e_mail,enable_user,first_name,last_name,login_pass,login_user,type_contract,type_users,professional_card,date_expedition,class) values (?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?,?,?,?,?)',
+                        [6,params.photoUser,params.birthDate,params.cedula,params.cellphone,params.dateContract,params.eMail,true,params.firstName,params.lastName,params.loginPass,params.loginUser,params.typeContract,params.typeUsers,params.professional_card,params.date_expedition,'co.com.seguridog.K9Veterinarian'])
+            }else{//manejador
+                sql.execute('insert into k9user(version,photo_user,birth_date,cedula,cellphone,date_contract,e_mail,enable_user,first_name,last_name,login_pass,login_user,type_contract,type_users,approved_course,date_approved,class) values (?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?,?,?,?,?)',
+                        [6,params.photoUser,params.birthDate,params.cedula,params.cellphone,params.dateContract,params.eMail,true,params.firstName,params.lastName,params.loginPass,params.loginUser,params.typeContract,params.typeUsers,params.approved_course,params.date_approved,'co.com.seguridog.K9Handler'])
+            }
+            redirect(controller: "K9Admin", action: "index")
+        }
     }
 
     def register_service (){

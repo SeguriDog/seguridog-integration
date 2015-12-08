@@ -11,9 +11,10 @@
 	<body>
 
         <script type="text/javascript" language="JavaScript">
+
            function enable_boxes(){
              if (document.form.typeUsers.value == "2") {
-         			document.getElementById('box1').style.display="";
+         			document.getElementById('box1').style.display="none";
                     document.getElementById('box2').style.display="";
          			document.getElementById('box3').style.display="none";
          			document.form.approved_course.disabled = false;
@@ -30,8 +31,9 @@
                     document.getElementById('box1').style.display="";
                     document.getElementById('box2').style.display="none";
                     document.getElementById('box3').style.display="none";
- 				    document.form.approved_course.disabled = false;
-                    document.form.date_approved.disabled = false;
+ 				    document.form.basic_induction_course.disabled = false;
+ 				    document.form.date_approved_induction.disabled = false;
+                    document.form.type_training_handler.disabled = false;
             }else{
         		 	document.getElementById('box1').style.display="none";
         		 	document.getElementById('box2').style.display="none";
@@ -59,7 +61,6 @@
 					<div class="col-sm-6 col-sm-offset-3">
 						<div class="basic-login">
 							<g:form controller = "K9Admin" action="save_data_user" name="form">
-
                                 <div class="form-group">
                                     <label for="typeUsers"><i class="icon-user"></i> <b>Tipo de usuario</b></label>
                                     <select name="typeUsers" id="typeUsers" type="number" SIZE="1" onChange="javascript:enable_boxes();">
@@ -84,48 +85,96 @@
                                 </div>
                                 <div class="form-group">
 		        				 	<label for="cedula"><i class="icon-user"></i> <b>Cédula</b></label>
-									<input class="form-control" id="cedula" name="cedula" type="text" placeholder="Ingrese cedula">
+									<input class="form-control" id="cedula" name="cedula" type="text" placeholder="Ingrese cedula" value="<g:if test='${newUser != null}'>${newUser.cedula}</g:if>">
+                                    <g:hasErrors bean="${newUser}" id="cedula" field="cedula">
+                                        <div class="alert-danger" style="display: block">
+                                            <g:fieldError field="cedula" bean="${newUser}"/>
+                                        </div>
+                                    </g:hasErrors>
 								</div>
 								<div class="form-group">
                                     <label for="firstName"><i class="icon-user"></i> <b>Nombre</b></label>
-                           			<input class="form-control" id="firstName" name="firstName" type="text" placeholder="Ingrese nombre">
+                           			<input class="form-control" id="firstName" name="firstName" type="text" placeholder="Ingrese nombre" value="<g:if test='${newUser != null}'>${newUser.firstName}</g:if>">
+                                    <g:hasErrors bean="${newUser}" id="firstName" field="firstName">
+                                        <div class="alert-danger" style="display: block">
+                                            <g:fieldError field="firstName" bean="${newUser}"/>
+                                        </div>
+                                    </g:hasErrors>
                            		</div>
                            		<div class="form-group">
                                     <label for="lastName"><i class="icon-user"></i> <b>Apellido</b></label>
-                                    <input class="form-control" id="lastName" name="lastName" type="text" placeholder="Ingrese apellido">
+                                    <input class="form-control" id="lastName" name="lastName" type="text" placeholder="Ingrese apellido" value="<g:if test='${newUser != null}'>${newUser.lastName}</g:if>">
+                                    <g:hasErrors bean="${newUser}" id="lastName" field="lastName">
+                                        <div class="alert-danger" style="display: block">
+                                            <g:fieldError field="lastName" bean="${newUser}"/>
+                                        </div>
+                                    </g:hasErrors>
                                 </div>
                                 <div class="form-group">
                                     <label for="loginUser"><i class="icon-user"></i> <b>Usuario</b></label>
-                                    <input class="form-control" id="loginUser" name="loginUser" type="text" placeholder="Ingrese usuario">
+                                    <input class="form-control" id="loginUser" name="loginUser" type="text" placeholder="Ingrese usuario" value="<g:if test='${newUser != null}'>${newUser.loginUser}</g:if>">
+                                    <g:hasErrors bean="${newUser}" id="loginUser" field="loginUser">
+                                        <div class="alert-danger" style="display: block">
+                                            <g:fieldError field="loginUser" bean="${newUser}"/>
+                                        </div>
+                                    </g:hasErrors>
                                 </div>
                                 <div class="form-group">
                                 	<label for="loginPass"><i class="icon-lock"></i> <b>Contrasenia</b></label>
-              						<input class="form-control" id="loginPass" name="loginPass" type="password" placeholder="ingrese contrasenia">
+              						<input class="form-control" id="loginPass" name="loginPass" type="password" placeholder="ingrese contraseña" value="<g:if test='${newUser != null}'>${newUser.loginPass}</g:if>">
+                                    <g:hasErrors bean="${newUser}" id="loginPass" field="loginPass">
+                                        <div class="alert-danger" style="display: block">
+                                            <g:fieldError field="loginPass" bean="${newUser}"/>
+                                        </div>
+                                    </g:hasErrors>
                                 </div>
                                 <div class="form-group">
                                     <label for="birthDate"><i class="icon-user"></i> <b>Fecha de Nacimiento</b></label>
-                                    <input class="form-control" id="birthDate" name="birthDate" type="date" placeholder="">
+                                    <input class="form-control" id="birthDate" name="birthDate" type="date" placeholder="" value="<g:if test='${newUser != null}'><g:formatDate format="yyyy-MM-dd" date="${newUser.birthDate}"/></g:if>">
+                                    <g:hasErrors bean="${newUser}" id="birthDate" field="birthDate">
+                                        <div class="alert-danger" style="display: block">
+                                            <g:fieldError field="birthDate" bean="${newUser}"/>
+                                        </div>
+                                    </g:hasErrors>
                                 </div>
                                 <div class="form-group">
                                     <label for="cellphone"><i class="icon-user"></i> <b>Teléfono</b></label>
-                                    <input class="form-control" id="cellphone" name="cellphone" type="text" placeholder="Ingrese telefono">
+                                    <input class="form-control" id="cellphone" name="cellphone" type="text" placeholder="Ingrese telefono" value="<g:if test='${newUser != null}'>${newUser.cellphone}</g:if>">
+                                    <g:hasErrors bean="${newUser}" id="cellphone" field="cellphone">
+                                        <div class="alert-danger" style="display: block">
+                                            <g:fieldError field="cellphone" bean="${newUser}"/>
+                                        </div>
+                                    </g:hasErrors>
                                 </div>
                                 <div class="form-group">
                                     <label for="eMail"><i class="icon-user"></i> <b>Correo Electrónico</b></label>
-                                    <input class="form-control" id="eMail" name="eMail" type="email" placeholder="Ingrese correo">
+                                    <input class="form-control" id="eMail" name="eMail" type="email" placeholder="Ingrese correo" value="<g:if test='${newUser != null}'>${newUser.eMail}</g:if>">
+                                    <g:hasErrors bean="${newUser}" id="eMail" field="eMail">
+                                        <div class="alert-danger" style="display: block">
+                                            <g:fieldError field="eMail" bean="${newUser}"/>
+                                        </div>
+                                    </g:hasErrors>
                                 </div>
 
                                 <h2>Formacion Profesional</h2>
-
                                 <div class="form-group" id="box1" style="{display:none}">
-	                                <label for="approved_course"><i class="icon-user"></i> <b>Curso Aprobado</b></label>
-	                                <input class="form-control" id="approved_course" name="approved_course" type="text" placeholder="Ingrese curso" disabled>
+	                                <label for="basic_induction_course"><i class="icon-user"></i> <b>Curso básico de inducción</b></label>
+	                                <input class="form-control" id="basic_induction_course" name="basic_induction_course" type="text" placeholder="Ingrese curso" disabled>
 	                                <br>
-	                                <label for="date_approved"><i class="icon-user"></i> <b>Fecha de Aprobacion</b></label>
-                                    <input class="form-control" id="date_approved" name="date_approved" type="date" placeholder="" disabled>
+	                                <label for="date_approved_induction"><i class="icon-user"></i> <b>Fecha de Aprobacion</b></label>
+                                    <input class="form-control" id="date_approved_induction" name="date_approved_induction" type="date" placeholder="" disabled>
+	                                <br>
+	                                <label for="type_training_handler"><i class="icon-user"></i> <b>Tipo de Entrenamiento</b></label>
+	                                <input class="form-control" id="type_training_handler" name="type_training_handler" type="text" placeholder="Ingrese curso" disabled>
                                 </div>
 
                                 <div class="form-group" id="box2" style="{display:none}">
+                                    <label for="approved_course"><i class="icon-user"></i> <b>Curso Aprobado</b></label>
+                                    <input class="form-control" id="approved_course" name="approved_course" type="text" placeholder="" disabled>
+                                    <br>
+                                    <label for="date_approved"><i class="icon-user"></i> <b>Fecha de Aprobación</b></label>
+                                    <input class="form-control" id="date_approved" name="date_approved" type="date" placeholder="" disabled>
+                                    <br>
                                     <label for="date_credentials"><i class="icon-user"></i> <b>Fecha de Credenciales</b></label>
                                     <input class="form-control" id="date_credentials" name="date_credentials" type="date" placeholder="" disabled>
                                     <br>
@@ -155,7 +204,6 @@
 									<button type="submit" class="btn pull-right">Guardar</button>
 									<div class="clearfix"></div>
 								</div>
-
 							</g:form>
 						</div>
 					</div>

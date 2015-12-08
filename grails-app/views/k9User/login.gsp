@@ -25,13 +25,14 @@
 									<button type="submit" class="btn pull-right">Login</button>
 									<div class="clearfix"></div>
 								</div>
+                        		<div class="alert-danger" style="display: block">${flash.message}</div>
 							</g:form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		${flash.message}
+
 		<!-- end main content -->
 	</body>
 </html>

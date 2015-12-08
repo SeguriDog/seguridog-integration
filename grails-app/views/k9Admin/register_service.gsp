@@ -69,8 +69,6 @@
                                         <option value="Movil">Móvil</option>
                                     </select>
                                 </div>
-
-
 								<div class="form-group">
 									<label for="dateFinishWork"><i class="icon-user"></i> <b>Fecha de inicio de labor:</b></label>
 									<input class="form-control" id="dateFinishWork" name="dateFinishWork" type="date" placeholder="">
@@ -84,7 +82,6 @@
 									<button type="submit" class="btn pull-right">Guardar</button>
 									<div class="clearfix"></div>
 								</div>
-
 							</g:form>
 						</div>
 					</div>

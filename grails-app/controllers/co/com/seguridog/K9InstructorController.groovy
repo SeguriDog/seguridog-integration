@@ -8,6 +8,11 @@ class K9InstructorController {
 
     def index() {}
 
+    def calendar() {
+        def exercise_ability_list = ExerciseAbility.findAllByInstructors(session.user)
+        [exercise_ability_list : exercise_ability_list]
+    }
+
     def register_ExerciseAbility() {
         def result_name_canine
         result_name_canine = Canine.findAll()

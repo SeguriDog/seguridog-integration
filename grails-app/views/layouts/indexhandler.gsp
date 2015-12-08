@@ -43,11 +43,7 @@
                     ul.sdt_menu li span.sdt_active{
                         background: #924d10;
                     }
-                    ul.sdt_menu li div.sdt_box{
-                        background: #e67e22;
-                    }
         </style>
-
 	</head>
 
 	<body>

@@ -1,5 +1,8 @@
 package co.com.seguridog
 
+import grails.validation.Validateable
+
+@Validateable
 class K9Instructor extends K9User {
     String approvedCourse
     Date dateApproved
