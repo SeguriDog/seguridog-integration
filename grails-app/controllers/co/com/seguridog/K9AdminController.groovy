@@ -1,5 +1,11 @@
 package co.com.seguridog
 
+import com.itextpdf.text.Document
+import com.itextpdf.text.Font
+import com.itextpdf.text.Paragraph
+import com.itextpdf.text.pdf.PdfWriter
+import com.itextpdf.text.Image;
+import com.itextpdf.text.Element;
 import groovy.sql.Sql
 import javax.imageio.ImageIO
 import java.awt.image.BufferedImage;
@@ -69,6 +75,51 @@ class K9AdminController {
         sql.execute('insert into canine(version,photo_canine,color_canine,date_birthday,micro_chip,name_canine,sex_canine,state_canine,type_race,attend_call,felt_down,name_father,name_mother,position_stay,sign_canine,sit_down,walk_side,watch_canine) values (?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?,?,?,?)',
                 [4,params.photoCanine,params.color_canine,params.date_birthday,params.micro_chip,params.name_canine,params.sex_canine,'Activo',params.type_race,'','',params.name_father,params.name_mother,'','','','',''])
         redirect(controller: "K9Admin", action: "index")
+    }
+
+    def genearateResumeCanine = {
+        def canine_info = Canine.findById(params.can_id)
+        def canine_abilities = ExerciseAbility.findAllByCanines(canine_info)
+        FileOutputStream archivo = new FileOutputStream("HV"+canine_info.nameCanine+".pdf")
+        Document documento = new Document()
+        PdfWriter.getInstance(documento, archivo)
+        Image photo_can = Image.getInstance("${new File("").getAbsolutePath()}\\web-app\\purpose\\img\\canines\\"+canine_info.photoCanine)
+        photo_can.setAlignment(Element.ALIGN_CENTER)
+        documento.open()
+        documento.add(new Paragraph(new Date().toString()))
+        documento.add(new Paragraph("HOJA DE VIDA"))
+        documento.add(photo_can)
+        documento.add(new Paragraph(
+                "----------------------------------------------------------------------------------------------------------------------------------"+"\n"+
+                "\nInformacion Basica: ".toUpperCase()+"\n"+"\n"+
+                "Nombre : "+canine_info.nameCanine+"\n"+
+                "Sexo : "+canine_info.sexCanine+"\n"+
+                "Color : "+canine_info.colorCanine+"\n"+
+                "Raza : "+canine_info.typeRace+"\n"+
+                "Fecha de Nacimiento : "+canine_info.dateBirthday+"\n"+
+                "Microchip : "+canine_info.microChip+"\n"+
+                "Padre : "+canine_info.nameFather+"\n"+
+                "Madre : "+canine_info.nameMother+"\n"+
+                "----------------------------------------------------------------------------------------------------------------------------------"+"\n"+
+                "\nHabilidades: ".toUpperCase()+"\n"+"\n"+
+                "Obediencia : "+canine_abilities.obedience+"\n"+
+                "Aprendizaje : "+canine_abilities.velLearning+"\n"+
+                "Caracter : "+canine_abilities.naturePlay+"\n"+
+                "Exploracion : "+canine_abilities.natureExplore+"\n"+
+                "Contacto : "+canine_abilities.levelContantactitude+"\n"+
+                "Escape : "+canine_abilities.levelExiting+"\n"+
+                "Actitud : "+canine_abilities.actitudeGeneral+"\n"+
+                "Dominado : "+canine_abilities.dominated+"\n"+
+                "Relacion con manejador : "+canine_abilities.relationshipHandler+"\n"+
+                "Comunicacion : "+canine_abilities.comunicativeCanine+"\n"+
+                "Estabilidad emocional : "+canine_abilities.stablityEmotional+"\n"+
+                "Agresividad : "+canine_abilities.interAgressive+"\n"
+        ))
+        documento.close()
+        def file = new File("HV"+canine_info.nameCanine+".pdf")
+        response.setContentType("application/octet-stream")
+        response.setHeader("Content-disposition", "attachment;filename=${file.getName()}")
+        response.outputStream << file.newInputStream()
     }
 
     def save_data_user = {

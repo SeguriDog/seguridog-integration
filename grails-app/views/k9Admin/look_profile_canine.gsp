@@ -136,6 +136,7 @@ var barChartData = {
         <div class="section">
 	    	<div class="container">
 	    		<div class="row">
+	    			<h2>Perfil canino</h2>
 	    			<div class="col-sm-6">
 	    				<div class="product-image-large">
 	                        <img src="${request.contextPath}/purpose/img/canines/${canine_info.photoCanine}">
@@ -163,6 +164,7 @@ var barChartData = {
                         </g:form>
 	    			</div>
 	    			<!-- Full Description & Specification -->
+	    			<h2>Historial canino</h2>
 	    			<div class="col-sm-12">
 	    				<div class="tabbable">
 	    					<!-- Tabs -->
@@ -206,7 +208,18 @@ var barChartData = {
 								</div>
 							</div>
 						</div>
+						<br><br>
 	    			</div>
+	    			<h2>Documentos del canino</h2>
+						<g:form controller="k9Admin" action="genearateResumeCanine">
+ 							<div class="form-group">
+                                <input class="form-control" id="can_id" name="can_id" type="hidden" value="${canine_info.id}">
+                            </div>
+								<center>
+                                <button type="submit" class="btn pull-center">Descargar Hoja de vida</button>
+                            	<div class="clearfix"></div>
+								</center>
+                        </g:form>
 	    		</div>
 			</div>
 		</div>
