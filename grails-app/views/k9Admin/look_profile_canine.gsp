@@ -214,7 +214,7 @@ var barChartData = {
 
 					   <div class = "col-sm-6 col-md-3">
 						  <div class = "thumbnail">
-							 <img src="${request.contextPath}/purpose/img/images_menu/registro.png" alt = "Generic placeholder thumbnail">
+							 <img src="${request.contextPath}/purpose/img/images_downloads/tarjetaAfiliacion.png" alt = "Generic placeholder thumbnail">
 							 <div class = "caption">
 								  <center>
 									  <h3>Tarjeta de Afiliacion</h3>
@@ -234,7 +234,7 @@ var barChartData = {
 
 					   <div class = "col-sm-6 col-md-3">
 						  <div class = "thumbnail">
-							 <img src="${request.contextPath}/purpose/img/images_menu/registro.png" alt = "Generic placeholder thumbnail">
+							 <img src="${request.contextPath}/purpose/img/images_downloads/hojaVida.jpg" alt = "Generic placeholder thumbnail">
 							 <div class = "caption">
 								  <center>
 									  <h3>Hoja de Vida</h3>
@@ -254,7 +254,7 @@ var barChartData = {
 
 					   <div class = "col-sm-6 col-md-3">
 						  <div class = "thumbnail">
-							 <img src="${request.contextPath}/purpose/img/images_menu/registro.png" alt = "Generic placeholder thumbnail">
+							 <img src="${request.contextPath}/purpose/img/images_downloads/certificadoFormacion.png" alt = "Generic placeholder thumbnail">
 							 <div class = "caption">
 								  <center>
 									  <h3>Certificado Formacion</h3>
@@ -274,7 +274,7 @@ var barChartData = {
 
 					   <div class = "col-sm-6 col-md-3">
 						  <div class = "thumbnail">
-							 <img src="${request.contextPath}/purpose/img/images_menu/registro.png" alt = "Generic placeholder thumbnail">
+							 <img src="${request.contextPath}/purpose/img/images_downloads/historiaClinica.png" alt = "Generic placeholder thumbnail">
 							 <div class = "caption">
 								  <center>
 									  <h3>Historia Clinica</h3>

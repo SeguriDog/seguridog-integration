@@ -3,8 +3,9 @@ package co.com.seguridog
 import com.itextpdf.text.Document
 import com.itextpdf.text.Paragraph
 import com.itextpdf.text.pdf.PdfWriter
-import com.itextpdf.text.Image;
-import com.itextpdf.text.Element;
+import com.itextpdf.text.Image
+import com.itextpdf.text.Element
+import com.itextpdf.text.pdf.PdfPTable
 import groovy.sql.Sql
 import javax.imageio.ImageIO
 import java.awt.image.BufferedImage
@@ -100,6 +101,8 @@ class K9AdminController {
                 "Microchip : "+canine_info.microChip+"\n"+
                 "Padre : "+canine_info.nameFather+"\n"+
                 "Madre : "+canine_info.nameMother+"\n"+
+                "Especialidad : "+canine_abilities.typeTraining+"\n"+
+                "Instructor : "+canine_abilities.instructors.fullName.toString()+"\n"+
                 "_____________________________________________________________________________"+"\n"+
                 "Habilidades: ".toUpperCase()+"\n"+
                 "_____________________________________________________________________________"+"\n"+
@@ -166,6 +169,21 @@ class K9AdminController {
 
     def generateMedicalHistoryCanine = {
         def canine_info = Canine.findById(params.canino_id)
+        def canine_clinic = ClinicHistory.findAllByCanines(canine_info)
+        def canine_abilities = ExerciseAbility.findAllByCanines(canine_info)
+        PdfPTable tabla = new PdfPTable(5)
+        tabla.addCell( "Fecha" )
+        tabla.addCell( "Veterinario" )
+        tabla.addCell( "Tipo" )
+        tabla.addCell( "Tratamiento" )
+        tabla.addCell( "Firma responsable" )
+        for (def canClinic : canine_clinic) {
+            tabla.addCell( canClinic.dateTreatment.toString() )
+            tabla.addCell( canClinic.medics.fullName.toString() )
+            tabla.addCell( canClinic.typeTreatment.toString() )
+            tabla.addCell( canClinic.nameTreatment.toString() )
+            tabla.addCell( " " )
+        }
         FileOutputStream archivo = new FileOutputStream("HClinica_"+canine_info.nameCanine+".pdf")
         Document documento = new Document()
         PdfWriter.getInstance(documento, archivo)
@@ -187,10 +205,13 @@ class K9AdminController {
                         "Fecha de Nacimiento : "+canine_info.dateBirthday+"\n"+
                         "Microchip : "+canine_info.microChip+"\n"+
                         "Padre : "+canine_info.nameFather+"\n"+
-                        "Madre : "+canine_info.nameMother+"\n\n\n"+
-                        "Firma medico veterinario _____________________________________\n"+
-                        "N registro medico _____________________________________\n"
+                        "Madre : "+canine_info.nameMother+"\n"+
+                        "Especialidad : "+canine_abilities.typeTraining+"\n"+
+                        "_____________________________________________________________________________"+"\n"+
+                        "HISTORIAL DE TRATAMIENTOS\n"+
+                        "_____________________________________________________________________________"+"\n\n"
         ))
+        documento.add(tabla);
         documento.close()
         def file = new File("HClinica_"+canine_info.nameCanine+".pdf")
         response.setContentType("application/octet-stream")
@@ -224,7 +245,7 @@ class K9AdminController {
                         "Madre : "+canine_info.nameMother+"\n\n\n"+
                         "Bajo la gravedad del juramento, manifiesto que la información y los documentos suministrados son ciertos "+
                         "y auténticos, de no ser así se incurrirá en los delitos y sanciones previstos en los artículos 286 y S.S. "+
-                        "del código penal y demás normas concord+A7antes. Igualmente, autorizo a la Superintendencia de Vigilancia y "+
+                        "del código penal y demás normas concordantes. Igualmente, autorizo a la Superintendencia de Vigilancia y "+
                         "Seguridad Privada para que verifique ante cualquier Persona Natural, Jurídica, Privada o Pública, sin "+
                         "limitación alguna, la información aquí suministrada.\n\n"+
                         "Firma Jefe de Registro K9 _____________________________________\n\n"+
