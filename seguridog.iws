@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b92634e5-1c40-442a-a065-1c3899fb4517" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/co/com/seguridog/K9AdminController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/k9Admin/look_profile_canine.gsp" afterPath="$PROJECT_DIR$/grails-app/views/k9Admin/look_profile_canine.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/seguridog.iws" afterPath="$PROJECT_DIR$/seguridog.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
-    </list>
+    <list default="true" id="b92634e5-1c40-442a-a065-1c3899fb4517" name="Default" comment="" />
     <ignored path="seguridog.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,8 +37,8 @@
       <file leaf-file-name="look_profile_canine.gsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/views/k9Admin/look_profile_canine.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62222224">
-              <caret line="284" column="20" selection-start-line="284" selection-start-column="20" selection-end-line="284" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.33162394">
+              <caret line="274" column="29" selection-start-line="274" selection-start-column="29" selection-end-line="274" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -480,7 +475,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -883,8 +878,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/k9Admin/look_profile_canine.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62222224">
-          <caret line="284" column="20" selection-start-line="284" selection-start-column="20" selection-end-line="284" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.33162394">
+          <caret line="274" column="29" selection-start-line="274" selection-start-column="29" selection-end-line="274" selection-end-column="29" />
           <folding />
         </state>
       </provider>
