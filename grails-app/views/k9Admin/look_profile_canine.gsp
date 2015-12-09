@@ -211,15 +211,87 @@ var barChartData = {
 						<br><br>
 	    			</div>
 	    			<h2>Documentos del canino</h2>
-						<g:form controller="k9Admin" action="genearateResumeCanine">
- 							<div class="form-group">
-                                <input class="form-control" id="can_id" name="can_id" type="hidden" value="${canine_info.id}">
-                            </div>
-								<center>
-                                <button type="submit" class="btn pull-center">Descargar Hoja de vida</button>
-                            	<div class="clearfix"></div>
-								</center>
-                        </g:form>
+
+					   <div class = "col-sm-6 col-md-3">
+						  <div class = "thumbnail">
+							 <img src="${request.contextPath}/purpose/img/images_menu/registro.png" alt = "Generic placeholder thumbnail">
+							 <div class = "caption">
+								  <center>
+									  <h3>Tarjeta de Afiliacion</h3>
+								  </center>
+								  <g:form controller="k9Admin" action="generateCardAffiliationCanine">
+									  <div class="form-group">
+										  <input class="form-control" id="canine_id" name="canine_id" type="hidden" value="${canine_info.id}">
+									  </div>
+									  <center>
+										  <button type="submit" class="btn pull-center">Descargar</button>
+										  <div class="clearfix"></div>
+									  </center>
+								  </g:form>
+							 </div>
+						  </div>
+					   </div>
+
+					   <div class = "col-sm-6 col-md-3">
+						  <div class = "thumbnail">
+							 <img src="${request.contextPath}/purpose/img/images_menu/registro.png" alt = "Generic placeholder thumbnail">
+							 <div class = "caption">
+								  <center>
+									  <h3>Hoja de Vida</h3>
+								  </center>
+								  <g:form controller="k9Admin" action="genearateResumeCanine">
+									  <div class="form-group">
+										  <input class="form-control" id="can_id" name="can_id" type="hidden" value="${canine_info.id}">
+									  </div>
+									  <center>
+										  <button type="submit" class="btn pull-center">Descargar</button>
+										  <div class="clearfix"></div>
+									  </center>
+								  </g:form>
+							 </div>
+						  </div>
+					   </div>
+
+					   <div class = "col-sm-6 col-md-3">
+						  <div class = "thumbnail">
+							 <img src="${request.contextPath}/purpose/img/images_menu/registro.png" alt = "Generic placeholder thumbnail">
+							 <div class = "caption">
+								  <center>
+									  <h3>Certificado Formacion</h3>
+								  </center>
+								  <g:form controller="k9Admin" action="generateCanineTrainingCertificate">
+									  <div class="form-group">
+										  <input class="form-control" id="canin_id" name="canin_id" type="hidden" value="${canine_info.id}">
+									  </div>
+									  <center>
+										  <button type="submit" class="btn pull-center">Descargar</button>
+										  <div class="clearfix"></div>
+									  </center>
+								  </g:form>
+							 </div>
+						  </div>
+					   </div>
+
+					   <div class = "col-sm-6 col-md-3">
+						  <div class = "thumbnail">
+							 <img src="${request.contextPath}/purpose/img/images_menu/registro.png" alt = "Generic placeholder thumbnail">
+							 <div class = "caption">
+								  <center>
+									  <h3>Historia Clinica</h3>
+								  </center>
+								  <g:form controller="k9Admin" action="generateMedicalHistoryCanine">
+									  <div class="form-group">
+										   <input class="form-control" id="canino_id" name="canino_id" type="hidden" value="${canine_info.id}">
+									  </div>
+									  <center>
+										   <button type="submit" class="btn pull-center">Descargar</button>
+										   <div class="clearfix"></div>
+									  </center>
+								  </g:form>
+							 </div>
+						  </div>
+					   </div>
+
 	    		</div>
 			</div>
 		</div>
