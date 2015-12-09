@@ -1,8 +1,14 @@
 package co.com.seguridog
 
+import com.itextpdf.text.Document
+import com.itextpdf.text.Paragraph
+import com.itextpdf.text.pdf.PdfWriter
+import com.itextpdf.text.Image
+import com.itextpdf.text.Element
+import com.itextpdf.text.pdf.PdfPTable
 import groovy.sql.Sql
 import javax.imageio.ImageIO
-import java.awt.image.BufferedImage;
+import java.awt.image.BufferedImage
 
 class K9AdminController {
 
@@ -75,6 +81,187 @@ class K9AdminController {
         sql.execute('insert into canine(version,photo_canine,color_canine,date_birthday,micro_chip,name_canine,sex_canine,state_canine,type_race,attend_call,felt_down,name_father,name_mother,position_stay,sign_canine,sit_down,walk_side,watch_canine) values (?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?,?,?,?)',
                 [4,params.photoCanine,params.color_canine,params.date_birthday,params.micro_chip,params.name_canine,params.sex_canine,'Activo',params.type_race,'','',params.name_father,params.name_mother,'','','','',''])
         redirect(controller: "K9Admin", action: "index")
+    }
+
+    def genearateResumeCanine = {
+        def canine_info = Canine.findById(params.can_id)
+        def canine_abilities = ExerciseAbility.findAllByCanines(canine_info)
+        FileOutputStream archivo = new FileOutputStream("HojaVida_"+canine_info.nameCanine+".pdf")
+        Document documento = new Document()
+        PdfWriter.getInstance(documento, archivo)
+        Image photo_can = Image.getInstance("${new File("").getAbsolutePath()}\\web-app\\purpose\\img\\canines\\"+canine_info.photoCanine)
+        photo_can.setAlignment(Element.ALIGN_CENTER)
+        documento.open()
+        documento.add(new Paragraph(new Date().toString()))
+        documento.add(new Paragraph("HOJA DE VIDA"))
+        documento.add(photo_can)
+        documento.add(new Paragraph(
+                "_____________________________________________________________________________"+"\n"+
+                "Informacion Basica: ".toUpperCase()+"\n"+
+                "_____________________________________________________________________________"+"\n"+
+                "Nombre : "+canine_info.nameCanine+"\n"+
+                "Sexo : "+canine_info.sexCanine+"\n"+
+                "Color : "+canine_info.colorCanine+"\n"+
+                "Raza : "+canine_info.typeRace+"\n"+
+                "Fecha de Nacimiento : "+canine_info.dateBirthday+"\n"+
+                "Microchip : "+canine_info.microChip+"\n"+
+                "Padre : "+canine_info.nameFather+"\n"+
+                "Madre : "+canine_info.nameMother+"\n"+
+                "Especialidad : "+canine_abilities.typeTraining+"\n"+
+                "Instructor : "+canine_abilities.instructors.fullName.toString()+"\n"+
+                "_____________________________________________________________________________"+"\n"+
+                "Habilidades: ".toUpperCase()+"\n"+
+                "_____________________________________________________________________________"+"\n"+
+                "Obediencia : "+canine_abilities.obedience+"\n"+
+                "Aprendizaje : "+canine_abilities.velLearning+"\n"+
+                "Caracter : "+canine_abilities.naturePlay+"\n"+
+                "Exploracion : "+canine_abilities.natureExplore+"\n"+
+                "Contacto : "+canine_abilities.levelContantactitude+"\n"+
+                "Escape : "+canine_abilities.levelExiting+"\n"+
+                "Actitud : "+canine_abilities.actitudeGeneral+"\n"+
+                "Dominado : "+canine_abilities.dominated+"\n"+
+                "Relacion con manejador : "+canine_abilities.relationshipHandler+"\n"+
+                "Comunicacion : "+canine_abilities.comunicativeCanine+"\n"+
+                "Estabilidad emocional : "+canine_abilities.stablityEmotional+"\n"+
+                "Agresividad : "+canine_abilities.interAgressive+"\n"
+        ))
+        documento.close()
+        def file = new File("HojaVida_"+canine_info.nameCanine+".pdf")
+        response.setContentType("application/octet-stream")
+        response.setHeader("Content-disposition", "attachment;filename=${file.getName()}")
+        response.outputStream << file.newInputStream()
+    }
+
+    def generateCanineTrainingCertificate = {
+        def canine_info = Canine.findById(params.canin_id)
+        def canine_abilities = ExerciseAbility.findAllByCanines(canine_info)
+        FileOutputStream archivo = new FileOutputStream("Certificado_"+canine_info.nameCanine+".pdf")
+        Document documento = new Document()
+        PdfWriter.getInstance(documento, archivo)
+        Image photo_can = Image.getInstance("${new File("").getAbsolutePath()}\\web-app\\purpose\\img\\canines\\"+canine_info.photoCanine)
+        photo_can.setAlignment(Element.ALIGN_CENTER)
+        documento.open()
+        documento.add(new Paragraph(new Date().toString()))
+        documento.add(new Paragraph("CERTIFICADO DE FORMACION"))
+        documento.add(new Paragraph("\n\nLa Escuela de Guias y Adiestramiento Canino de la Policia Nacional de Colombia " +
+                "CERTIFICA al canino perteneciente a la empresa de seguridad privada K9 - SECURITY LTDA, con numero de " +
+                "NIT 830.062.025-0, el cual supero las pruebas tecnicas de trabajo para su desempeño en la Especialidad de: " +
+                canine_abilities.typeTraining))
+        documento.add(photo_can)
+        documento.add(new Paragraph(
+                        "_____________________________________________________________________________"+"\n"+
+                        "Descripcion Canino: ".toUpperCase()+"\n"+
+                        "_____________________________________________________________________________"+"\n"+
+                        "Nombre : "+canine_info.nameCanine+"\n"+
+                        "Sexo : "+canine_info.sexCanine+"\n"+
+                        "Color : "+canine_info.colorCanine+"\n"+
+                        "Raza : "+canine_info.typeRace+"\n"+
+                        "Fecha de Nacimiento : "+canine_info.dateBirthday+"\n"+
+                        "Microchip : "+canine_info.microChip+"\n"+
+                        "Padre : "+canine_info.nameFather+"\n"+
+                        "Madre : "+canine_info.nameMother+"\n\n\n"+
+                        "Nota: El presente certificado demuestra la aptitud del canino en la especialidad para la cual fue "+
+                        "entrenado y no se exime de responsabilidad al propietaio por el manejo inadecuado, o empleo en otra "+
+                        "especialidad no avalada.\n\n\n\n"+
+                        "_________________________________________________________\n"+
+                        "Jefe de Registro y Control Escuela de Guias y Adiestramiento Canino"
+        ))
+        documento.close()
+        def file = new File("Certificado_"+canine_info.nameCanine+".pdf")
+        response.setContentType("application/octet-stream")
+        response.setHeader("Content-disposition", "attachment;filename=${file.getName()}")
+        response.outputStream << file.newInputStream()
+    }
+
+    def generateMedicalHistoryCanine = {
+        def canine_info = Canine.findById(params.canino_id)
+        def canine_clinic = ClinicHistory.findAllByCanines(canine_info)
+        def canine_abilities = ExerciseAbility.findAllByCanines(canine_info)
+        PdfPTable tabla = new PdfPTable(5)
+        tabla.addCell( "Fecha" )
+        tabla.addCell( "Veterinario" )
+        tabla.addCell( "Tipo" )
+        tabla.addCell( "Tratamiento" )
+        tabla.addCell( "Firma responsable" )
+        for (def canClinic : canine_clinic) {
+            tabla.addCell( canClinic.dateTreatment.toString() )
+            tabla.addCell( canClinic.medics.fullName.toString() )
+            tabla.addCell( canClinic.typeTreatment.toString() )
+            tabla.addCell( canClinic.nameTreatment.toString() )
+            tabla.addCell( " " )
+        }
+        FileOutputStream archivo = new FileOutputStream("HClinica_"+canine_info.nameCanine+".pdf")
+        Document documento = new Document()
+        PdfWriter.getInstance(documento, archivo)
+        Image photo_can = Image.getInstance("${new File("").getAbsolutePath()}\\web-app\\purpose\\img\\canines\\"+canine_info.photoCanine)
+        photo_can.setAlignment(Element.ALIGN_CENTER)
+        documento.open()
+        documento.add(new Paragraph(new Date().toString()))
+        documento.add(new Paragraph("HISTORIA CLINICA DEL CANINO \n\n"+
+                "Nombre o razon social : K9 SECURITY LTDA\n\n"))
+        documento.add(photo_can)
+        documento.add(new Paragraph(
+                        "_____________________________________________________________________________"+"\n"+
+                        "DATOS DEL CANINO\n"+
+                        "_____________________________________________________________________________"+"\n"+
+                        "Nombre : "+canine_info.nameCanine+"\n"+
+                        "Sexo : "+canine_info.sexCanine+"\n"+
+                        "Color : "+canine_info.colorCanine+"\n"+
+                        "Raza : "+canine_info.typeRace+"\n"+
+                        "Fecha de Nacimiento : "+canine_info.dateBirthday+"\n"+
+                        "Microchip : "+canine_info.microChip+"\n"+
+                        "Padre : "+canine_info.nameFather+"\n"+
+                        "Madre : "+canine_info.nameMother+"\n"+
+                        "Especialidad : "+canine_abilities.typeTraining+"\n"+
+                        "_____________________________________________________________________________"+"\n"+
+                        "HISTORIAL DE TRATAMIENTOS\n"+
+                        "_____________________________________________________________________________"+"\n\n"
+        ))
+        documento.add(tabla);
+        documento.close()
+        def file = new File("HClinica_"+canine_info.nameCanine+".pdf")
+        response.setContentType("application/octet-stream")
+        response.setHeader("Content-disposition", "attachment;filename=${file.getName()}")
+        response.outputStream << file.newInputStream()
+    }
+
+    def generateCardAffiliationCanine = {
+        def canine_info = Canine.findById(params.canine_id)
+        FileOutputStream archivo = new FileOutputStream("TAfiliacion_"+canine_info.nameCanine+".pdf")
+        Document documento = new Document()
+        PdfWriter.getInstance(documento, archivo)
+        Image photo_can = Image.getInstance("${new File("").getAbsolutePath()}\\web-app\\purpose\\img\\canines\\"+canine_info.photoCanine)
+        photo_can.setAlignment(Element.ALIGN_CENTER)
+        documento.open()
+        documento.add(new Paragraph(new Date().toString()))
+        documento.add(new Paragraph("TARJETA DE AFILIACION CANINA \n\n"+
+                "Nombre o razon social : K9 SECURITY LTDA\n\n"))
+        documento.add(photo_can)
+        documento.add(new Paragraph(
+                        "_____________________________________________________________________________"+"\n"+
+                        "DATOS DEL CANINO\n"+
+                        "_____________________________________________________________________________"+"\n"+
+                        "Nombre : "+canine_info.nameCanine+"\n"+
+                        "Sexo : "+canine_info.sexCanine+"\n"+
+                        "Color : "+canine_info.colorCanine+"\n"+
+                        "Raza : "+canine_info.typeRace+"\n"+
+                        "Fecha de Nacimiento : "+canine_info.dateBirthday+"\n"+
+                        "Microchip : "+canine_info.microChip+"\n"+
+                        "Padre : "+canine_info.nameFather+"\n"+
+                        "Madre : "+canine_info.nameMother+"\n\n\n"+
+                        "Bajo la gravedad del juramento, manifiesto que la información y los documentos suministrados son ciertos "+
+                        "y auténticos, de no ser así se incurrirá en los delitos y sanciones previstos en los artículos 286 y S.S. "+
+                        "del código penal y demás normas concordantes. Igualmente, autorizo a la Superintendencia de Vigilancia y "+
+                        "Seguridad Privada para que verifique ante cualquier Persona Natural, Jurídica, Privada o Pública, sin "+
+                        "limitación alguna, la información aquí suministrada.\n\n"+
+                        "Firma Jefe de Registro K9 _____________________________________\n\n"+
+                        "Firma Representante Legal _____________________________________"
+        ))
+        documento.close()
+        def file = new File("TAfiliacion_"+canine_info.nameCanine+".pdf")
+        response.setContentType("application/octet-stream")
+        response.setHeader("Content-disposition", "attachment;filename=${file.getName()}")
+        response.outputStream << file.newInputStream()
     }
 
     def save_data_user = {
